@@ -4,37 +4,39 @@ public class PlayerMovement : MonoBehaviour
 {
     public float increment = 1f;
 
-    float current_rotation = 0f;
-    public float rotation_degrees = 90f;
-
-    public GameObject parent;
+    float target_rotation = 0f;
+    public float rotation_speed = 90f;
+    public float rotation_smoothness = 5f;
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.W))
         {
-            transform.localPosition += Vector3.forward * increment;
+            transform.localPosition += transform.forward * increment;
         } else if (Input.GetKeyDown(KeyCode.S))
         {
-            transform.localPosition += Vector3.back * increment;
+            transform.localPosition -= transform.forward * increment;
         }
         else if (Input.GetKeyDown(KeyCode.D))
         {
-            transform.localPosition += Vector3.right * increment;
+            transform.localPosition += transform.right * increment;
         }
         else if (Input.GetKeyDown(KeyCode.A))
         {
-            transform.localPosition += Vector3.left * increment;
+            transform.localPosition -= transform.right * increment;
         }
 
-        if(Input.GetKeyDown(KeyCode.LeftArrow))
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            current_rotation -= 90f;
-            parent.transform.rotation = Quaternion.Euler(new Vector3(0f, current_rotation, 0f));
-        } else if (Input.GetKeyDown(KeyCode.RightArrow)) 
-        {
-            current_rotation += 90f;
-            parent.transform.rotation = Quaternion.Euler(new Vector3(0f, current_rotation, 0f));
+            target_rotation -= 90f;
         }
+        else if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            target_rotation += 90f;
+        }
+
+        Quaternion current_rotation = transform.rotation;
+        Quaternion target_quaternion = Quaternion.Euler(0f, target_rotation, 0f);
+        transform.rotation = Quaternion.RotateTowards(current_rotation, target_quaternion, rotation_speed * Time.deltaTime * rotation_smoothness);
     }
 }
