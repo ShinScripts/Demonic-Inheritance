@@ -2,24 +2,28 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float increment = 1.0f;
+    public float increment = 1f;
+    public float rotation_degrees = 90f;
+
+    public GameObject parent;
+
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.W))
         {
-            transform.position += new Vector3(0.0f, 0.0f, increment);
+            transform.localPosition += Vector3.forward * increment;
         } else if (Input.GetKeyDown(KeyCode.S))
         {
-            transform.position += new Vector3(0.0f, 0.0f, -increment);
+            transform.localPosition += Vector3.back * increment;
         }
         else if (Input.GetKeyDown(KeyCode.D))
         {
-            transform.position += new Vector3(increment, 0.0f, 0.0f);
+            transform.localPosition += Vector3.right * increment;
         }
         else if (Input.GetKeyDown(KeyCode.A))
         {
-            transform.position += new Vector3(-increment, 0.0f, 0.0f);
+            transform.localPosition += Vector3.left * increment;
         }
     }
 }
