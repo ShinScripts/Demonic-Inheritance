@@ -8,14 +8,38 @@ public class PlayerMovement : MonoBehaviour
     public float rotation_speed = 90f;
     public float rotation_smoothness = 5f;
 
+    bool ClearToMove(bool forward = true)
+    {
+        RaycastHit hit;
+
+        Physics.Raycast(transform.position, forward ? transform.forward : transform.forward * -1, out hit, increment);
+
+        return !hit.collider;
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.W))
         {
-            transform.localPosition += transform.forward * increment;
-        } else if (Input.GetKeyDown(KeyCode.S))
+            if (ClearToMove())
+            {
+                transform.localPosition += transform.forward * increment;
+            }
+            else
+            {
+                print("obstacle in front");
+            }
+        }
+        else if (Input.GetKeyDown(KeyCode.S))
         {
-            transform.localPosition -= transform.forward * increment;
+            if (ClearToMove(false))
+            {
+                transform.localPosition -= transform.forward * increment;
+            }
+            else
+            {
+                print("obstacle behind");
+            }
         }
         else if (Input.GetKeyDown(KeyCode.D))
         {
