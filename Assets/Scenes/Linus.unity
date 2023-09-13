@@ -10409,7 +10409,12 @@ MonoBehaviour:
   rotation_speed: 90
   rotation_smoothness: 5
   source: {fileID: 645153567}
-  footsteps: []
+  footsteps:
+  - {fileID: 8300000, guid: 6b79cf5da53ac494295bdb2add2ac13a, type: 3}
+  - {fileID: 8300000, guid: c48cd1d9dc6ac2e4d9befe2fa0c18b62, type: 3}
+  - {fileID: 8300000, guid: 6808f5b09845117478e4350e957f92d6, type: 3}
+  - {fileID: 8300000, guid: 3d9ed0d2ac9e23e4fbe03ea75d89c37c, type: 3}
+  - {fileID: 8300000, guid: 58e467e7cefb6664db26821e8dd2df86, type: 3}
 --- !u!82 &645153567
 AudioSource:
   m_ObjectHideFlags: 0
@@ -25814,7 +25819,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1821566739}
   m_LocalRotation: {x: -0, y: -0.70329887, z: -0, w: 0.7108943}
-  m_LocalPosition: {x: 10, y: 0, z: 7.38}
+  m_LocalPosition: {x: 10, y: 0, z: 7.46}
   m_LocalScale: {x: 1, y: 1, z: 4}
   m_ConstrainProportionsScale: 0
   m_Children: []
