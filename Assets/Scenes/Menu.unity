@@ -227,6 +227,10 @@ PrefabInstance:
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4251297732040067204, guid: 46a1b3be7d97c9e41922cfd932a70990, type: 3}
+      propertyPath: tutorialClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: aa5876d1c746d38498f2581c1d59d8a4, type: 3}
+    - target: {fileID: 4251297732040067204, guid: 46a1b3be7d97c9e41922cfd932a70990, type: 3}
       propertyPath: tutorialClips.Array.data[3]
       value: 
       objectReference: {fileID: 8300000, guid: 6391c6a5e21b9ba4d9b8689f66f37a41, type: 3}
