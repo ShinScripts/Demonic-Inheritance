@@ -11,9 +11,14 @@ public class PlayerMovement : MonoBehaviour
 
     private bool isMoving = false;
 
-    public AudioSource source;
+    public SoundSource sourceFront;
+    public SoundSource sourceBack;
+    public AudioSource sourceCenter;
     public AudioClip[] footsteps;
-    public AudioClip wall_clip;
+    public AudioClip[] wall_bump_clips;
+
+    public float maxSoundPitch = 1.2f;
+    public float minSoundPitch = 0.8f;
 
     private bool ClearToMove(bool forward = true)
     {
@@ -39,8 +44,8 @@ public class PlayerMovement : MonoBehaviour
             else
             {
                 print("obstacle in front");
-                source.clip = wall_clip;
-                source.PlayOneShot(source.clip);
+                float pitch = Random.Range(minSoundPitch, maxSoundPitch); 
+                sourceFront.PlayOneShot(wall_bump_clips[Random.Range(0, wall_bump_clips.Length)], pitch);
             }
         }
         else if (Input.GetKeyDown(KeyCode.S))
@@ -53,8 +58,8 @@ public class PlayerMovement : MonoBehaviour
             else
             {
                 print("obstacle behind");
-                source.clip = wall_clip;
-                source.PlayOneShot(source.clip);
+                float pitch = Random.Range(minSoundPitch, maxSoundPitch);
+                sourceBack.PlayOneShot(wall_bump_clips[Random.Range(0, wall_bump_clips.Length)], pitch);
             }
         }
 
@@ -77,8 +82,8 @@ public class PlayerMovement : MonoBehaviour
     public void RandomizeFootstep()
     {
         int clip = Random.Range(0, footsteps.Length - 1);
-        source.pitch = Random.Range(0.7f, 0.9f);
-        source.clip = footsteps[clip];
+        sourceCenter.pitch = Random.Range(0.7f, 0.9f);
+        sourceCenter.clip = footsteps[clip];
 
     }
 
@@ -88,8 +93,8 @@ public class PlayerMovement : MonoBehaviour
         {
             isMoving = true;
             RandomizeFootstep();
-            source.PlayOneShot(source.clip);
-            yield return new WaitForSeconds(source.clip.length + Random.Range(0.125f, 0.17f));
+            sourceCenter.PlayOneShot(sourceCenter.clip);
+            yield return new WaitForSeconds(sourceCenter.clip.length + Random.Range(0.125f, 0.17f));
             isMoving = false;
         }
     }
