@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     public SoundSource sourceBack;
     public AudioSource sourceCenter;
     public AudioClip[] footsteps;
-    public AudioClip[] wall_bump_clips;
+    public AudioClip[] wall_bump_clips; //front array[0], back array[1]
 
     public float maxSoundPitch = 1.2f;
     public float minSoundPitch = 0.8f;
@@ -44,8 +44,9 @@ public class PlayerMovement : MonoBehaviour
             else
             {
                 print("obstacle in front");
-                float pitch = Random.Range(minSoundPitch, maxSoundPitch); 
-                sourceFront.PlayOneShot(wall_bump_clips[Random.Range(0, wall_bump_clips.Length)], pitch);
+                float pitch = Random.Range(minSoundPitch, maxSoundPitch);
+                //front array[0], back array[1]
+                sourceFront.PlayOneShot(wall_bump_clips[0], pitch);
             }
         }
         else if (Input.GetKeyDown(KeyCode.S))
@@ -59,7 +60,8 @@ public class PlayerMovement : MonoBehaviour
             {
                 print("obstacle behind");
                 float pitch = Random.Range(minSoundPitch, maxSoundPitch);
-                sourceBack.PlayOneShot(wall_bump_clips[Random.Range(0, wall_bump_clips.Length)], pitch);
+                //front array[0], back array[1]
+                sourceBack.PlayOneShot(wall_bump_clips[1], pitch);
             }
         }
 
@@ -81,15 +83,15 @@ public class PlayerMovement : MonoBehaviour
 
     public void RandomizeFootstep()
     {
-        int clip = Random.Range(0, footsteps.Length - 1);
-        sourceCenter.pitch = Random.Range(0.7f, 0.9f);
+        int clip = Random.Range(0, footsteps.Length);
+        sourceCenter.pitch = Random.Range(0.8f, 1.1f);
         sourceCenter.clip = footsteps[clip];
 
     }
 
     IEnumerator PlayFootsteps()
     {
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < 2; i++)
         {
             isMoving = true;
             RandomizeFootstep();
