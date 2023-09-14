@@ -26,11 +26,12 @@ public class PlayerMovement : MonoBehaviour
 
         Physics.Raycast(transform.position, forward ? transform.forward : transform.forward * -1, out hit, increment);
 
-        return !hit.collider;
+        return !(hit.collider && !hit.collider.CompareTag("Generator"));
     }
 
     private void Update()
     {
+
         if (isMoving)
             return;
 
@@ -65,11 +66,11 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        if (Input.GetKeyDown(KeyCode.A))
         {
             target_rotation -= 90f;
         }
-        else if (Input.GetKeyDown(KeyCode.RightArrow))
+        else if (Input.GetKeyDown(KeyCode.D))
         {
             target_rotation += 90f;
         }

@@ -13,7 +13,7 @@ public class GeneratorManager : MonoBehaviour
     {
         generators = GameObject.FindGameObjectsWithTag("Generator");
 
-        for(int i = 0; i < generators.Length; i++)
+        for (int i = 0; i < generators.Length; i++)
         {
             if (generators[i].GetComponent<GeneratorScript>().generatorNumber == 0)
             {
@@ -35,7 +35,7 @@ public class GeneratorManager : MonoBehaviour
 
             print("Started generator " + index);
 
-            for(int i = 0; i < generators.Length; i++)
+            for (int i = 0; i < generators.Length; i++)
             {
                 if (generators[i].GetComponent<GeneratorScript>().generatorNumber == index)
                 {
