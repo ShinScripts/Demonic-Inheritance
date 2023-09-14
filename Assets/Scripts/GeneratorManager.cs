@@ -18,7 +18,12 @@ public class GeneratorManager : MonoBehaviour
             if (generators[i].GetComponent<GeneratorScript>().generatorNumber == 0)
             {
                 current_generator = generators[i];
-                generators[i].GetComponent<AudioSource>().Play();
+                generators[i].SetActive(true);
+            }
+
+            else
+            {
+                generators[i].SetActive(false);
             }
         }
     }
@@ -27,7 +32,7 @@ public class GeneratorManager : MonoBehaviour
     {
         if (current_generator.GetComponent<GeneratorScript>().beenTaken)
         {
-            current_generator.GetComponent<AudioSource>().Stop();
+            current_generator.SetActive(false);
             index++;
 
             if (index >= generators.Length)
@@ -40,7 +45,7 @@ public class GeneratorManager : MonoBehaviour
                 if (generators[i].GetComponent<GeneratorScript>().generatorNumber == index)
                 {
                     current_generator = generators[i];
-                    generators[i].GetComponent<AudioSource>().Play();
+                    generators[i].SetActive(true);
                 }
             }
         }
