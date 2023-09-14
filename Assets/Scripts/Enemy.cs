@@ -20,7 +20,7 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector3.MoveTowards(gameObject.transform.position, target.transform.position, speed * Time.fixedDeltaTime);
+        transform.position = Vector3.MoveTowards(gameObject.transform.position, target.transform.position, speed * Time.deltaTime);
         if (gameObject.transform.position == target.transform.position)
         {
             ChangeTargets();

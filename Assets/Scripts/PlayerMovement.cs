@@ -92,7 +92,7 @@ public class PlayerMovement : MonoBehaviour
 
     IEnumerator PlayFootsteps()
     {
-        for (int i = 0; i < 2; i++)
+        for (int i = 0; i < 3; i++)
         {
             isMoving = true;
             RandomizeFootstep();
