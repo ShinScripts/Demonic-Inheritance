@@ -32,13 +32,10 @@ public class FirstPersonOcclusion : MonoBehaviour
     private void Start()
     {
         audioDes = RuntimeManager.GetEventDescription(selectAudio);
-        float minDistance, maxDistance;
         audioDes.getMinMaxDistance(out minDistance, out maxDistance);
-
-        this.minDistance = minDistance;
-        this.maxDistance = maxDistance;
-
         listener = FindObjectOfType<StudioListener>();
+
+        Debug.Log(maxDistance);
     }
 
     private void FixedUpdate()
