@@ -13189,7 +13189,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 322532491470912352, guid: d2008cde9d7961a4aab021b7a14685c8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -28.05996
+      value: -31.13
       objectReference: {fileID: 0}
     - target: {fileID: 322532491470912352, guid: d2008cde9d7961a4aab021b7a14685c8, type: 3}
       propertyPath: m_LocalPosition.y
@@ -13197,7 +13197,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 322532491470912352, guid: d2008cde9d7961a4aab021b7a14685c8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 12.363196
+      value: 15.39
       objectReference: {fileID: 0}
     - target: {fileID: 322532491470912352, guid: d2008cde9d7961a4aab021b7a14685c8, type: 3}
       propertyPath: m_LocalRotation.w
@@ -30717,6 +30717,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2144990941, guid: d98789f6cc3f7af4e9e3ccbcf6d406c5, type: 3}
+      propertyPath: m_Looping
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2914009556716280664, guid: d98789f6cc3f7af4e9e3ccbcf6d406c5, type: 3}
       propertyPath: m_Name
       value: CheatsManager
@@ -30764,10 +30768,6 @@ PrefabInstance:
     - target: {fileID: 2914009556716280678, guid: d98789f6cc3f7af4e9e3ccbcf6d406c5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2914009556716280679, guid: d98789f6cc3f7af4e9e3ccbcf6d406c5, type: 3}
-      propertyPath: isSceneVisible
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2914009557262000516, guid: d98789f6cc3f7af4e9e3ccbcf6d406c5, type: 3}
       propertyPath: m_Camera

@@ -40,7 +40,7 @@ public class DebugController : MonoBehaviour
         if (isShiftPressed && Input.GetKeyDown(KeyCode.Alpha1)) { 
             isSceneVisible = !isSceneVisible;
             canvas.enabled = !isSceneVisible;
-            Debug.Log("CHEAT: SceneVisibility: " + canvas.enabled);
+            Debug.Log("CHEAT: SceneVisibility: " + !canvas.enabled);
         }
     }
 }
