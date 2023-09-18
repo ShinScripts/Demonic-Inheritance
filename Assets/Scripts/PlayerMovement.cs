@@ -66,6 +66,7 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
+        // ** ROTATION **
         if (Input.GetKeyDown(KeyCode.A))
         {
             target_rotation -= 90f;
@@ -82,24 +83,27 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    public void RandomizeFootstep()
-    {
-        int clip = Random.Range(0, footsteps.Length);
-        sourceCenter.pitch = Random.Range(0.8f, 1.1f);
-        sourceCenter.clip = footsteps[clip];
-
-    }
 
     IEnumerator PlayFootsteps()
     {
+        float footSteepVolume = 2f;
+
         for (int i = 0; i < 3; i++)
         {
             isMoving = true;
             RandomizeFootstep();
-            sourceCenter.PlayOneShot(sourceCenter.clip);
+            sourceCenter.PlayOneShot(sourceCenter.clip, footSteepVolume);
             yield return new WaitForSeconds(sourceCenter.clip.length + Random.Range(0.125f, 0.17f));
             isMoving = false;
         }
+    }
+
+
+    public void RandomizeFootstep() {
+        int clip = Random.Range(0, footsteps.Length);
+        sourceCenter.pitch = Random.Range(0.8f, 1.1f);
+        sourceCenter.clip = footsteps[clip];
+
     }
 
 }
