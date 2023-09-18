@@ -4,7 +4,7 @@ using UnityEngine;
 
 //Put me on player with camera
 
-public class Debug_Controller : MonoBehaviour
+public class DebugController : MonoBehaviour
 {
     public Canvas canvas;
 

@@ -37,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
 
         Physics.Raycast(transform.position, forward ? transform.forward : transform.forward * -1, out hit, increment);
 
-        return !(hit.collider && !hit.collider.CompareTag("Generator"));
+        return !(hit.collider && !hit.collider.CompareTag("Item"));
     }
 
     private void Update()
