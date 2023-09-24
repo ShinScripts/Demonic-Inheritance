@@ -16,15 +16,6 @@ public class PlayerMovement : MonoBehaviour
     private bool isMoving = false;
     private bool isRotating = false;
 
-    public AudioSource sourceFront;
-    public AudioSource sourceBack;
-    public AudioSource sourceCenter;
-    public AudioClip[] footsteps;
-    public AudioClip[] wall_bump_clips; //front array[0], back array[1]
-
-    public float maxSoundPitch = 1.2f;
-    public float minSoundPitch = 0.8f;
-
     private float movementStartTime;
     private Vector3 startPosition;
     private Vector3 targetPosition;
@@ -101,9 +92,8 @@ public class PlayerMovement : MonoBehaviour
             else
             {
                 print("obstacle in front");
-                float pitch = Random.Range(minSoundPitch, maxSoundPitch);
-                //front array[0], back array[1]
-                sourceFront.PlayOneShot(wall_bump_clips[0], pitch);
+                playerAudioManager.PlayWallHitSoundFront();
+
             }
         }
         else if (Input.GetKeyDown(KeyCode.S) && !isMoving)
@@ -116,9 +106,7 @@ public class PlayerMovement : MonoBehaviour
             else
             {
                 print("obstacle behind");
-                float pitch = Random.Range(minSoundPitch, maxSoundPitch);
-                //front array[0], back array[1]
-                sourceBack.PlayOneShot(wall_bump_clips[1], pitch);
+                playerAudioManager.PlayWallHitSoundBack();
             }
         }
 
@@ -150,13 +138,14 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-    public void RandomizeFootstep()
+   /* public void RandomizeFootstep()
     {
         int clip = Random.Range(0, footsteps.Length);
         sourceCenter.pitch = Random.Range(0.8f, 1.1f);
         sourceCenter.clip = footsteps[clip];
 
     }
+   */
 
     IEnumerator PlayFootsteps()
     {

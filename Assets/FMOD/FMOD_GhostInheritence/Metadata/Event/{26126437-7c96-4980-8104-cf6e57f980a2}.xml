@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{26126437-7c96-4980-8104-cf6e57f980a2}">
 		<property name="name">
-			<value>PlayerFoley</value>
+			<value>PlayerFoley_Footsteps</value>
 		</property>
 		<property name="outputFormat">
 			<value>2</value>

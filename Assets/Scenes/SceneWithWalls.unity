@@ -3495,6 +3495,17 @@ Transform:
   m_Father: {fileID: 416756414}
   m_RootOrder: 171
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &108489467 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1240699072861892969, guid: 171ada5a24e9e6a47bf58753649d49a2, type: 3}
+  m_PrefabInstance: {fileID: 1427443385}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e608da8c291815544a3d93e0e39a704a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &111219610
 GameObject:
   m_ObjectHideFlags: 0
@@ -26469,7 +26480,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 966107722}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12, y: 2.5, z: -4}
+  m_LocalPosition: {x: -12, y: 2.5, z: -3}
   m_LocalScale: {x: 1, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -37954,6 +37965,82 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1240699072861892969, guid: 171ada5a24e9e6a47bf58753649d49a2, type: 3}
+      propertyPath: enemyPosition
+      value: 
+      objectReference: {fileID: 1928958447}
+    - target: {fileID: 1240699072861892969, guid: 171ada5a24e9e6a47bf58753649d49a2, type: 3}
+      propertyPath: WallhitEvent.Path
+      value: event:/PlayerFoley_WallHit
+      objectReference: {fileID: 0}
+    - target: {fileID: 1240699072861892969, guid: 171ada5a24e9e6a47bf58753649d49a2, type: 3}
+      propertyPath: BreathingEvent.Path
+      value: event:/PlayerFoley_Breathing
+      objectReference: {fileID: 0}
+    - target: {fileID: 1240699072861892969, guid: 171ada5a24e9e6a47bf58753649d49a2, type: 3}
+      propertyPath: FootStepsEvent.Path
+      value: event:/PlayerFoley_Footsteps
+      objectReference: {fileID: 0}
+    - target: {fileID: 1240699072861892969, guid: 171ada5a24e9e6a47bf58753649d49a2, type: 3}
+      propertyPath: HeartbeatEvent.Path
+      value: event:/PlayerFoley_Heartbeat
+      objectReference: {fileID: 0}
+    - target: {fileID: 1240699072861892969, guid: 171ada5a24e9e6a47bf58753649d49a2, type: 3}
+      propertyPath: maxDistanceThreshold
+      value: 38
+      objectReference: {fileID: 0}
+    - target: {fileID: 1240699072861892969, guid: 171ada5a24e9e6a47bf58753649d49a2, type: 3}
+      propertyPath: minDistanceThreshold
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1240699072861892969, guid: 171ada5a24e9e6a47bf58753649d49a2, type: 3}
+      propertyPath: WallhitEvent.Guid.Data1
+      value: -394688862
+      objectReference: {fileID: 0}
+    - target: {fileID: 1240699072861892969, guid: 171ada5a24e9e6a47bf58753649d49a2, type: 3}
+      propertyPath: WallhitEvent.Guid.Data2
+      value: 1295590220
+      objectReference: {fileID: 0}
+    - target: {fileID: 1240699072861892969, guid: 171ada5a24e9e6a47bf58753649d49a2, type: 3}
+      propertyPath: WallhitEvent.Guid.Data3
+      value: -962501502
+      objectReference: {fileID: 0}
+    - target: {fileID: 1240699072861892969, guid: 171ada5a24e9e6a47bf58753649d49a2, type: 3}
+      propertyPath: WallhitEvent.Guid.Data4
+      value: -244977721
+      objectReference: {fileID: 0}
+    - target: {fileID: 1240699072861892969, guid: 171ada5a24e9e6a47bf58753649d49a2, type: 3}
+      propertyPath: BreathingEvent.Guid.Data1
+      value: -2093506517
+      objectReference: {fileID: 0}
+    - target: {fileID: 1240699072861892969, guid: 171ada5a24e9e6a47bf58753649d49a2, type: 3}
+      propertyPath: BreathingEvent.Guid.Data2
+      value: 1174515441
+      objectReference: {fileID: 0}
+    - target: {fileID: 1240699072861892969, guid: 171ada5a24e9e6a47bf58753649d49a2, type: 3}
+      propertyPath: BreathingEvent.Guid.Data3
+      value: 1867968178
+      objectReference: {fileID: 0}
+    - target: {fileID: 1240699072861892969, guid: 171ada5a24e9e6a47bf58753649d49a2, type: 3}
+      propertyPath: BreathingEvent.Guid.Data4
+      value: -480091773
+      objectReference: {fileID: 0}
+    - target: {fileID: 1240699072861892969, guid: 171ada5a24e9e6a47bf58753649d49a2, type: 3}
+      propertyPath: HeartbeatEvent.Guid.Data1
+      value: -520590321
+      objectReference: {fileID: 0}
+    - target: {fileID: 1240699072861892969, guid: 171ada5a24e9e6a47bf58753649d49a2, type: 3}
+      propertyPath: HeartbeatEvent.Guid.Data2
+      value: 1152551810
+      objectReference: {fileID: 0}
+    - target: {fileID: 1240699072861892969, guid: 171ada5a24e9e6a47bf58753649d49a2, type: 3}
+      propertyPath: HeartbeatEvent.Guid.Data3
+      value: -586051436
+      objectReference: {fileID: 0}
+    - target: {fileID: 1240699072861892969, guid: 171ada5a24e9e6a47bf58753649d49a2, type: 3}
+      propertyPath: HeartbeatEvent.Guid.Data4
+      value: 1697505232
+      objectReference: {fileID: 0}
     - target: {fileID: 1736591108206439955, guid: 171ada5a24e9e6a47bf58753649d49a2, type: 3}
       propertyPath: m_Name
       value: Player
@@ -38001,6 +38088,26 @@ PrefabInstance:
     - target: {fileID: 1736591108206439956, guid: 171ada5a24e9e6a47bf58753649d49a2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736591108206439957, guid: 171ada5a24e9e6a47bf58753649d49a2, type: 3}
+      propertyPath: sourceFront
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736591108206439957, guid: 171ada5a24e9e6a47bf58753649d49a2, type: 3}
+      propertyPath: sourceBehind
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736591108206439957, guid: 171ada5a24e9e6a47bf58753649d49a2, type: 3}
+      propertyPath: playerAudioManager
+      value: 
+      objectReference: {fileID: 108489467}
+    - target: {fileID: 1844150198282790395, guid: 171ada5a24e9e6a47bf58753649d49a2, type: 3}
+      propertyPath: m_Name
+      value: AudioSourcePosition
+      objectReference: {fileID: 0}
+    - target: {fileID: 7828172348966540220, guid: 171ada5a24e9e6a47bf58753649d49a2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 171ada5a24e9e6a47bf58753649d49a2, type: 3}
@@ -39720,7 +39827,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8715230443046452062, guid: d83b6aa1ab818174a8ffe96f8521b37c, type: 3}
       propertyPath: generatorNumber
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d83b6aa1ab818174a8ffe96f8521b37c, type: 3}
@@ -55853,7 +55960,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8715230443046452050, guid: d83b6aa1ab818174a8ffe96f8521b37c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.94
+      value: 40.18
       objectReference: {fileID: 0}
     - target: {fileID: 8715230443046452050, guid: d83b6aa1ab818174a8ffe96f8521b37c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -55861,7 +55968,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8715230443046452050, guid: d83b6aa1ab818174a8ffe96f8521b37c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 9.23
+      value: 12.74
       objectReference: {fileID: 0}
     - target: {fileID: 8715230443046452050, guid: d83b6aa1ab818174a8ffe96f8521b37c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -55897,7 +56004,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8715230443046452062, guid: d83b6aa1ab818174a8ffe96f8521b37c, type: 3}
       propertyPath: generatorNumber
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d83b6aa1ab818174a8ffe96f8521b37c, type: 3}

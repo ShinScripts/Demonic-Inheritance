@@ -113,6 +113,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   beenTaken: 0
   generatorNumber: 0
+  GeneratorCollectedEvent:
+    Guid:
+      Data1: -109833649
+      Data2: 1150866856
+      Data3: -882387314
+      Data4: 1518396006
+    Path: event:/SFX_GeneratorCollected
 --- !u!114 &8715230443046452044
 MonoBehaviour:
   m_ObjectHideFlags: 0
