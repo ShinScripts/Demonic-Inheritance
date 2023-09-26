@@ -119,6 +119,7 @@ Transform:
   m_Children:
   - {fileID: 1736591106977312865}
   - {fileID: 5480841509109247369}
+  - {fileID: 508483058}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -204,7 +205,7 @@ MonoBehaviour:
   sourceFront: {fileID: 263090063917796643}
   sourceBack: {fileID: 3858996995657688808}
   sourceCenter: {fileID: 7927236537803988507}
-  footsteps:
+  footsteps_clips:
   - {fileID: 8300000, guid: c7b1bd5efc0d69941b7fa61c4b336d88, type: 3}
   - {fileID: 8300000, guid: 870cf2ed46abd734f85bbcb402cc411c, type: 3}
   - {fileID: 8300000, guid: c11487051568a584795f7488606f3ffd, type: 3}
@@ -215,6 +216,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 79592c1d0eb30b84b9797eb5655d242e, type: 3}
   - {fileID: 8300000, guid: 36dd8206aac918d43ac1c24f6055307c, type: 3}
   - {fileID: 8300000, guid: ef492b91eac1eda45b9e8fd0f5aa017c, type: 3}
+  rotations_clips:
+  - {fileID: 8300000, guid: e80b9a947c364b849b8ce83867481017, type: 3}
+  - {fileID: 8300000, guid: 14a67da4ad9a19645911ecc31ae5f04c, type: 3}
   wall_bump_clips:
   - {fileID: 8300000, guid: aa5876d1c746d38498f2581c1d59d8a4, type: 3}
   - {fileID: 8300000, guid: 9713392a4e8791446a786d56f021f004, type: 3}
@@ -398,6 +402,68 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1001 &2565174977416414379
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1736591108206439956}
+    m_Modifications:
+    - target: {fileID: 2565174977320882521, guid: b5ae0c968796270479c303e3b1288893, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2565174977320882521, guid: b5ae0c968796270479c303e3b1288893, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.071
+      objectReference: {fileID: 0}
+    - target: {fileID: 2565174977320882521, guid: b5ae0c968796270479c303e3b1288893, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2565174977320882521, guid: b5ae0c968796270479c303e3b1288893, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 2565174977320882521, guid: b5ae0c968796270479c303e3b1288893, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2565174977320882521, guid: b5ae0c968796270479c303e3b1288893, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2565174977320882521, guid: b5ae0c968796270479c303e3b1288893, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2565174977320882521, guid: b5ae0c968796270479c303e3b1288893, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2565174977320882521, guid: b5ae0c968796270479c303e3b1288893, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2565174977320882521, guid: b5ae0c968796270479c303e3b1288893, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2565174977320882521, guid: b5ae0c968796270479c303e3b1288893, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2565174977320882523, guid: b5ae0c968796270479c303e3b1288893, type: 3}
+      propertyPath: m_Name
+      value: HeartbeatManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b5ae0c968796270479c303e3b1288893, type: 3}
+--- !u!4 &508483058 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2565174977320882521, guid: b5ae0c968796270479c303e3b1288893, type: 3}
+  m_PrefabInstance: {fileID: 2565174977416414379}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6316686312830937064
 PrefabInstance:
   m_ObjectHideFlags: 0
