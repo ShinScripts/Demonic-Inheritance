@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="AudioFile" id="{718869aa-634d-48ed-bfa3-a3a33b0d388c}">
+	<object class="AudioFile" id="{13e5052f-41f1-4603-a46c-edd0f2502b99}">
 		<property name="assetPath">
 			<value>Foley/PlayerFoley/Foley_Heavy_breathing.wav</value>
 		</property>
