@@ -28,19 +28,16 @@ public class Enemy : MonoBehaviour
     {
         transform.LookAt(player.transform);
 
-        RaycastHit hit;
-
-        Physics.Raycast(transform.position, Vector3.forward, out hit);
+        Physics.Raycast(transform.position, Vector3.forward, out RaycastHit hit);
 
         if (hit.collider)
         {
-            Debug.DrawLine(transform.position, player.transform.position, Color.magenta);
-            print(hit.collider);
+            // print(hit.collider);
         }
 
         transform.position = Vector3.MoveTowards(gameObject.transform.position, target.transform.position, speed * Time.deltaTime);
 
-        if (gameObject.transform.position == target.transform.position)
+        if (Vector3.Distance(transform.position, target.transform.position) < 0.5f)
         {
             ChangeTargets();
         }
