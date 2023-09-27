@@ -10,15 +10,15 @@ public class Enemy : MonoBehaviour
     public float speed = 2f;
 
     private GameObject target;
+    private GameObject player;
 
     private NavMeshAgent agent;
-    private GameObject player;
 
 
     void Start()
     {
-        agent = GetComponent<NavMeshAgent>();
         player = GameObject.FindGameObjectWithTag("Player");
+        agent = GetComponent<NavMeshAgent>();
 
         transform.position = start.transform.position;
         target = end;
@@ -28,14 +28,17 @@ public class Enemy : MonoBehaviour
     {
         transform.LookAt(player.transform);
 
-        Physics.Raycast(transform.position, Vector3.forward, out RaycastHit hit);
+        bool has_hit = Physics.Raycast(transform.position + transform.forward, transform.forward, out RaycastHit hit, 200f);
 
-        if (hit.collider)
+        if (has_hit && hit.transform.CompareTag("Player"))
         {
-            // print(hit.collider);
+            agent.SetDestination(player.transform.position);
+            return;
         }
-
-        transform.position = Vector3.MoveTowards(gameObject.transform.position, target.transform.position, speed * Time.deltaTime);
+        else
+        {
+            agent.SetDestination(target.transform.position);
+        }
 
         if (Vector3.Distance(transform.position, target.transform.position) < 0.5f)
         {
