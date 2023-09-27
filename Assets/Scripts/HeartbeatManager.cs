@@ -60,6 +60,9 @@ public class HeartbeatManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //TEMP This should only play when enemy makes sound
+        UpdateEnemyDistance();
+
         //time += Time.deltaTime;
 
         //UpdateHeartbeatDelay();

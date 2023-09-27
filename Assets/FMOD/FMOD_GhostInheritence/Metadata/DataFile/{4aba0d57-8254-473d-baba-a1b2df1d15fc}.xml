@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="DataFile" id="{4aba0d57-8254-473d-baba-a1b2df1d15fc}">
+		<property name="assetPath">
+			<value>Foley/PlayerFoley/unused heartbeat2/Foley_heart-beat2.wav.meta</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e859f30b-e6e0-442d-b14d-aa53359f7ec9}</destination>
+		</relationship>
+	</object>
+</objects>

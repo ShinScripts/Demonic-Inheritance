@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="DataFile" id="{5ee113e8-b582-4085-b046-67d652325725}">
+		<property name="assetPath">
+			<value>Foley/PlayerFoley/Footsteps/Wood/Footstep_Wood3.wav.meta</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e859f30b-e6e0-442d-b14d-aa53359f7ec9}</destination>
+		</relationship>
+	</object>
+</objects>

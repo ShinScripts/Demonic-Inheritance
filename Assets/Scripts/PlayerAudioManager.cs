@@ -73,8 +73,6 @@ public class PlayerAudioManager : MonoBehaviour
 
     private void PlayFootstep() //Footsteps event in FMOD
     {
-        RaycastHit hit;
-
         if(Physics.Raycast(transform.position, Vector3.down, 20f, wood)) {
             print("wood");
 
