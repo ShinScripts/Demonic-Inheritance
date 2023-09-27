@@ -18,14 +18,18 @@ public class PlayerAudioManager : MonoBehaviour
     [SerializeField] private EventReference HeartbeatEvent;
     [SerializeField] private EventReference WallhitEvent;
 
+    [Space(20)]
+    [Header("Layers")]
+    [SerializeField] private LayerMask wood;
+    [SerializeField] private LayerMask tiles;
+    [SerializeField] private LayerMask stone;
+
 
     [SerializeField]
     private float minDistanceThreshold; // Minimum distance threshold
     [SerializeField]
     private float maxDistanceThreshold; // Maximum distance threshold
 
-    //private EventInstance breathingAudio;
-    //private EventInstance heartbeatAudio;
     private EventInstance wallhitAudio;
 
     [SerializeField] private float distanceParameter = 0;
@@ -41,12 +45,7 @@ public class PlayerAudioManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //breathingAudio = RuntimeManager.CreateInstance(BreathingEvent);
-        //heartbeatAudio = RuntimeManager.CreateInstance(HeartbeatEvent);
         wallhitAudio = RuntimeManager.CreateInstance(WallhitEvent);
-
-        //breathingAudio.start();
-        //heartbeatAudio.start();
 
         wallhitAudio.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(playerMovement.transform.position));
         
@@ -70,19 +69,27 @@ public class PlayerAudioManager : MonoBehaviour
 
         ParseDistance();
 
-        //heartbeatAudio.setParameterByName(DIST_TO_ENEMY_H, distanceParameter);
-        //breathingAudio.setParameterByName(DIST_TO_ENEMY_B, distanceParameter);
-
-
-
-        //  Debug.Log("distance to enemy:" + distanceToEnemy);
-        //  Debug.Log("distance parameter:" + distanceParameter);
-
     }
 
     private void PlayFootstep() //Footsteps event in FMOD
     {
-        RuntimeManager.PlayOneShot(FootStepsEvent, transform.position);                                                                                    // We also set our event instance to release straight after we tell it to play, so that the instance is released once the event had finished playing.
+        RaycastHit hit;
+
+        if(Physics.Raycast(transform.position, Vector3.down, 20f, wood)) {
+            print("wood");
+
+        } else if(Physics.Raycast(transform.position, Vector3.down, 20f, tiles)) {
+            print("tiles");
+
+        } else if (Physics.Raycast(transform.position, Vector3.down, 20f, stone)) {
+            print("stone");
+
+        } else
+        {
+            print("generic");
+        }
+
+        RuntimeManager.PlayOneShot(FootStepsEvent, transform.position);                                                                                 
     }
 
     private void ParseDistance()

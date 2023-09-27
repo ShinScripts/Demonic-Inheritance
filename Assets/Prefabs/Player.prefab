@@ -267,6 +267,15 @@ MonoBehaviour:
       Data3: -962501502
       Data4: -244977721
     Path: event:/PlayerFoley_WallHit
+  wood:
+    serializedVersion: 2
+    m_Bits: 512
+  tiles:
+    serializedVersion: 2
+    m_Bits: 2048
+  stone:
+    serializedVersion: 2
+    m_Bits: 1024
   minDistanceThreshold: 10
   maxDistanceThreshold: 38
   distanceParameter: 0
@@ -325,7 +334,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: HeartbeatManager
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2565174977320882520, guid: b5ae0c968796270479c303e3b1288893, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b5ae0c968796270479c303e3b1288893, type: 3}
 --- !u!4 &2565174978384118262 stripped
 Transform:
