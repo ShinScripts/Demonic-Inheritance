@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731713, g: 0.13414738, b: 0.121078536, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -224,28 +224,48 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4251297732040067204, guid: 46a1b3be7d97c9e41922cfd932a70990, type: 3}
       propertyPath: tutorialClips.Array.size
-      value: 8
+      value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 4251297732040067204, guid: 46a1b3be7d97c9e41922cfd932a70990, type: 3}
+      propertyPath: menuItemCips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: c3296d8449591284e96e441702bac7e2, type: 3}
+    - target: {fileID: 4251297732040067204, guid: 46a1b3be7d97c9e41922cfd932a70990, type: 3}
+      propertyPath: menuItemCips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: cff9e33768b47d64592ab7d5ee286188, type: 3}
+    - target: {fileID: 4251297732040067204, guid: 46a1b3be7d97c9e41922cfd932a70990, type: 3}
+      propertyPath: menuItemCips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 5a2a1e900afc2b647a8a292c4a10d3ac, type: 3}
+    - target: {fileID: 4251297732040067204, guid: 46a1b3be7d97c9e41922cfd932a70990, type: 3}
+      propertyPath: tutorialClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: cbcef2c4cbad7d34a88373af2c3c3907, type: 3}
     - target: {fileID: 4251297732040067204, guid: 46a1b3be7d97c9e41922cfd932a70990, type: 3}
       propertyPath: tutorialClips.Array.data[1]
       value: 
-      objectReference: {fileID: 8300000, guid: aa5876d1c746d38498f2581c1d59d8a4, type: 3}
+      objectReference: {fileID: 8300000, guid: b7fd4ff33ab7b4243adaa85e36fb699d, type: 3}
+    - target: {fileID: 4251297732040067204, guid: 46a1b3be7d97c9e41922cfd932a70990, type: 3}
+      propertyPath: tutorialClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2bb3075cb8ee45e4989a709b22c1304b, type: 3}
     - target: {fileID: 4251297732040067204, guid: 46a1b3be7d97c9e41922cfd932a70990, type: 3}
       propertyPath: tutorialClips.Array.data[3]
       value: 
-      objectReference: {fileID: 8300000, guid: 6391c6a5e21b9ba4d9b8689f66f37a41, type: 3}
+      objectReference: {fileID: 8300000, guid: 97fffca0f2f1f9141855a58ec0c3081b, type: 3}
     - target: {fileID: 4251297732040067204, guid: 46a1b3be7d97c9e41922cfd932a70990, type: 3}
       propertyPath: tutorialClips.Array.data[4]
       value: 
-      objectReference: {fileID: 8300000, guid: f5b260976cc74cb47b99f1ee974589d6, type: 3}
+      objectReference: {fileID: 8300000, guid: 9bd34145b2589ab4cb9f120966116fcc, type: 3}
     - target: {fileID: 4251297732040067204, guid: 46a1b3be7d97c9e41922cfd932a70990, type: 3}
       propertyPath: tutorialClips.Array.data[5]
       value: 
-      objectReference: {fileID: 8300000, guid: 43cd6200e02e11d4b804644093ac3107, type: 3}
+      objectReference: {fileID: 8300000, guid: b55f73d8932b653409c7edba3862db4b, type: 3}
     - target: {fileID: 4251297732040067204, guid: 46a1b3be7d97c9e41922cfd932a70990, type: 3}
       propertyPath: tutorialClips.Array.data[6]
       value: 
-      objectReference: {fileID: 8300000, guid: 30ab7de3cfbeb5d46bb7605f8fe7440e, type: 3}
+      objectReference: {fileID: 8300000, guid: b55f73d8932b653409c7edba3862db4b, type: 3}
     - target: {fileID: 4251297732040067204, guid: 46a1b3be7d97c9e41922cfd932a70990, type: 3}
       propertyPath: tutorialClips.Array.data[7]
       value: 
