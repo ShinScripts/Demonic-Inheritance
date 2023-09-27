@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{0dcc5242-dd02-463c-bc5f-60ee21a547c5}">
 		<property name="assetPath">
-			<value>Unsorted/SFX_Generator-Collected.wav</value>
+			<value>SFX/SFX_Generator-Collected.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>22.0499992</value>

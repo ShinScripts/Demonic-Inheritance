@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{8cc51475-e5fd-4f5f-b7d4-23183ae21bff}">
 		<property name="assetPath">
-			<value>Unsorted/SpotFX_Fireplace.wav</value>
+			<value>SFX/SpotFX_Fireplace.wav</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>

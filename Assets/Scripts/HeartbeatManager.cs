@@ -30,11 +30,11 @@ public class HeartbeatManager : MonoBehaviour
     public AudioClip[] clips;
     public float minPitch = 0.875f;
     public float maxPitch = 1.065f;
-    [Space(10)]
-    [Range(0, 100)]
-    [Tooltip("To what percent should distance to enemy affect heartbeatDelay compared to enemy state")]
+    //[Space(10)]
+    //[Range(0, 100)]
+    //[Tooltip("To what percent should distance to enemy affect heartbeatDelay compared to enemy state")]
 
-    private float time = 0f;
+    //private float time = 0f;
 
     // Start is called before the first frame update
     void Start()

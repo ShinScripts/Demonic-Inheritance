@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{8ff1e66a-2a43-4a23-ac7f-21e9a8a1f512}">
 		<property name="assetPath">
-			<value>Unsorted/SpotFX_BumpWood2.wav</value>
+			<value>SFX/SpotFX_BumpWood2.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>

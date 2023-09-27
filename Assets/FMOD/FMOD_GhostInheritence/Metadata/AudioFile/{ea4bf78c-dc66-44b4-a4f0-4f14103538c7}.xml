@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{ea4bf78c-dc66-44b4-a4f0-4f14103538c7}">
 		<property name="assetPath">
-			<value>Unsorted/SpotFX_Tractor_Engine.wav</value>
+			<value>SFX/SpotFX_Tractor_Engine.wav</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>

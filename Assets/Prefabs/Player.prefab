@@ -1,5 +1,38 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &359734896469589424
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8446381769339467690}
+  m_Layer: 0
+  m_Name: AudioSourcesLocations
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8446381769339467690
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 359734896469589424}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7642822655399181}
+  - {fileID: 3074912213798670035}
+  m_Father: {fileID: 1736591108206439956}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1736591106977312864
 GameObject:
   m_ObjectHideFlags: 0
@@ -124,7 +157,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1736591106977312865}
-  - {fileID: 2565174978384118262}
+  - {fileID: 8446381769339467690}
+  - {fileID: 7472579617780510089}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -208,6 +242,8 @@ MonoBehaviour:
   rotation_speed: 90
   rotation_smoothness: 5
   movementSpeed: 3.3
+  audioFrontPosition: {fileID: 7642822655399181}
+  audioBehindPosition: {fileID: 3074912213798670035}
   playerAudioManager: {fileID: 1240699072861892969}
 --- !u!54 &1736591108206439961
 Rigidbody:
@@ -267,19 +303,72 @@ MonoBehaviour:
       Data3: -962501502
       Data4: -244977721
     Path: event:/PlayerFoley_WallHit
-  wood:
-    serializedVersion: 2
-    m_Bits: 512
-  tiles:
-    serializedVersion: 2
-    m_Bits: 2048
-  stone:
-    serializedVersion: 2
-    m_Bits: 1024
   minDistanceThreshold: 10
   maxDistanceThreshold: 38
   distanceParameter: 0
---- !u!1001 &1084281007
+--- !u!1 &4127993121949838038
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3074912213798670035}
+  m_Layer: 0
+  m_Name: Behind
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3074912213798670035
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4127993121949838038}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8446381769339467690}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8316170925617347127
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7642822655399181}
+  m_Layer: 0
+  m_Name: Front
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7642822655399181
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8316170925617347127}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8446381769339467690}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &4911943536272686288
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -288,7 +377,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2565174977320882521, guid: b5ae0c968796270479c303e3b1288893, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2565174977320882521, guid: b5ae0c968796270479c303e3b1288893, type: 3}
       propertyPath: m_LocalPosition.x
@@ -334,11 +423,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HeartbeatManager
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2565174977320882520, guid: b5ae0c968796270479c303e3b1288893, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5ae0c968796270479c303e3b1288893, type: 3}
---- !u!4 &2565174978384118262 stripped
+--- !u!4 &7472579617780510089 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2565174977320882521, guid: b5ae0c968796270479c303e3b1288893, type: 3}
-  m_PrefabInstance: {fileID: 1084281007}
+  m_PrefabInstance: {fileID: 4911943536272686288}
   m_PrefabAsset: {fileID: 0}

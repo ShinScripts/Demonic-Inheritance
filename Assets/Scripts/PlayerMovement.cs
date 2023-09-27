@@ -2,6 +2,7 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using FMODUnity;
+using Unity.VisualScripting;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -12,6 +13,9 @@ public class PlayerMovement : MonoBehaviour
     public float rotation_smoothness = 5f;
     [SerializeField] private float movementSpeed = 3.3f;
     private float movementTime;
+
+    [SerializeField] private Transform audioFrontPosition;
+    [SerializeField] private Transform audioBehindPosition;
 
     private bool isMoving = false;
     private bool isRotating = false;
@@ -25,19 +29,39 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private PlayerAudioManager playerAudioManager;
 
     public bool IsBusy { get => (isMoving || isRotating);}
+    public Transform AudioFrontPosition { get => audioFrontPosition;}
+    public Transform AudioBehindPosition { get => audioBehindPosition;}
+
+    private string currentObstacle;
 
     private void Start()
     {
         movementTime = 1 / movementSpeed;
+
+        currentObstacle = string.Empty;
+
     }
 
     private bool ClearToMove(bool forward = true)
     {
         RaycastHit hit;
 
-        Physics.Raycast(transform.position, forward ? transform.forward : transform.forward * -1, out hit, increment);
+        if (Physics.Raycast(transform.position, forward ? transform.forward : transform.forward * -1, out hit, increment))
+        {
 
-        return !(hit.collider && !hit.collider.CompareTag("Generator"));
+            currentObstacle = hit.collider.tag;
+
+            Debug.Log(currentObstacle);
+            return !(hit.collider.CompareTag("Wall") || hit.collider.CompareTag("Furniture"));
+        }
+
+        currentObstacle = string.Empty;
+        return true;
+    }
+
+    private void FixedUpdate()
+    {
+        Debug.DrawRay(transform.position, transform.forward);
     }
 
     private void Update()
@@ -92,7 +116,7 @@ public class PlayerMovement : MonoBehaviour
             else
             {
                 print("obstacle in front");
-                playerAudioManager.PlayWallHitSoundFront();
+                playerAudioManager.PlayWallHitSoundFront(currentObstacle);
 
             }
         }
@@ -106,7 +130,7 @@ public class PlayerMovement : MonoBehaviour
             else
             {
                 print("obstacle behind");
-                playerAudioManager.PlayWallHitSoundBack();
+                playerAudioManager.PlayWallHitSoundBack(currentObstacle);
             }
         }
 

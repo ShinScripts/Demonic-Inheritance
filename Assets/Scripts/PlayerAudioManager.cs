@@ -14,15 +14,9 @@ public class PlayerAudioManager : MonoBehaviour
     //private FMOD.Studio.EventInstance playerState;
     [Header("FMOD Settings")]
     [SerializeField] private EventReference FootStepsEvent;
-    [SerializeField] private EventReference BreathingEvent;
-    [SerializeField] private EventReference HeartbeatEvent;
+    //[SerializeField] private EventReference BreathingEvent;
+    //[SerializeField] private EventReference HeartbeatEvent;
     [SerializeField] private EventReference WallhitEvent;
-
-    [Space(20)]
-    [Header("Layers")]
-    [SerializeField] private LayerMask wood;
-    [SerializeField] private LayerMask tiles;
-    [SerializeField] private LayerMask stone;
 
 
     [SerializeField]
@@ -30,6 +24,8 @@ public class PlayerAudioManager : MonoBehaviour
     [SerializeField]
     private float maxDistanceThreshold; // Maximum distance threshold
 
+    private EventInstance breathingAudio;
+    private EventInstance heartbeatAudio;
     private EventInstance wallhitAudio;
 
     [SerializeField] private float distanceParameter = 0;
@@ -41,14 +37,27 @@ public class PlayerAudioManager : MonoBehaviour
 
     private bool shouldPlay = true;
 
+    private Transform audioSourceFrontPosition;
+    private Transform audioSourceBackPosition;
+
+    private int furnitureCounter = 0;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        //breathingAudio = RuntimeManager.CreateInstance(BreathingEvent);
+        //heartbeatAudio = RuntimeManager.CreateInstance(HeartbeatEvent);
         wallhitAudio = RuntimeManager.CreateInstance(WallhitEvent);
 
+        //breathingAudio.start();
+        //heartbeatAudio.start();
+
+        audioSourceBackPosition = playerMovement.AudioFrontPosition;
+        audioSourceFrontPosition = playerMovement.AudioBehindPosition;
+
         wallhitAudio.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(playerMovement.transform.position));
-        
+
     }
 
     // Update is called once per frame
@@ -69,25 +78,19 @@ public class PlayerAudioManager : MonoBehaviour
 
         ParseDistance();
 
+        //heartbeatAudio.setParameterByName(DIST_TO_ENEMY_H, distanceParameter);
+        //breathingAudio.setParameterByName(DIST_TO_ENEMY_B, distanceParameter);
+
+
+
+        //  Debug.Log("distance to enemy:" + distanceToEnemy);
+        //  Debug.Log("distance parameter:" + distanceParameter);
+
     }
 
     private void PlayFootstep() //Footsteps event in FMOD
     {
-        if(Physics.Raycast(transform.position, Vector3.down, 20f, wood)) {
-            print("wood");
-
-        } else if(Physics.Raycast(transform.position, Vector3.down, 20f, tiles)) {
-            print("tiles");
-
-        } else if (Physics.Raycast(transform.position, Vector3.down, 20f, stone)) {
-            print("stone");
-
-        } else
-        {
-            print("generic");
-        }
-
-        RuntimeManager.PlayOneShot(FootStepsEvent, transform.position);                                                                                 
+        RuntimeManager.PlayOneShot(FootStepsEvent, transform.position);                                                                                    // We also set our event instance to release straight after we tell it to play, so that the instance is released once the event had finished playing.
     }
 
     private void ParseDistance()
@@ -101,19 +104,59 @@ public class PlayerAudioManager : MonoBehaviour
         distanceParameter = 1 - Mathf.InverseLerp(minDistanceThreshold, maxDistanceThreshold, clampedDistance);
     }
 
-    public void PlayWallHitSoundFront()
+    public void PlayWallHitSoundFront(string obstacle)
     {
-        wallhitAudio.setParameterByNameWithLabel("FrontBack", "Front");
+        wallhitAudio.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(audioSourceFrontPosition.position));
+
+        wallhitAudio.setParameterByNameWithLabel("Panner", "Front");
+
+        if (obstacle.Equals("Wall"))
+        {
+            wallhitAudio.setParameterByNameWithLabel("Obstacle", "Wall");
+        }
+
+        else if (obstacle.Equals("Furniture") && furnitureCounter <= 0)
+        {
+            wallhitAudio.setParameterByNameWithLabel("Obstacle", "Furniture_First");
+            furnitureCounter++;  
+        }
+        
+        else
+        {
+            wallhitAudio.setParameterByNameWithLabel("Obstacle", "Furniture");
+        }
+
         wallhitAudio.start();
-       // wallhitAudioFront.release();
+        //wallhitAudio.release();
 
     }
 
-    public void PlayWallHitSoundBack()
+    public void PlayWallHitSoundBack(string obstacle)
     {
-        wallhitAudio.setParameterByNameWithLabel("FrontBack", "Back");
+
+        wallhitAudio.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(audioSourceFrontPosition.position));
+
+        wallhitAudio.setParameterByNameWithLabel("Panner", "Back");
+
+        if (obstacle.Equals("Wall"))
+        {
+            wallhitAudio.setParameterByNameWithLabel("Obstacle", "Wall");
+        }
+
+        else if (obstacle.Equals("Furniture") && furnitureCounter <= 0)
+        {
+            wallhitAudio.setParameterByNameWithLabel("Obstacle", "Furniture_First");
+            furnitureCounter++;
+        }
+
+        else
+        {
+            wallhitAudio.setParameterByNameWithLabel("Obstacle", "Furniture");
+        }
+
         wallhitAudio.start();
-       // wallhitAudioBack.release();
+
+        //wallhitAudio.release();
 
     }
 }
