@@ -124,6 +124,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1736591106977312865}
+  - {fileID: 2565174978384118262}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -207,9 +208,7 @@ MonoBehaviour:
   rotation_speed: 90
   rotation_smoothness: 5
   movementSpeed: 3.3
-  sourceFront: {fileID: 0}
-  sourceBehind: {fileID: 0}
-  playerAudioManager: {fileID: 0}
+  playerAudioManager: {fileID: 1240699072861892969}
 --- !u!54 &1736591108206439961
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -246,28 +245,90 @@ MonoBehaviour:
       Data2: 1233157270
       Data3: 1859060865
       Data4: -1568605865
-    Path: event:/PlayerFoley
+    Path: event:/PlayerFoley_Footsteps
   BreathingEvent:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -2093506517
+      Data2: 1174515441
+      Data3: 1867968178
+      Data4: -480091773
+    Path: event:/PlayerFoley_Breathing
   HeartbeatEvent:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -520590321
+      Data2: 1152551810
+      Data3: -586051436
+      Data4: 1697505232
+    Path: event:/PlayerFoley_Heartbeat
   WallhitEvent:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
-  minDistanceThreshold: 0
-  maxDistanceThreshold: 0
+      Data1: -394688862
+      Data2: 1295590220
+      Data3: -962501502
+      Data4: -244977721
+    Path: event:/PlayerFoley_WallHit
+  minDistanceThreshold: 10
+  maxDistanceThreshold: 38
   distanceParameter: 0
+--- !u!1001 &1084281007
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1736591108206439956}
+    m_Modifications:
+    - target: {fileID: 2565174977320882521, guid: b5ae0c968796270479c303e3b1288893, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2565174977320882521, guid: b5ae0c968796270479c303e3b1288893, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.071
+      objectReference: {fileID: 0}
+    - target: {fileID: 2565174977320882521, guid: b5ae0c968796270479c303e3b1288893, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2565174977320882521, guid: b5ae0c968796270479c303e3b1288893, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 2565174977320882521, guid: b5ae0c968796270479c303e3b1288893, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2565174977320882521, guid: b5ae0c968796270479c303e3b1288893, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2565174977320882521, guid: b5ae0c968796270479c303e3b1288893, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2565174977320882521, guid: b5ae0c968796270479c303e3b1288893, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2565174977320882521, guid: b5ae0c968796270479c303e3b1288893, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2565174977320882521, guid: b5ae0c968796270479c303e3b1288893, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2565174977320882521, guid: b5ae0c968796270479c303e3b1288893, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2565174977320882523, guid: b5ae0c968796270479c303e3b1288893, type: 3}
+      propertyPath: m_Name
+      value: HeartbeatManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b5ae0c968796270479c303e3b1288893, type: 3}
+--- !u!4 &2565174978384118262 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2565174977320882521, guid: b5ae0c968796270479c303e3b1288893, type: 3}
+  m_PrefabInstance: {fileID: 1084281007}
+  m_PrefabAsset: {fileID: 0}

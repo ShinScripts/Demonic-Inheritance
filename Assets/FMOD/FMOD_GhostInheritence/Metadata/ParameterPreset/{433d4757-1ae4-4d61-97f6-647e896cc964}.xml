@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{433d4757-1ae4-4d61-97f6-647e896cc964}">
+		<property name="name">
+			<value>NewEnemyDistance</value>
+		</property>
+		<relationship name="folder">
+			<destination>{ac082d7b-88d9-43cd-865b-26e36b29ce5c}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{02619821-ad30-4821-8e50-70a302be830d}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{02619821-ad30-4821-8e50-70a302be830d}">
+		<property name="initialValue">
+			<value>0.34999999999999998</value>
+		</property>
+	</object>
+</objects>

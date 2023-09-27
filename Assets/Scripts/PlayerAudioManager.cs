@@ -24,8 +24,8 @@ public class PlayerAudioManager : MonoBehaviour
     [SerializeField]
     private float maxDistanceThreshold; // Maximum distance threshold
 
-    private EventInstance breathingAudio;
-    private EventInstance heartbeatAudio;
+    //private EventInstance breathingAudio;
+    //private EventInstance heartbeatAudio;
     private EventInstance wallhitAudio;
 
     [SerializeField] private float distanceParameter = 0;
@@ -41,12 +41,12 @@ public class PlayerAudioManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        breathingAudio = RuntimeManager.CreateInstance(BreathingEvent);
-        heartbeatAudio = RuntimeManager.CreateInstance(HeartbeatEvent);
+        //breathingAudio = RuntimeManager.CreateInstance(BreathingEvent);
+        //heartbeatAudio = RuntimeManager.CreateInstance(HeartbeatEvent);
         wallhitAudio = RuntimeManager.CreateInstance(WallhitEvent);
 
-        breathingAudio.start();
-        heartbeatAudio.start();
+        //breathingAudio.start();
+        //heartbeatAudio.start();
 
         wallhitAudio.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(playerMovement.transform.position));
         
@@ -70,8 +70,8 @@ public class PlayerAudioManager : MonoBehaviour
 
         ParseDistance();
 
-        heartbeatAudio.setParameterByName(DIST_TO_ENEMY_H, distanceParameter);
-        breathingAudio.setParameterByName(DIST_TO_ENEMY_B, distanceParameter);
+        //heartbeatAudio.setParameterByName(DIST_TO_ENEMY_H, distanceParameter);
+        //breathingAudio.setParameterByName(DIST_TO_ENEMY_B, distanceParameter);
 
 
 

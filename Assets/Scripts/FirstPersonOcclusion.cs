@@ -127,7 +127,7 @@ public class FirstPersonOcclusion : MonoBehaviour
         else
             Debug.DrawLine(Start, End, colour);
 
-        Debug.Log(gameObject.name + ": " + lineCastHitCount);
+        //Debug.Log(gameObject.name + ": " + lineCastHitCount);
     }
 
     private void SetParameter()
