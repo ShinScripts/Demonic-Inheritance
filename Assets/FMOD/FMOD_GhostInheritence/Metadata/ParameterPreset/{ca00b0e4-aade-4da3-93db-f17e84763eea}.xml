@@ -1,27 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="ParameterPreset" id="{e88c8520-9f91-49a9-a853-71f17086efbd}">
+	<object class="ParameterPreset" id="{ca00b0e4-aade-4da3-93db-f17e84763eea}">
 		<property name="name">
-			<value>Obstacle</value>
+			<value>Panner</value>
 		</property>
 		<relationship name="folder">
 			<destination>{ac082d7b-88d9-43cd-865b-26e36b29ce5c}</destination>
 		</relationship>
 		<relationship name="parameter">
-			<destination>{3d97d82d-0b56-4848-8586-b3638934a799}</destination>
+			<destination>{6d3d0088-104b-4fcb-9286-6cb4978cd584}</destination>
 		</relationship>
 	</object>
-	<object class="GameParameter" id="{3d97d82d-0b56-4848-8586-b3638934a799}">
+	<object class="GameParameter" id="{6d3d0088-104b-4fcb-9286-6cb4978cd584}">
 		<property name="parameterType">
 			<value>2</value>
 		</property>
 		<property name="maximum">
-			<value>3</value>
+			<value>2</value>
 		</property>
 		<property name="enumerationLabels">
-			<value>Wall</value>
-			<value>Furniture_First</value>
-			<value>Furniture</value>
+			<value>Front</value>
+			<value>Back</value>
 		</property>
 		<property name="initialValue">
 			<value>0</value>

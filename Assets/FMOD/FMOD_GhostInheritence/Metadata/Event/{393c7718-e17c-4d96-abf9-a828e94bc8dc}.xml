@@ -65,6 +65,9 @@
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{bc174d9d-19e1-46d1-a1ca-3162333e55f8}">
+		<property name="priority">
+			<value>4</value>
+		</property>
 		<property name="minimumDistance">
 			<value>0.5</value>
 		</property>
@@ -211,7 +214,14 @@
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{3cfc5510-0cab-4b59-95ab-0f2b3dcdc049}" />
-	<object class="SpatialiserEffect" id="{5950f1e8-f561-4a0b-81da-5d670d5b8a5e}" />
+	<object class="SpatialiserEffect" id="{5950f1e8-f561-4a0b-81da-5d670d5b8a5e}">
+		<property name="minimumDistance">
+			<value>0.5</value>
+		</property>
+		<property name="maximumDistance">
+			<value>45</value>
+		</property>
+	</object>
 	<object class="LowpassEffect" id="{067c505b-d566-415f-9796-3e0e8d1302a5}">
 		<property name="cutoff">
 			<value>22000</value>

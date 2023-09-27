@@ -14,6 +14,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float movementSpeed = 3.3f;
     private float movementTime;
 
+    [SerializeField] private Transform audioFrontPosition;
+    [SerializeField] private Transform audioBehindPosition;
+
     private bool isMoving = false;
     private bool isRotating = false;
 
@@ -26,10 +29,17 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private PlayerAudioManager playerAudioManager;
 
     public bool IsBusy { get => (isMoving || isRotating);}
+    public Transform AudioFrontPosition { get => audioFrontPosition;}
+    public Transform AudioBehindPosition { get => audioBehindPosition;}
+
+    private string currentObstacle;
 
     private void Start()
     {
         movementTime = 1 / movementSpeed;
+
+        currentObstacle = string.Empty;
+
     }
 
     private bool ClearToMove(bool forward = true)
@@ -38,9 +48,14 @@ public class PlayerMovement : MonoBehaviour
 
         if (Physics.Raycast(transform.position, forward ? transform.forward : transform.forward * -1, out hit, increment))
         {
-            return !hit.collider.CompareTag("Wall");
+
+            currentObstacle = hit.collider.tag;
+
+            Debug.Log(currentObstacle);
+            return !(hit.collider.CompareTag("Wall") || hit.collider.CompareTag("Furniture"));
         }
 
+        currentObstacle = string.Empty;
         return true;
     }
 
@@ -101,7 +116,7 @@ public class PlayerMovement : MonoBehaviour
             else
             {
                 print("obstacle in front");
-                playerAudioManager.PlayWallHitSoundFront();
+                playerAudioManager.PlayWallHitSoundFront(currentObstacle);
 
             }
         }
@@ -115,7 +130,7 @@ public class PlayerMovement : MonoBehaviour
             else
             {
                 print("obstacle behind");
-                playerAudioManager.PlayWallHitSoundBack();
+                playerAudioManager.PlayWallHitSoundBack(currentObstacle);
             }
         }
 

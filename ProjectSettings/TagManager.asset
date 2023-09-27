@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Generator
   - Wall
+  - Furniture
   layers:
   - Default
   - TransparentFX

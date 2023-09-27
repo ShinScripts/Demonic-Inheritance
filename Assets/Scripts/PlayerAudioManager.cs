@@ -37,6 +37,11 @@ public class PlayerAudioManager : MonoBehaviour
 
     private bool shouldPlay = true;
 
+    private Transform audioSourceFrontPosition;
+    private Transform audioSourceBackPosition;
+
+    private int furnitureCounter = 0;
+
 
     // Start is called before the first frame update
     void Start()
@@ -48,8 +53,11 @@ public class PlayerAudioManager : MonoBehaviour
         breathingAudio.start();
         heartbeatAudio.start();
 
+        audioSourceBackPosition = playerMovement.AudioFrontPosition;
+        audioSourceFrontPosition = playerMovement.AudioBehindPosition;
+
         wallhitAudio.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(playerMovement.transform.position));
-        
+
     }
 
     // Update is called once per frame
@@ -96,19 +104,59 @@ public class PlayerAudioManager : MonoBehaviour
         distanceParameter = 1 - Mathf.InverseLerp(minDistanceThreshold, maxDistanceThreshold, clampedDistance);
     }
 
-    public void PlayWallHitSoundFront()
+    public void PlayWallHitSoundFront(string obstacle)
     {
-        wallhitAudio.setParameterByNameWithLabel("FrontBack", "Front");
+        wallhitAudio.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(audioSourceFrontPosition.position));
+
+        wallhitAudio.setParameterByNameWithLabel("Panner", "Front");
+
+        if (obstacle.Equals("Wall"))
+        {
+            wallhitAudio.setParameterByNameWithLabel("Obstacle", "Wall");
+        }
+
+        else if (obstacle.Equals("Furniture") && furnitureCounter <= 0)
+        {
+            wallhitAudio.setParameterByNameWithLabel("Obstacle", "Furniture_First");
+            furnitureCounter++;  
+        }
+        
+        else
+        {
+            wallhitAudio.setParameterByNameWithLabel("Obstacle", "Furniture");
+        }
+
         wallhitAudio.start();
-       // wallhitAudioFront.release();
+        //wallhitAudio.release();
 
     }
 
-    public void PlayWallHitSoundBack()
+    public void PlayWallHitSoundBack(string obstacle)
     {
-        wallhitAudio.setParameterByNameWithLabel("FrontBack", "Back");
+
+        wallhitAudio.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(audioSourceFrontPosition.position));
+
+        wallhitAudio.setParameterByNameWithLabel("Panner", "Back");
+
+        if (obstacle.Equals("Wall"))
+        {
+            wallhitAudio.setParameterByNameWithLabel("Obstacle", "Wall");
+        }
+
+        else if (obstacle.Equals("Furniture") && furnitureCounter <= 0)
+        {
+            wallhitAudio.setParameterByNameWithLabel("Obstacle", "Furniture_First");
+            furnitureCounter++;
+        }
+
+        else
+        {
+            wallhitAudio.setParameterByNameWithLabel("Obstacle", "Furniture");
+        }
+
         wallhitAudio.start();
-       // wallhitAudioBack.release();
+
+        //wallhitAudio.release();
 
     }
 }

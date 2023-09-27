@@ -3361,7 +3361,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 85326935}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.57, y: 0, z: 0.728}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3382,10 +3382,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectAudio:
     Guid:
-      Data1: 33058973
-      Data2: 1307624631
-      Data3: -972571008
-      Data4: -874354352
+      Data1: 610278019
+      Data2: 1214677136
+      Data3: -1279319424
+      Data4: 1525017106
     Path: event:/SFX_TV_Long_Corridor
   soundOcclusionWidening: 1.3
   playerOcclusionWidening: 0.8
@@ -4274,7 +4274,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 125360840}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1.512, y: 0, z: -0.071}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4295,10 +4295,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectAudio:
     Guid:
-      Data1: -1378618768
-      Data2: 1190347514
-      Data3: -900879435
-      Data4: 730405908
+      Data1: 1265958973
+      Data2: 1189855305
+      Data3: 385353866
+      Data4: -1107398906
     Path: event:/SFX_Bedroom_2
   soundOcclusionWidening: 1.3
   playerOcclusionWidening: 0.8
@@ -14517,7 +14517,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 462063283}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.821, y: 0, z: -0.701}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14538,10 +14538,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectAudio:
     Guid:
-      Data1: 1579924778
-      Data2: 1288678453
-      Data3: -1892085826
-      Data4: 102331949
+      Data1: -1647875099
+      Data2: 1264595374
+      Data3: 1422264208
+      Data4: -846838752
     Path: event:/SFX_Corridor_2
   soundOcclusionWidening: 1.3
   playerOcclusionWidening: 0.8
@@ -18747,6 +18747,11 @@ Transform:
   m_Father: {fileID: 46130200}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &616618640 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3074912213798670035, guid: 171ada5a24e9e6a47bf58753649d49a2, type: 3}
+  m_PrefabInstance: {fileID: 1427443385}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &617187541
 GameObject:
   m_ObjectHideFlags: 0
@@ -19649,7 +19654,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 635665150}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.986, y: 0, z: -0.053}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19670,10 +19675,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectAudio:
     Guid:
-      Data1: -1418635909
-      Data2: 1294119053
-      Data3: -1385817198
-      Data4: 2143032265
+      Data1: -1463002907
+      Data2: 1153875178
+      Data3: -272813944
+      Data4: -927939970
     Path: event:/SFX_Bedroom_1
   soundOcclusionWidening: 1.3
   playerOcclusionWidening: 0.8
@@ -29019,6 +29024,7 @@ Transform:
   - {fileID: 1442930040}
   - {fileID: 1819360988}
   - {fileID: 694732350}
+  - {fileID: 1220199537}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -29788,7 +29794,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1000292993}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1.0244, y: -0.205, z: 0.864}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -29809,10 +29815,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectAudio:
     Guid:
-      Data1: 1747137240
-      Data2: 1182882224
-      Data3: 142277035
-      Data4: 690528208
+      Data1: -1037206512
+      Data2: 1232706934
+      Data3: 960368013
+      Data4: -829210677
     Path: event:/SFX_LivingRoom
   soundOcclusionWidening: 1.3
   playerOcclusionWidening: 0.8
@@ -30444,6 +30450,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1008246243}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1010474750 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7642822655399181, guid: 171ada5a24e9e6a47bf58753649d49a2, type: 3}
+  m_PrefabInstance: {fileID: 1427443385}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1010865327
 GameObject:
   m_ObjectHideFlags: 0
@@ -30630,7 +30641,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1031474341}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.158, y: 0, z: -1.439}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -30651,10 +30662,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectAudio:
     Guid:
-      Data1: -379715832
-      Data2: 1149789356
-      Data3: -111748464
-      Data4: -1793164538
+      Data1: 1552353776
+      Data2: 1234904330
+      Data3: -261049183
+      Data4: 33974656
     Path: event:/SFX_TV_Short_Corridor
   soundOcclusionWidening: 1.3
   playerOcclusionWidening: 0.8
@@ -32818,7 +32829,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1121509612}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 4.676, y: 0, z: 0.089}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -32839,10 +32850,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectAudio:
     Guid:
-      Data1: 1857162522
-      Data2: 1147330316
-      Data3: -2072495937
-      Data4: -500104603
+      Data1: -1499484210
+      Data2: 1081389327
+      Data3: -1469998407
+      Data4: 796713028
     Path: event:/SFX_Entrance
   soundOcclusionWidening: 1.3
   playerOcclusionWidening: 0.8
@@ -35339,7 +35350,7 @@ GameObject:
   - component: {fileID: 1182314207}
   m_Layer: 6
   m_Name: Cube (40)
-  m_TagString: Wall
+  m_TagString: Furniture
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35352,8 +35363,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1182314205}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 3.71, y: 0, z: 14.13}
-  m_LocalScale: {x: 1, y: 1, z: 10.926209}
+  m_LocalPosition: {x: 3.95, y: -0.317, z: 14.34}
+  m_LocalScale: {x: 1, y: 0.19306, z: 5.6155252}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 966107723}
@@ -36231,6 +36242,103 @@ Transform:
   m_Father: {fileID: 416756414}
   m_RootOrder: 189
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1220199536
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1220199537}
+  - component: {fileID: 1220199540}
+  - component: {fileID: 1220199539}
+  - component: {fileID: 1220199538}
+  m_Layer: 6
+  m_Name: Cube (44)
+  m_TagString: Wall
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1220199537
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1220199536}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -4, y: 0, z: 23.41}
+  m_LocalScale: {x: 1, y: 1, z: 16.889845}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 966107723}
+  m_RootOrder: 42
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!65 &1220199538
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1220199536}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1220199539
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1220199536}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1220199540
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1220199536}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1225962819
 GameObject:
   m_ObjectHideFlags: 0
@@ -41314,7 +41422,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1425371547}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.26, y: 0, z: 0.079}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -41335,10 +41443,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectAudio:
     Guid:
-      Data1: -746402245
-      Data2: 1312839165
-      Data3: -1064866638
-      Data4: -1888477276
+      Data1: -777430336
+      Data2: 1182404633
+      Data3: 1446483357
+      Data4: -2103904202
     Path: event:/SFX_Kitchen
   soundOcclusionWidening: 1.3
   playerOcclusionWidening: 0.8
@@ -41516,9 +41624,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1736591108206439957, guid: 171ada5a24e9e6a47bf58753649d49a2, type: 3}
+      propertyPath: audioFrontPosition
+      value: 
+      objectReference: {fileID: 1010474750}
+    - target: {fileID: 1736591108206439957, guid: 171ada5a24e9e6a47bf58753649d49a2, type: 3}
       propertyPath: playerAudioManager
       value: 
       objectReference: {fileID: 108489467}
+    - target: {fileID: 1736591108206439957, guid: 171ada5a24e9e6a47bf58753649d49a2, type: 3}
+      propertyPath: audioBehindPosition
+      value: 
+      objectReference: {fileID: 616618640}
     - target: {fileID: 1844150198282790395, guid: 171ada5a24e9e6a47bf58753649d49a2, type: 3}
       propertyPath: m_Name
       value: AudioSourcePosition
@@ -43978,7 +44094,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1525002640}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.625, y: 0, z: -0.682}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -43999,10 +44115,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectAudio:
     Guid:
-      Data1: -2054936813
-      Data2: 1296990251
-      Data3: -1481061187
-      Data4: 1369008634
+      Data1: -267986921
+      Data2: 1284283766
+      Data3: -916180839
+      Data4: -1510036088
     Path: event:/SFX_Corridor_1
   soundOcclusionWidening: 1.3
   playerOcclusionWidening: 0.8
@@ -45928,7 +46044,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1592029043}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.096, y: 0, z: -0.972}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -55362,7 +55478,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1921759911}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1.53, y: 0, z: 0.018}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -55383,10 +55499,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectAudio:
     Guid:
-      Data1: 2008675798
-      Data2: 1249944637
-      Data3: 208382907
-      Data4: -1649871944
+      Data1: 1466666355
+      Data2: 1225053154
+      Data3: -1697750851
+      Data4: -733226131
     Path: event:/SFX_TV_Middle
   soundOcclusionWidening: 1.3
   playerOcclusionWidening: 0.8

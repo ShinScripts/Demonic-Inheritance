@@ -29,11 +29,13 @@ public class FirstPersonOcclusion : MonoBehaviour
     private float lineCastHitCount = 0f;
     private Color colour;
 
+
     private void Start()
     {
         audioDes = RuntimeManager.GetEventDescription(selectAudio);
         audioDes.getMinMaxDistance(out minDistance, out maxDistance);
         listener = FindObjectOfType<StudioListener>();
+
 
         //Debug.Log(maxDistance);
     }
