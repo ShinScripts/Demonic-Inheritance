@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{384c4b9d-e717-4358-abae-8351b674a61c}">
 		<property name="assetPath">
-			<value>Unsorted/SpotFX_WaterDrop.wav</value>
+			<value>SFX/SpotFX_WaterDrop.wav</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>

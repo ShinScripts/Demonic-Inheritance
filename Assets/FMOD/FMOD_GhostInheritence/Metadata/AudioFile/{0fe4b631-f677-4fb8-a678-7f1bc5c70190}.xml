@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{0fe4b631-f677-4fb8-a678-7f1bc5c70190}">
 		<property name="assetPath">
-			<value>Unsorted/SpotFX_HitTable_GlassDrop.wav</value>
+			<value>SFX/SpotFX_HitTable_GlassDrop.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>

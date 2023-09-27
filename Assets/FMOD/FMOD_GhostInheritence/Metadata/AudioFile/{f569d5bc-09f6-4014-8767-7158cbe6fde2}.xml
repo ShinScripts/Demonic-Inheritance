@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{f569d5bc-09f6-4014-8767-7158cbe6fde2}">
 		<property name="assetPath">
-			<value>Unsorted/SpotFX_TV_Static_Noise.wav</value>
+			<value>SFX/SpotFX_TV_Static_Noise.wav</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>

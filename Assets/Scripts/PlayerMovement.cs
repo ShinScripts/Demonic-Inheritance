@@ -2,6 +2,7 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using FMODUnity;
+using Unity.VisualScripting;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -35,9 +36,17 @@ public class PlayerMovement : MonoBehaviour
     {
         RaycastHit hit;
 
-        Physics.Raycast(transform.position, forward ? transform.forward : transform.forward * -1, out hit, increment);
+        if (Physics.Raycast(transform.position, forward ? transform.forward : transform.forward * -1, out hit, increment))
+        {
+            return !hit.collider.CompareTag("Wall");
+        }
 
-        return !(hit.collider && !hit.collider.CompareTag("Generator"));
+        return true;
+    }
+
+    private void FixedUpdate()
+    {
+        Debug.DrawRay(transform.position, transform.forward);
     }
 
     private void Update()

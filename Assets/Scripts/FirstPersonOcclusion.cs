@@ -35,7 +35,7 @@ public class FirstPersonOcclusion : MonoBehaviour
         audioDes.getMinMaxDistance(out minDistance, out maxDistance);
         listener = FindObjectOfType<StudioListener>();
 
-        Debug.Log(maxDistance);
+        //Debug.Log(maxDistance);
     }
 
     private void FixedUpdate()
@@ -127,7 +127,7 @@ public class FirstPersonOcclusion : MonoBehaviour
         else
             Debug.DrawLine(Start, End, colour);
 
-        Debug.Log(gameObject.name + ": " + lineCastHitCount);
+       // Debug.Log(gameObject.name + ": " + lineCastHitCount);
     }
 
     private void SetParameter()
