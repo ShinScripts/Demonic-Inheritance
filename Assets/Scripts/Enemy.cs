@@ -8,22 +8,13 @@ public class Enemy : MonoBehaviour
     public GameObject end;
     public float speed = 2f;
 
-    private bool isDead;
-
     GameObject target;
 
-    AudioSource source;
-    public AudioClip[] footsteps;
-    public float footstepDelayFrequency = 1.5f;
-
-   
     // Start is called before the first frame update
     void Start()
     {
         transform.position = start.transform.position;
         target = end;
-        source = GetComponent<AudioSource>();
-        StartCoroutine(PlayFootsteps());
     }
 
     // Update is called once per frame
@@ -39,14 +30,5 @@ public class Enemy : MonoBehaviour
     void ChangeTargets()
     {
         target = (target == start) ? end : start;
-    }
-
-    IEnumerator PlayFootsteps() {
-        while (!isDead) {
-            AudioClip clip = footsteps[Random.Range(0, footsteps.Length - 1)];
-            source.PlayOneShot(clip);
-            yield return new WaitForSeconds(clip.length + footstepDelayFrequency);
-        }
-
     }
 }

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{384c4b9d-e717-4358-abae-8351b674a61c}">
+		<property name="assetPath">
+			<value>Unsorted/SpotFX_WaterDrop.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>59.265691609977324</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e859f30b-e6e0-442d-b14d-aa53359f7ec9}</destination>
+		</relationship>
+	</object>
+</objects>
