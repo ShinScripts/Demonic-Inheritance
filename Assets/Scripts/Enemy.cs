@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Enemy : MonoBehaviour
-{
+public class Enemy : MonoBehaviour {
     public GameObject start;
     public GameObject end;
     public float speed = 2f;
@@ -15,8 +14,7 @@ public class Enemy : MonoBehaviour
     private NavMeshAgent agent;
 
 
-    void Start()
-    {
+    void Start() {
         player = GameObject.FindGameObjectWithTag("Player");
         agent = GetComponent<NavMeshAgent>();
 
@@ -24,30 +22,24 @@ public class Enemy : MonoBehaviour
         target = end;
     }
 
-    void Update()
-    {
+    void Update() {
         transform.LookAt(player.transform);
 
         bool has_hit = Physics.Raycast(transform.position + transform.forward, transform.forward, out RaycastHit hit, 200f);
 
-        if (has_hit && hit.transform.CompareTag("Player"))
-        {
+        if (has_hit && hit.transform.CompareTag("Player")) {
             agent.SetDestination(player.transform.position);
             return;
-        }
-        else
-        {
+        } else {
             agent.SetDestination(target.transform.position);
         }
 
-        if (Vector3.Distance(transform.position, target.transform.position) < 0.5f)
-        {
+        if (Vector3.Distance(transform.position, target.transform.position) < 0.5f) {
             ChangeTargets();
         }
     }
 
-    void ChangeTargets()
-    {
+    void ChangeTargets() {
         target = (target == start) ? end : start;
     }
 }
