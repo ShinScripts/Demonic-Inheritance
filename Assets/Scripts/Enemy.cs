@@ -1,45 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 
-public class Enemy : MonoBehaviour {
+public class Enemy : MonoBehaviour
+{
     public GameObject start;
     public GameObject end;
     public float speed = 2f;
 
-    private GameObject target;
-    private GameObject player;
+    GameObject target;
 
-    private NavMeshAgent agent;
-
-
-    void Start() {
-        player = GameObject.FindGameObjectWithTag("Player");
-        agent = GetComponent<NavMeshAgent>();
-
+    // Start is called before the first frame update
+    void Start()
+    {
         transform.position = start.transform.position;
         target = end;
     }
 
-    void Update() {
-        transform.LookAt(player.transform);
-
-        bool has_hit = Physics.Raycast(transform.position + transform.forward, transform.forward, out RaycastHit hit, 200f);
-
-        if (has_hit && hit.transform.CompareTag("Player")) {
-            agent.SetDestination(player.transform.position);
-            return;
-        } else {
-            agent.SetDestination(target.transform.position);
-        }
-
-        if (Vector3.Distance(transform.position, target.transform.position) < 0.5f) {
+    // Update is called once per frame
+    void Update()
+    {
+        transform.position = Vector3.MoveTowards(gameObject.transform.position, target.transform.position, speed * Time.deltaTime);
+        if (gameObject.transform.position == target.transform.position)
+        {
             ChangeTargets();
         }
     }
 
-    void ChangeTargets() {
+    void ChangeTargets()
+    {
         target = (target == start) ? end : start;
     }
 }
