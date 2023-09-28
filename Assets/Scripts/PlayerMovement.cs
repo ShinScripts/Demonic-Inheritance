@@ -26,11 +26,16 @@ public class PlayerMovement : MonoBehaviour
     private Quaternion startRotation;
     private Quaternion targetRotation;
 
+    private string currentSoundZoneName;
+
+    [SerializeField] private string[] obstacleTags;
+
     [SerializeField] private PlayerAudioManager playerAudioManager;
 
     public bool IsBusy { get => (isMoving || isRotating);}
     public Transform AudioFrontPosition { get => audioFrontPosition;}
     public Transform AudioBehindPosition { get => audioBehindPosition;}
+    public string CurrentSoundZoneName { get => currentSoundZoneName;}
 
     private string currentObstacle;
 
@@ -51,8 +56,8 @@ public class PlayerMovement : MonoBehaviour
 
             currentObstacle = hit.collider.tag;
 
-            Debug.Log(currentObstacle);
-            return !(hit.collider.CompareTag("Wall") || hit.collider.CompareTag("Furniture"));
+            //Debug.Log(currentObstacle);
+            return !IsObstacleTag(currentObstacle);
         }
 
         currentObstacle = string.Empty;
@@ -191,4 +196,22 @@ public class PlayerMovement : MonoBehaviour
         }
     }
     */
+
+    private bool IsObstacleTag(string tag)
+    {
+        for(int i = 0; i < obstacleTags.Length; i++)
+        {
+            if (obstacleTags[i].Equals(tag))
+                return true;
+        }
+        return false;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.layer == LayerMask.NameToLayer("SoundZones"))
+        {
+            currentSoundZoneName = other.tag;
+        }
+    }
 }

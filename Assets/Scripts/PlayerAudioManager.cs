@@ -10,8 +10,6 @@ public class PlayerAudioManager : MonoBehaviour
 
     [SerializeField] private PlayerMovement playerMovement;
     [SerializeField] private Transform enemyPosition;
-
-    //private FMOD.Studio.EventInstance playerState;
     [Header("FMOD Settings")]
     [SerializeField] private EventReference FootStepsEvent;
     [SerializeField] private EventReference BreathingEvent;
@@ -110,20 +108,15 @@ public class PlayerAudioManager : MonoBehaviour
 
         wallhitAudio.setParameterByNameWithLabel("Panner", "Front");
 
-        if (obstacle.Equals("Wall"))
-        {
-            wallhitAudio.setParameterByNameWithLabel("Obstacle", "Wall");
-        }
-
-        else if (obstacle.Equals("Furniture") && furnitureCounter <= 0)
+        if (obstacle.Equals("Furniture") && furnitureCounter <= 0)
         {
             wallhitAudio.setParameterByNameWithLabel("Obstacle", "Furniture_First");
-            furnitureCounter++;  
+            furnitureCounter++;
         }
-        
+
         else
         {
-            wallhitAudio.setParameterByNameWithLabel("Obstacle", "Furniture");
+            wallhitAudio.setParameterByNameWithLabel("Obstacle", obstacle);
         }
 
         wallhitAudio.start();
@@ -138,12 +131,7 @@ public class PlayerAudioManager : MonoBehaviour
 
         wallhitAudio.setParameterByNameWithLabel("Panner", "Back");
 
-        if (obstacle.Equals("Wall"))
-        {
-            wallhitAudio.setParameterByNameWithLabel("Obstacle", "Wall");
-        }
-
-        else if (obstacle.Equals("Furniture") && furnitureCounter <= 0)
+        if (obstacle.Equals("Furniture") && furnitureCounter <= 0)
         {
             wallhitAudio.setParameterByNameWithLabel("Obstacle", "Furniture_First");
             furnitureCounter++;
@@ -151,7 +139,7 @@ public class PlayerAudioManager : MonoBehaviour
 
         else
         {
-            wallhitAudio.setParameterByNameWithLabel("Obstacle", "Furniture");
+            wallhitAudio.setParameterByNameWithLabel("Obstacle", obstacle);
         }
 
         wallhitAudio.start();

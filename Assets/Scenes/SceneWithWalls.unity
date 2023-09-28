@@ -3346,7 +3346,7 @@ GameObject:
   m_Component:
   - component: {fileID: 85326936}
   - component: {fileID: 85326937}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Location
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3801,9 +3801,9 @@ GameObject:
   m_Component:
   - component: {fileID: 109343827}
   - component: {fileID: 109343829}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bedroom_1
-  m_TagString: Untagged
+  m_TagString: NoSignal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3822,7 +3822,7 @@ Transform:
   m_Children:
   - {fileID: 635665151}
   m_Father: {fileID: 1638441870}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!65 &109343829
 BoxCollider:
@@ -3952,6 +3952,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f2a29eceaee4124c8c029c3a6be4dcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ai_companion: {fileID: 0}
 --- !u!1 &113923106
 GameObject:
   m_ObjectHideFlags: 0
@@ -4259,7 +4260,7 @@ GameObject:
   m_Component:
   - component: {fileID: 125360841}
   - component: {fileID: 125360842}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Location
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10275,7 +10276,7 @@ GameObject:
   - component: {fileID: 342414717}
   m_Layer: 6
   m_Name: Cube (38)
-  m_TagString: Wall
+  m_TagString: LockedDoor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14502,7 +14503,7 @@ GameObject:
   m_Component:
   - component: {fileID: 462063284}
   - component: {fileID: 462063285}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Location
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15010,9 +15011,9 @@ GameObject:
   m_Component:
   - component: {fileID: 473982236}
   - component: {fileID: 473982238}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Corridor_1
-  m_TagString: Untagged
+  m_TagString: NoSignal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15031,7 +15032,7 @@ Transform:
   m_Children:
   - {fileID: 1525002641}
   m_Father: {fileID: 1638441870}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!65 &473982238
 BoxCollider:
@@ -16693,7 +16694,7 @@ GameObject:
   m_Component:
   - component: {fileID: 516999686}
   - component: {fileID: 516999687}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Location
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18451,9 +18452,9 @@ GameObject:
   m_Component:
   - component: {fileID: 605081823}
   - component: {fileID: 605081825}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Entrance
-  m_TagString: Untagged
+  m_TagString: Hallway
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18472,7 +18473,7 @@ Transform:
   m_Children:
   - {fileID: 1121509613}
   m_Father: {fileID: 1638441870}
-  m_RootOrder: 11
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!65 &605081825
 BoxCollider:
@@ -19639,7 +19640,7 @@ GameObject:
   m_Component:
   - component: {fileID: 635665151}
   - component: {fileID: 635665152}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Location
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19654,7 +19655,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 635665150}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.986, y: 0, z: -0.053}
+  m_LocalPosition: {x: -0.92, y: 0, z: 0.803}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -29779,7 +29780,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1000292994}
   - component: {fileID: 1000292995}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Location
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30626,7 +30627,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1031474342}
   - component: {fileID: 1031474343}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Location
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31728,9 +31729,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1082188834}
   - component: {fileID: 1082188836}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Kitchen
-  m_TagString: Untagged
+  m_TagString: NoSignal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31749,7 +31750,7 @@ Transform:
   m_Children:
   - {fileID: 1425371548}
   m_Father: {fileID: 1638441870}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1082188836
 BoxCollider:
@@ -32814,7 +32815,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1121509613}
   - component: {fileID: 1121509614}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Location
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37938,9 +37939,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1273580398}
   - component: {fileID: 1273580400}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Living Room
-  m_TagString: Untagged
+  m_TagString: DinningTable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37959,7 +37960,7 @@ Transform:
   m_Children:
   - {fileID: 1000292994}
   m_Father: {fileID: 1638441870}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1273580400
 BoxCollider:
@@ -40931,9 +40932,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1398132463}
   - component: {fileID: 1398132465}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bedroom_2
-  m_TagString: Untagged
+  m_TagString: NoSignal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40952,7 +40953,7 @@ Transform:
   m_Children:
   - {fileID: 125360841}
   m_Father: {fileID: 1638441870}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1398132465
 BoxCollider:
@@ -41330,9 +41331,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1421299964}
   - component: {fileID: 1421299966}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Corridor_2
-  m_TagString: Untagged
+  m_TagString: NoSignal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41351,7 +41352,7 @@ Transform:
   m_Children:
   - {fileID: 462063284}
   m_Father: {fileID: 1638441870}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1421299966
 BoxCollider:
@@ -41407,7 +41408,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1425371548}
   - component: {fileID: 1425371549}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Location
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41635,9 +41636,49 @@ PrefabInstance:
       propertyPath: audioBehindPosition
       value: 
       objectReference: {fileID: 616618640}
+    - target: {fileID: 1736591108206439957, guid: 171ada5a24e9e6a47bf58753649d49a2, type: 3}
+      propertyPath: obstacleTags.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736591108206439957, guid: 171ada5a24e9e6a47bf58753649d49a2, type: 3}
+      propertyPath: obstacleTags.Array.data[0]
+      value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736591108206439957, guid: 171ada5a24e9e6a47bf58753649d49a2, type: 3}
+      propertyPath: obstacleTags.Array.data[1]
+      value: Furniture
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736591108206439957, guid: 171ada5a24e9e6a47bf58753649d49a2, type: 3}
+      propertyPath: obstacleTags.Array.data[2]
+      value: LockedDoor
+      objectReference: {fileID: 0}
     - target: {fileID: 1844150198282790395, guid: 171ada5a24e9e6a47bf58753649d49a2, type: 3}
       propertyPath: m_Name
       value: AudioSourcePosition
+      objectReference: {fileID: 0}
+    - target: {fileID: 5774368647889398949, guid: 171ada5a24e9e6a47bf58753649d49a2, type: 3}
+      propertyPath: NestedEvent.Path
+      value: event:/VO_NestedEvent
+      objectReference: {fileID: 0}
+    - target: {fileID: 5774368647889398949, guid: 171ada5a24e9e6a47bf58753649d49a2, type: 3}
+      propertyPath: generatorManager
+      value: 
+      objectReference: {fileID: 111396820}
+    - target: {fileID: 5774368647889398949, guid: 171ada5a24e9e6a47bf58753649d49a2, type: 3}
+      propertyPath: NestedEvent.Guid.Data1
+      value: 1618281243
+      objectReference: {fileID: 0}
+    - target: {fileID: 5774368647889398949, guid: 171ada5a24e9e6a47bf58753649d49a2, type: 3}
+      propertyPath: NestedEvent.Guid.Data2
+      value: 1247318190
+      objectReference: {fileID: 0}
+    - target: {fileID: 5774368647889398949, guid: 171ada5a24e9e6a47bf58753649d49a2, type: 3}
+      propertyPath: NestedEvent.Guid.Data3
+      value: -611222099
+      objectReference: {fileID: 0}
+    - target: {fileID: 5774368647889398949, guid: 171ada5a24e9e6a47bf58753649d49a2, type: 3}
+      propertyPath: NestedEvent.Guid.Data4
+      value: -807112313
       objectReference: {fileID: 0}
     - target: {fileID: 7828172348966540220, guid: 171ada5a24e9e6a47bf58753649d49a2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -41785,9 +41826,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1435318901}
   - component: {fileID: 1435318903}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TV Room ShortCorridor
-  m_TagString: Untagged
+  m_TagString: NoSignal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41806,7 +41847,7 @@ Transform:
   m_Children:
   - {fileID: 1031474342}
   m_Father: {fileID: 1638441870}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!65 &1435318903
 BoxCollider:
@@ -43565,7 +43606,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8715230443046452050, guid: d83b6aa1ab818174a8ffe96f8521b37c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 31.903196
+      value: 25.32
       objectReference: {fileID: 0}
     - target: {fileID: 8715230443046452050, guid: d83b6aa1ab818174a8ffe96f8521b37c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -43601,7 +43642,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8715230443046452062, guid: d83b6aa1ab818174a8ffe96f8521b37c, type: 3}
       propertyPath: generatorNumber
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8715230443046452063, guid: d83b6aa1ab818174a8ffe96f8521b37c, type: 3}
       propertyPath: m_Size.x
@@ -44079,7 +44120,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1525002641}
   - component: {fileID: 1525002642}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Location
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46029,7 +46070,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1592029044}
   - component: {fileID: 1592029045}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Location
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47555,7 +47596,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1638441870}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Sound Zones
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47575,6 +47616,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2005636863}
+  - {fileID: 605081823}
   - {fileID: 1273580398}
   - {fileID: 1852474391}
   - {fileID: 1906134916}
@@ -47585,7 +47627,6 @@ Transform:
   - {fileID: 1988360406}
   - {fileID: 1082188834}
   - {fileID: 1398132463}
-  - {fileID: 605081823}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -52161,7 +52202,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8715230443046452062, guid: d83b6aa1ab818174a8ffe96f8521b37c, type: 3}
       propertyPath: generatorNumber
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8715230443046452063, guid: d83b6aa1ab818174a8ffe96f8521b37c, type: 3}
       propertyPath: m_Size.x
@@ -53492,9 +53533,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1852474391}
   - component: {fileID: 1852474393}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TV room LongCorridor
-  m_TagString: Untagged
+  m_TagString: LongCorridor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53513,7 +53554,7 @@ Transform:
   m_Children:
   - {fileID: 85326936}
   m_Father: {fileID: 1638441870}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!65 &1852474393
 BoxCollider:
@@ -54990,9 +55031,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1906134916}
   - component: {fileID: 1906134918}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: TV Room middle
-  m_TagString: Untagged
+  m_TagString: NoSignal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -55011,7 +55052,7 @@ Transform:
   m_Children:
   - {fileID: 1921759912}
   m_Father: {fileID: 1638441870}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!65 &1906134918
 BoxCollider:
@@ -55463,7 +55504,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1921759912}
   - component: {fileID: 1921759913}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Location
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56986,9 +57027,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1988360406}
   - component: {fileID: 1988360408}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Garage
-  m_TagString: Untagged
+  m_TagString: NoSignal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -57007,7 +57048,7 @@ Transform:
   m_Children:
   - {fileID: 516999686}
   m_Father: {fileID: 1638441870}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1988360408
 BoxCollider:
@@ -57414,9 +57455,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2005636863}
   - component: {fileID: 2005636865}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bathroom
-  m_TagString: Untagged
+  m_TagString: Bathroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -61244,7 +61285,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8715230443046452062, guid: d83b6aa1ab818174a8ffe96f8521b37c, type: 3}
       propertyPath: generatorNumber
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8715230443046452063, guid: d83b6aa1ab818174a8ffe96f8521b37c, type: 3}
       propertyPath: m_Size.x

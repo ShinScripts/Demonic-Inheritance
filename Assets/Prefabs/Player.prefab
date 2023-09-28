@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 1736591108206439957}
   - component: {fileID: 1736591108206439961}
   - component: {fileID: 1240699072861892969}
+  - component: {fileID: 5774368647889398949}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -241,6 +242,9 @@ MonoBehaviour:
   rotation_speed: 90
   rotation_smoothness: 5
   movementSpeed: 3.3
+  audioFrontPosition: {fileID: 0}
+  audioBehindPosition: {fileID: 0}
+  obstacleTags: []
   playerAudioManager: {fileID: 0}
 --- !u!54 &1736591108206439961
 Rigidbody:
@@ -303,6 +307,20 @@ MonoBehaviour:
   minDistanceThreshold: 0
   maxDistanceThreshold: 0
   distanceParameter: 0
+--- !u!114 &5774368647889398949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736591108206439955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9369901f80691f046b73b4effb8829e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerMovement: {fileID: 1736591108206439957}
+  generatorManager: {fileID: 0}
 --- !u!1 &4127993121949838038
 GameObject:
   m_ObjectHideFlags: 0

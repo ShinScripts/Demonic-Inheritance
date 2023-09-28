@@ -29,13 +29,15 @@ public class FirstPersonOcclusion : MonoBehaviour
     private float lineCastHitCount = 0f;
     private Color colour;
 
+    private string obstruction;
+
 
     private void Start()
     {
         audioDes = RuntimeManager.GetEventDescription(selectAudio);
         audioDes.getMinMaxDistance(out minDistance, out maxDistance);
         listener = FindObjectOfType<StudioListener>();
-
+        obstruction = string.Empty;
 
         //Debug.Log(maxDistance);
     }
@@ -49,7 +51,11 @@ public class FirstPersonOcclusion : MonoBehaviour
             listenerDistance = Vector3.Distance(transform.position, listener.transform.position);
 
             if (!audioIsVirtual && pb == PLAYBACK_STATE.PLAYING && listenerDistance <= maxDistance)
+            {
+                obstruction = ObjectsBetweenCount(CalculateObjectsBetween(transform.position, listener.transform.position));
+                //Debug.Log("Objects between " + gameObject.name + " and listener: " + objectsBetweenCount);
                 OccludeBetween(transform.position, listener.transform.position);
+            }
 
             lineCastHitCount = 0f;
         }
@@ -93,7 +99,7 @@ public class FirstPersonOcclusion : MonoBehaviour
             colour = Color.green;
         }
 
-        SetParameter();
+        SetParameters();
     }
 
     private Vector3 CalculatePoint(Vector3 a, Vector3 b, float m, bool posOrNeg)
@@ -129,11 +135,12 @@ public class FirstPersonOcclusion : MonoBehaviour
         else
             Debug.DrawLine(Start, End, colour);
 
-       // Debug.Log(gameObject.name + ": " + lineCastHitCount);
+        // Debug.Log(gameObject.name + ": " + lineCastHitCount);
     }
 
-    private void SetParameter()
+    private void SetParameters()
     {
+        audio.setParameterByNameWithLabel("Obstruction", obstruction);
         audio.setParameterByName("Occlusion", lineCastHitCount / 11);
     }
 
@@ -152,4 +159,38 @@ public class FirstPersonOcclusion : MonoBehaviour
             audio.release();
         }
     }
+
+    private int CalculateObjectsBetween(Vector3 start, Vector3 end)
+    {
+        int objectsBetweenCount = 0;
+        RaycastHit[] hits = Physics.RaycastAll(start, (end - start).normalized, Vector3.Distance(start, end), occlusionLayer);
+
+        foreach (RaycastHit hit in hits)
+        {
+            if (hit.collider)
+            {
+                objectsBetweenCount++;
+            }
+        }
+
+        return objectsBetweenCount;
+    }
+
+    private string ObjectsBetweenCount(int obstructions)
+    {
+        if (obstructions == 0)
+        {
+            return "NoObstruction";
+        }
+
+        else if (obstructions >= 1 && obstructions <= 3 && lineCastHitCount >= 10)
+        {
+            return "Obstruction_" + obstructions.ToString() + "_Wall";
+
+        }
+
+        else return "Obstruction_3_Wall";
+                    
+    }
+
 }

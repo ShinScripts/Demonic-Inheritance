@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Linus.unity
     guid: 52da8da385588a4469f6549d32874988
+  - enabled: 1
+    path: Assets/Scenes/SceneWithWalls.unity
+    guid: 78f4551d8a0bafc45864ade404da03e7
   m_configObjects: {}
