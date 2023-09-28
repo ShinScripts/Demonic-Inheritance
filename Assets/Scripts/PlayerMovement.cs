@@ -32,10 +32,10 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private PlayerAudioManager playerAudioManager;
 
-    public bool IsBusy { get => (isMoving || isRotating);}
-    public Transform AudioFrontPosition { get => audioFrontPosition;}
-    public Transform AudioBehindPosition { get => audioBehindPosition;}
-    public string CurrentSoundZoneName { get => currentSoundZoneName;}
+    public bool IsBusy { get => (isMoving || isRotating); }
+    public Transform AudioFrontPosition { get => audioFrontPosition; }
+    public Transform AudioBehindPosition { get => audioBehindPosition; }
+    public string CurrentSoundZoneName { get => currentSoundZoneName; }
 
     private string currentObstacle;
 
@@ -47,17 +47,48 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    private bool ClearToMove(bool forward = true)
+    private bool ClearToMove(string direction)
     {
         RaycastHit hit;
 
-        if (Physics.Raycast(transform.position, forward ? transform.forward : transform.forward * -1, out hit, increment))
+        switch (direction)
         {
+            case "forward":
+                if (Physics.Raycast(transform.position, transform.forward, out hit, increment))
+                {
+                    currentObstacle = hit.collider.tag;
 
-            currentObstacle = hit.collider.tag;
+                    //Debug.Log(currentObstacle);
+                    return !IsObstacleTag(currentObstacle);
+                }
+                break;
+            case "backward":
+                if (Physics.Raycast(transform.position, transform.forward * -1f, out hit, increment))
+                {
+                    currentObstacle = hit.collider.tag;
 
-            //Debug.Log(currentObstacle);
-            return !IsObstacleTag(currentObstacle);
+                    //Debug.Log(currentObstacle);
+                    return !IsObstacleTag(currentObstacle);
+                }
+                break;
+            case "left":
+                if (Physics.Raycast(transform.position, transform.right * -1f, out hit, increment))
+                {
+                    currentObstacle = hit.collider.tag;
+
+                    //Debug.Log(currentObstacle);
+                    return !IsObstacleTag(currentObstacle);
+                }
+                break;
+            case "right":
+                if (Physics.Raycast(transform.position, transform.right, out hit, increment))
+                {
+                    currentObstacle = hit.collider.tag;
+
+                    //Debug.Log(currentObstacle);
+                    return !IsObstacleTag(currentObstacle);
+                }
+                break;
         }
 
         currentObstacle = string.Empty;
@@ -113,7 +144,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.W) && !isMoving)
         {
-            if (ClearToMove())
+            if (ClearToMove("forward"))
             {
                 StartCoroutine(PlayFootsteps());
                 StartMovement(transform.forward);
@@ -122,12 +153,11 @@ public class PlayerMovement : MonoBehaviour
             {
                 print("obstacle in front");
                 playerAudioManager.PlayWallHitSoundFront(currentObstacle);
-
             }
         }
         else if (Input.GetKeyDown(KeyCode.S) && !isMoving)
         {
-            if (ClearToMove(false))
+            if (ClearToMove("backward"))
             {
                 StartCoroutine(PlayFootsteps());
                 StartMovement(-transform.forward);
@@ -138,12 +168,38 @@ public class PlayerMovement : MonoBehaviour
                 playerAudioManager.PlayWallHitSoundBack(currentObstacle);
             }
         }
+        else if (Input.GetKeyDown(KeyCode.A) && !isMoving)
+        {
+            if (ClearToMove("left"))
+            {
+                StartCoroutine(PlayFootsteps());
+                StartMovement(-transform.right);
+            }
+            else
+            {
+                print("obstacle to the left");
+                playerAudioManager.PlayWallHitSoundBack(currentObstacle);
+            }
+        }
+        else if (Input.GetKeyDown(KeyCode.D) && !isMoving)
+        {
+            if (ClearToMove("right"))
+            {
+                StartCoroutine(PlayFootsteps());
+                StartMovement(transform.right);
+            }
+            else
+            {
+                print("obstacle to the right");
+                playerAudioManager.PlayWallHitSoundBack(currentObstacle);
+            }
+        }
 
-        if (Input.GetKeyDown(KeyCode.A) && !isRotating)
+        if (Input.GetKeyDown(KeyCode.LeftArrow) && !isRotating)
         {
             StartRotation(-90f);
         }
-        else if (Input.GetKeyDown(KeyCode.D) && !isRotating)
+        else if (Input.GetKeyDown(KeyCode.RightArrow) && !isRotating)
         {
             StartRotation(90f);
         }
@@ -167,14 +223,14 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-   /* public void RandomizeFootstep()
-    {
-        int clip = Random.Range(0, footsteps.Length);
-        sourceCenter.pitch = Random.Range(0.8f, 1.1f);
-        sourceCenter.clip = footsteps[clip];
+    /* public void RandomizeFootstep()
+     {
+         int clip = Random.Range(0, footsteps.Length);
+         sourceCenter.pitch = Random.Range(0.8f, 1.1f);
+         sourceCenter.clip = footsteps[clip];
 
-    }
-   */
+     }
+    */
 
     IEnumerator PlayFootsteps()
     {
@@ -199,7 +255,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool IsObstacleTag(string tag)
     {
-        for(int i = 0; i < obstacleTags.Length; i++)
+        for (int i = 0; i < obstacleTags.Length; i++)
         {
             if (obstacleTags[i].Equals(tag))
                 return true;
@@ -209,7 +265,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.layer == LayerMask.NameToLayer("SoundZones"))
+        if (other.gameObject.layer == LayerMask.NameToLayer("SoundZones"))
         {
             currentSoundZoneName = other.tag;
         }
