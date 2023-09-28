@@ -1,5 +1,6 @@
 using FMOD.Studio;
 using FMODUnity;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,7 +15,7 @@ public class AI_Companion : MonoBehaviour
 
     int totalGenerators;
 
-    public EventInstance Ai_assitance { get => ai_assitance;}
+    public EventInstance Ai_assitance { get => ai_assitance; set => ai_assitance = value; }
 
     // Start is called before the first frame update
     void Start()
@@ -32,9 +33,18 @@ public class AI_Companion : MonoBehaviour
                 ai_assitance.setParameterByNameWithLabel("RoomZone", playerMovement.CurrentSoundZoneName);
                 ai_assitance.start();
                 totalGenerators = generatorManager.GeneratorsLeft();
-                Debug.Log("Asking for help" + " generators left: " + totalGenerators);
+                //Debug.Log("Asking for help" + " generators left: " + totalGenerators);
             }
         }
 
+        float voiceActing;
+        float outValue;
+        FMODUnity.RuntimeManager.StudioSystem.getParameterByName("VoiceActingOngoing", out outValue, out voiceActing); ;
+        Debug.Log("voice acting is: " + voiceActing);
+    }
+
+    public void SetGeneratorIndex(int index)
+    {
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("PiecesCollected", index);
     }
 }

@@ -62,7 +62,7 @@
 			<destination>{7e011c15-6ba6-4b4e-8cc4-f016bc59e60c}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{af092b75-20ef-4b8d-a9a6-51fc4da90aba}</destination>
+			<destination>{8ac638dd-d7f3-4d34-a60e-140fa5a843d6}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{ac69a522-3dcc-4034-bed0-b287e7e6a2d2}">
@@ -273,7 +273,7 @@
 			<value>3</value>
 		</property>
 		<property name="value">
-			<value>-24</value>
+			<value>-80</value>
 		</property>
 	</object>
 	<object class="Automator" id="{fcad7ddf-9d72-41f8-8129-1281deba49e9}">

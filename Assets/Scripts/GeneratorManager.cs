@@ -2,6 +2,7 @@ using FMOD.Studio;
 using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.Antlr3.Runtime.Tree;
 using UnityEngine;
 
 public class GeneratorManager : MonoBehaviour
@@ -11,6 +12,8 @@ public class GeneratorManager : MonoBehaviour
     GameObject[] generators;
     GameObject current_generator;
     int index = 0;
+
+    int piecesCollected = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -38,7 +41,8 @@ public class GeneratorManager : MonoBehaviour
         {
             current_generator.SetActive(false);
             index++;
-            ai_companion.Ai_assitance.setParameterByName("PiecesCollected", index);
+            piecesCollected++;
+            ai_companion.SetGeneratorIndex(piecesCollected);
 
             if (index >= generators.Length)
                 return;

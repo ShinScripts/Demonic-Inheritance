@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{392fc17f-816e-4c12-a62c-bd4450da334a}">
+		<property name="name">
+			<value>VoiceActingActive</value>
+		</property>
+		<relationship name="folder">
+			<destination>{ac082d7b-88d9-43cd-865b-26e36b29ce5c}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{97a7f71d-9865-4525-b715-163ecb1d4c8a}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{97a7f71d-9865-4525-b715-163ecb1d4c8a}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>True</value>
+			<value>False</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
