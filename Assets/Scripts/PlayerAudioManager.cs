@@ -35,9 +35,6 @@ public class PlayerAudioManager : MonoBehaviour
 
     private bool shouldPlay = true;
 
-    private Transform audioSourceFrontPosition;
-    private Transform audioSourceBackPosition;
-
     private int furnitureCounter = 0;
 
 
@@ -50,9 +47,6 @@ public class PlayerAudioManager : MonoBehaviour
 
         breathingAudio.start();
         heartbeatAudio.start();
-
-        audioSourceBackPosition = playerMovement.AudioFrontPosition;
-        audioSourceFrontPosition = playerMovement.AudioBehindPosition;
 
         wallhitAudio.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(playerMovement.transform.position));
 
@@ -88,7 +82,7 @@ public class PlayerAudioManager : MonoBehaviour
 
     private void PlayFootstep() //Footsteps event in FMOD
     {
-        RuntimeManager.PlayOneShot(FootStepsEvent, transform.position);                                                                                    // We also set our event instance to release straight after we tell it to play, so that the instance is released once the event had finished playing.
+        RuntimeManager.PlayOneShot(FootStepsEvent, transform.position);                             // We also set our event instance to release straight after we tell it to play, so that the instance is released once the event had finished playing.
     }
 
     private void ParseDistance()
@@ -102,11 +96,11 @@ public class PlayerAudioManager : MonoBehaviour
         distanceParameter = 1 - Mathf.InverseLerp(minDistanceThreshold, maxDistanceThreshold, clampedDistance);
     }
 
-    public void PlayWallHitSoundFront(string obstacle)
+    public void PlayWallHitSound(string obstacle, Transform transform, string side)
     {
-        wallhitAudio.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(audioSourceFrontPosition.position));
+        wallhitAudio.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform.position));
 
-        wallhitAudio.setParameterByNameWithLabel("Panner", "Front");
+        wallhitAudio.setParameterByNameWithLabel("Panner", side);
 
         if (obstacle.Equals("Furniture") && furnitureCounter <= 0)
         {
@@ -120,30 +114,6 @@ public class PlayerAudioManager : MonoBehaviour
         }
 
         wallhitAudio.start();
-        //wallhitAudio.release();
-
-    }
-
-    public void PlayWallHitSoundBack(string obstacle)
-    {
-
-        wallhitAudio.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(audioSourceFrontPosition.position));
-
-        wallhitAudio.setParameterByNameWithLabel("Panner", "Back");
-
-        if (obstacle.Equals("Furniture") && furnitureCounter <= 0)
-        {
-            wallhitAudio.setParameterByNameWithLabel("Obstacle", "Furniture_First");
-            furnitureCounter++;
-        }
-
-        else
-        {
-            wallhitAudio.setParameterByNameWithLabel("Obstacle", obstacle);
-        }
-
-        wallhitAudio.start();
-
         //wallhitAudio.release();
 
     }

@@ -42115,9 +42115,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 1736591108206439957, guid: 171ada5a24e9e6a47bf58753649d49a2, type: 3}
+      propertyPath: audioLeftPosition
+      value: 
+      objectReference: {fileID: 2101493715}
+    - target: {fileID: 1736591108206439957, guid: 171ada5a24e9e6a47bf58753649d49a2, type: 3}
       propertyPath: audioFrontPosition
       value: 
       objectReference: {fileID: 1010474750}
+    - target: {fileID: 1736591108206439957, guid: 171ada5a24e9e6a47bf58753649d49a2, type: 3}
+      propertyPath: audioRightPosition
+      value: 
+      objectReference: {fileID: 1597262345}
     - target: {fileID: 1736591108206439957, guid: 171ada5a24e9e6a47bf58753649d49a2, type: 3}
       propertyPath: playerAudioManager
       value: 
@@ -44133,6 +44141,22 @@ PrefabInstance:
     - target: {fileID: 8715230443046452062, guid: d83b6aa1ab818174a8ffe96f8521b37c, type: 3}
       propertyPath: generatorNumber
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715230443046452062, guid: d83b6aa1ab818174a8ffe96f8521b37c, type: 3}
+      propertyPath: GeneratorCollectedEvent.Guid.Data1
+      value: 23749390
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715230443046452062, guid: d83b6aa1ab818174a8ffe96f8521b37c, type: 3}
+      propertyPath: GeneratorCollectedEvent.Guid.Data2
+      value: 1146307791
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715230443046452062, guid: d83b6aa1ab818174a8ffe96f8521b37c, type: 3}
+      propertyPath: GeneratorCollectedEvent.Guid.Data3
+      value: -1535432023
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715230443046452062, guid: d83b6aa1ab818174a8ffe96f8521b37c, type: 3}
+      propertyPath: GeneratorCollectedEvent.Guid.Data4
+      value: -1586253075
       objectReference: {fileID: 0}
     - target: {fileID: 8715230443046452063, guid: d83b6aa1ab818174a8ffe96f8521b37c, type: 3}
       propertyPath: m_Size.x
@@ -46606,6 +46630,11 @@ MonoBehaviour:
   occlusionLayer:
     serializedVersion: 2
     m_Bits: 64
+--- !u!4 &1597262345 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4187191842826247541, guid: 171ada5a24e9e6a47bf58753649d49a2, type: 3}
+  m_PrefabInstance: {fileID: 1427443385}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1598888878
 GameObject:
   m_ObjectHideFlags: 0
@@ -52693,6 +52722,22 @@ PrefabInstance:
     - target: {fileID: 8715230443046452062, guid: d83b6aa1ab818174a8ffe96f8521b37c, type: 3}
       propertyPath: generatorNumber
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715230443046452062, guid: d83b6aa1ab818174a8ffe96f8521b37c, type: 3}
+      propertyPath: GeneratorCollectedEvent.Guid.Data1
+      value: 23749390
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715230443046452062, guid: d83b6aa1ab818174a8ffe96f8521b37c, type: 3}
+      propertyPath: GeneratorCollectedEvent.Guid.Data2
+      value: 1146307791
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715230443046452062, guid: d83b6aa1ab818174a8ffe96f8521b37c, type: 3}
+      propertyPath: GeneratorCollectedEvent.Guid.Data3
+      value: -1535432023
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715230443046452062, guid: d83b6aa1ab818174a8ffe96f8521b37c, type: 3}
+      propertyPath: GeneratorCollectedEvent.Guid.Data4
+      value: -1586253075
       objectReference: {fileID: 0}
     - target: {fileID: 8715230443046452063, guid: d83b6aa1ab818174a8ffe96f8521b37c, type: 3}
       propertyPath: m_Size.x
@@ -60364,6 +60409,11 @@ Transform:
   m_Father: {fileID: 1571904437}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &2101493715 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6495156922622153797, guid: 171ada5a24e9e6a47bf58753649d49a2, type: 3}
+  m_PrefabInstance: {fileID: 1427443385}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2107758746
 GameObject:
   m_ObjectHideFlags: 0
@@ -61787,6 +61837,22 @@ PrefabInstance:
     - target: {fileID: 8715230443046452062, guid: d83b6aa1ab818174a8ffe96f8521b37c, type: 3}
       propertyPath: generatorNumber
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715230443046452062, guid: d83b6aa1ab818174a8ffe96f8521b37c, type: 3}
+      propertyPath: GeneratorCollectedEvent.Guid.Data1
+      value: 23749390
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715230443046452062, guid: d83b6aa1ab818174a8ffe96f8521b37c, type: 3}
+      propertyPath: GeneratorCollectedEvent.Guid.Data2
+      value: 1146307791
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715230443046452062, guid: d83b6aa1ab818174a8ffe96f8521b37c, type: 3}
+      propertyPath: GeneratorCollectedEvent.Guid.Data3
+      value: -1535432023
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715230443046452062, guid: d83b6aa1ab818174a8ffe96f8521b37c, type: 3}
+      propertyPath: GeneratorCollectedEvent.Guid.Data4
+      value: -1586253075
       objectReference: {fileID: 0}
     - target: {fileID: 8715230443046452063, guid: d83b6aa1ab818174a8ffe96f8521b37c, type: 3}
       propertyPath: m_Size.x

@@ -16,6 +16,8 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private Transform audioFrontPosition;
     [SerializeField] private Transform audioBehindPosition;
+    [SerializeField] private Transform audioLeftPosition;
+    [SerializeField] private Transform audioRightPosition;
 
     private bool isMoving = false;
     private bool isRotating = false;
@@ -33,8 +35,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private PlayerAudioManager playerAudioManager;
 
     public bool IsBusy { get => (isMoving || isRotating); }
-    public Transform AudioFrontPosition { get => audioFrontPosition; }
-    public Transform AudioBehindPosition { get => audioBehindPosition; }
     public string CurrentSoundZoneName { get => currentSoundZoneName; }
 
     private string currentObstacle;
@@ -152,7 +152,7 @@ public class PlayerMovement : MonoBehaviour
             else
             {
                 print("obstacle in front");
-                playerAudioManager.PlayWallHitSoundFront(currentObstacle);
+                playerAudioManager.PlayWallHitSound(currentObstacle, audioFrontPosition, "Front");
             }
         }
         else if (Input.GetKeyDown(KeyCode.S) && !isMoving)
@@ -165,7 +165,7 @@ public class PlayerMovement : MonoBehaviour
             else
             {
                 print("obstacle behind");
-                playerAudioManager.PlayWallHitSoundBack(currentObstacle);
+                playerAudioManager.PlayWallHitSound(currentObstacle, audioBehindPosition, "Back");
             }
         }
         else if (Input.GetKeyDown(KeyCode.A) && !isMoving)
@@ -178,7 +178,7 @@ public class PlayerMovement : MonoBehaviour
             else
             {
                 print("obstacle to the left");
-                playerAudioManager.PlayWallHitSoundBack(currentObstacle);
+                playerAudioManager.PlayWallHitSound(currentObstacle, audioLeftPosition, "Left");
             }
         }
         else if (Input.GetKeyDown(KeyCode.D) && !isMoving)
@@ -191,7 +191,7 @@ public class PlayerMovement : MonoBehaviour
             else
             {
                 print("obstacle to the right");
-                playerAudioManager.PlayWallHitSoundBack(currentObstacle);
+                playerAudioManager.PlayWallHitSound(currentObstacle, audioRightPosition, "Right");
             }
         }
 
