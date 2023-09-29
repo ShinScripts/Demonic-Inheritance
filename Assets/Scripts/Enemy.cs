@@ -14,6 +14,8 @@ public class Enemy : MonoBehaviour
 
     private NavMeshAgent agent;
 
+    bool follow_player = false;
+
 
     void Start()
     {
@@ -26,11 +28,16 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
+        if (player.GetComponent<PlayerMovement>().isMoving && !follow_player)
+        {
+            StartCoroutine(StartFollowing(2));
+        }
+
         transform.LookAt(player.transform);
 
         bool has_hit = Physics.Raycast(transform.position + transform.forward, transform.forward, out RaycastHit hit, 200f);
 
-        if (has_hit && hit.transform.CompareTag("Player"))
+        if (has_hit && hit.transform.CompareTag("Player") && follow_player)
         {
             agent.SetDestination(player.transform.position);
             return;
@@ -49,5 +56,16 @@ public class Enemy : MonoBehaviour
     void ChangeTargets()
     {
         target = (target == start) ? end : start;
+    }
+
+    private IEnumerator StartFollowing(float duration)
+    {
+        follow_player = true;
+
+        yield return new WaitForSeconds(duration);
+
+        follow_player = false;
+
+        yield return null;
     }
 }

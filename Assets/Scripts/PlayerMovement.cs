@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float movementSpeed = 3.3f;
     private float movementTime;
 
-    private bool isMoving = false;
+    public bool isMoving = false;
     private bool isRotating = false;
 
     private float movementStartTime;
@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private PlayerAudioManager playerAudioManager;
 
-    public bool IsBusy { get => (isMoving || isRotating);}
+    public bool IsBusy { get => (isMoving || isRotating); }
 
     private void Start()
     {
@@ -138,14 +138,14 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-   /* public void RandomizeFootstep()
-    {
-        int clip = Random.Range(0, footsteps.Length);
-        sourceCenter.pitch = Random.Range(0.8f, 1.1f);
-        sourceCenter.clip = footsteps[clip];
+    /* public void RandomizeFootstep()
+     {
+         int clip = Random.Range(0, footsteps.Length);
+         sourceCenter.pitch = Random.Range(0.8f, 1.1f);
+         sourceCenter.clip = footsteps[clip];
 
-    }
-   */
+     }
+    */
 
     IEnumerator PlayFootsteps()
     {
