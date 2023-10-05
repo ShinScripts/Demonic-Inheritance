@@ -4,6 +4,12 @@
 		<property name="name">
 			<value>PlayerFoley</value>
 		</property>
+		<relationship name="automators">
+			<destination>{08179b72-f4ef-48d4-8d51-aa97d09b107a}</destination>
+		</relationship>
+		<relationship name="masters">
+			<destination>{e13c366f-169b-4042-a968-4693214266bf}</destination>
+		</relationship>
 		<relationship name="effectChain">
 			<destination>{a8721402-9ee2-47ac-aec6-a42747536149}</destination>
 		</relationship>
@@ -14,11 +20,44 @@
 			<destination>{af092b75-20ef-4b8d-a9a6-51fc4da90aba}</destination>
 		</relationship>
 	</object>
+	<object class="Automator" id="{08179b72-f4ef-48d4-8d51-aa97d09b107a}">
+		<property name="nameOfPropertyBeingAutomated">
+			<value>volume</value>
+		</property>
+		<relationship name="automationCurves">
+			<destination>{fa368a05-33b2-4e1f-8f08-a4a605808fb6}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusEffectChain" id="{a8721402-9ee2-47ac-aec6-a42747536149}">
 		<relationship name="effects">
 			<destination>{81e1015a-14db-49e4-9a01-82585d277e78}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{d5eea2cb-ed5e-47ee-b62b-d6717a860b74}" />
+	<object class="AutomationCurve" id="{fa368a05-33b2-4e1f-8f08-a4a605808fb6}">
+		<relationship name="parameter">
+			<destination>{15d356e4-174d-4bb6-a342-63be9f540f14}</destination>
+		</relationship>
+		<relationship name="automationPoints">
+			<destination>{ec28e69f-3803-4fb8-88fa-4529953304de}</destination>
+			<destination>{9999a6f1-a4e6-42ea-aff7-aa8827a926c4}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusFader" id="{81e1015a-14db-49e4-9a01-82585d277e78}" />
+	<object class="AutomationPoint" id="{ec28e69f-3803-4fb8-88fa-4529953304de}">
+		<property name="position">
+			<value>0</value>
+		</property>
+		<property name="value">
+			<value>3.81469727e-06</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{9999a6f1-a4e6-42ea-aff7-aa8827a926c4}">
+		<property name="position">
+			<value>1</value>
+		</property>
+		<property name="value">
+			<value>-5</value>
+		</property>
+	</object>
 </objects>
