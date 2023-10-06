@@ -52671,6 +52671,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1886178191}
     m_Modifications:
+    - target: {fileID: 8715230443046452044, guid: d83b6aa1ab818174a8ffe96f8521b37c, type: 3}
+      propertyPath: soundOcclusionWidening
+      value: 2.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 8715230443046452044, guid: d83b6aa1ab818174a8ffe96f8521b37c, type: 3}
+      propertyPath: playerOcclusionWidening
+      value: 0.85
+      objectReference: {fileID: 0}
     - target: {fileID: 8715230443046452050, guid: d83b6aa1ab818174a8ffe96f8521b37c, type: 3}
       propertyPath: m_RootOrder
       value: 2
