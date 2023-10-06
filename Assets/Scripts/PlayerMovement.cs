@@ -146,7 +146,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (ClearToMove("forward"))
             {
-                StartCoroutine(PlayFootsteps());
+                StartCoroutine(FootstepsDelay());
                 StartMovement(transform.forward);
             }
             else
@@ -159,7 +159,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (ClearToMove("backward"))
             {
-                StartCoroutine(PlayFootsteps());
+                StartCoroutine(FootstepsDelay());
                 StartMovement(-transform.forward);
             }
             else
@@ -172,7 +172,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (ClearToMove("left"))
             {
-                StartCoroutine(PlayFootsteps());
+                StartCoroutine(FootstepsDelay());
                 StartMovement(-transform.right);
             }
             else
@@ -185,7 +185,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (ClearToMove("right"))
             {
-                StartCoroutine(PlayFootsteps());
+                StartCoroutine(FootstepsDelay());
                 StartMovement(transform.right);
             }
             else
@@ -232,10 +232,9 @@ public class PlayerMovement : MonoBehaviour
      }
     */
 
-    IEnumerator PlayFootsteps()
+    IEnumerator FootstepsDelay()
     {
         isMoving = true;
-        //playerAudioManager.PlayFootstep();
         yield return new WaitForSeconds(movementTime);
         isMoving = false;
     }

@@ -13,9 +13,9 @@ public class AI_Companion : MonoBehaviour
     [SerializeField] private EventReference NestedEvent;
     private EventInstance ai_assitance;
 
-    int totalGenerators;
+    //int totalGenerators;
 
-    public EventInstance Ai_assitance { get => ai_assitance; set => ai_assitance = value; }
+  //  public EventInstance Ai_assitance { get => ai_assitance;}
 
     // Start is called before the first frame update
     void Start()
@@ -32,19 +32,22 @@ public class AI_Companion : MonoBehaviour
             {
                 ai_assitance.setParameterByNameWithLabel("RoomZone", playerMovement.CurrentSoundZoneName);
                 ai_assitance.start();
+
+                /*
                 totalGenerators = generatorManager.GeneratorsLeft();
-                //Debug.Log("Asking for help" + " generators left: " + totalGenerators);
+                Debug.Log("Asking for help" + " generators left: " + totalGenerators);
+
+                */
             }
         }
 
+        /* 
         float voiceActing;
         float outValue;
         FMODUnity.RuntimeManager.StudioSystem.getParameterByName("VoiceActingOngoing", out outValue, out voiceActing); ;
         Debug.Log("voice acting is: " + voiceActing);
+        */
+
     }
 
-    public void SetGeneratorIndex(int index)
-    {
-        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("PiecesCollected", index);
-    }
 }

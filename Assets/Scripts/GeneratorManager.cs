@@ -7,13 +7,12 @@ using UnityEngine;
 
 public class GeneratorManager : MonoBehaviour
 {
-    [SerializeField] private AI_Companion ai_companion;
+   // [SerializeField] private AI_Companion ai_companion;
 
     GameObject[] generators;
     GameObject current_generator;
     int index = 0;
 
-    int piecesCollected = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -41,8 +40,7 @@ public class GeneratorManager : MonoBehaviour
         {
             current_generator.SetActive(false);
             index++;
-            piecesCollected++;
-            ai_companion.SetGeneratorIndex(piecesCollected);
+            FMODUnity.RuntimeManager.StudioSystem.setParameterByName("PiecesCollected", index);
 
             if (index >= generators.Length)
                 return;

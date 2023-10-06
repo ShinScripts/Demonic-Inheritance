@@ -1,35 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="ParameterPreset" id="{6bea63e6-86cb-440b-a9d1-838cc28994c0}">
+	<object class="ParameterPreset" id="{7c1deb0d-53d1-4096-8853-f46f295065c1}">
 		<property name="name">
-			<value>VoiceActingOngoing</value>
+			<value>FloorMaterial</value>
 		</property>
 		<relationship name="folder">
 			<destination>{ac082d7b-88d9-43cd-865b-26e36b29ce5c}</destination>
 		</relationship>
 		<relationship name="parameter">
-			<destination>{15d356e4-174d-4bb6-a342-63be9f540f14}</destination>
+			<destination>{363a447d-492d-4a75-94f1-d7ca7d717aa1}</destination>
 		</relationship>
 	</object>
-	<object class="GameParameter" id="{15d356e4-174d-4bb6-a342-63be9f540f14}">
+	<object class="GameParameter" id="{363a447d-492d-4a75-94f1-d7ca7d717aa1}">
 		<property name="parameterType">
 			<value>2</value>
 		</property>
 		<property name="maximum">
-			<value>2</value>
+			<value>3</value>
 		</property>
 		<property name="enumerationLabels">
-			<value>No</value>
-			<value>Yes</value>
-		</property>
-		<property name="isGlobal">
-			<value>true</value>
+			<value>Solid</value>
+			<value>Wood</value>
+			<value>FloorTile</value>
 		</property>
 		<property name="initialValue">
 			<value>0</value>
-		</property>
-		<property name="isExposedRecursively">
-			<value>false</value>
 		</property>
 	</object>
 </objects>

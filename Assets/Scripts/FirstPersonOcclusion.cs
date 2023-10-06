@@ -1,12 +1,12 @@
-using UnityEngine;
-using FMODUnity;
 using FMOD.Studio;
+using FMODUnity;
+using UnityEngine;
 
 public class FirstPersonOcclusion : MonoBehaviour
 {
     [Header("FMOD Event")]
     [SerializeField]
-    private EventReference selectAudio; // Use EventReference instead of string
+    private EventReference selectAudio;
     private new EventInstance audio;
     private EventDescription audioDes;
     private StudioListener listener;
@@ -19,27 +19,34 @@ public class FirstPersonOcclusion : MonoBehaviour
     [SerializeField]
     [Range(0f, 10f)]
     private float playerOcclusionWidening = 1f;
-    [SerializeField]
-    private LayerMask occlusionLayer;
+
+    private static LayerMask occlusionLayer; 
+    private static LayerMask obstructionLayer;
+
+    [SerializeField] private bool checkLayer = false;
 
     private bool audioIsVirtual;
     private float minDistance;
     private float maxDistance;
     private float listenerDistance;
-    private float lineCastHitCount = 0f;
+    private float lineCastOcclusionHitCount = 0f;
+    private float lineCastObstructionHitCount = 0f;
     private Color colour;
-
-    private string obstruction;
-
+    private int obstructionCount;
+    private string currentObstruction;
+    private string objectsBetweenCount;
 
     private void Start()
     {
         audioDes = RuntimeManager.GetEventDescription(selectAudio);
         audioDes.getMinMaxDistance(out minDistance, out maxDistance);
         listener = FindObjectOfType<StudioListener>();
-        obstruction = string.Empty;
+        currentObstruction = "hello world";
 
-        //Debug.Log(maxDistance);
+        occlusionLayer = LayerMask.GetMask(LayerMask.LayerToName(6));
+        obstructionLayer = LayerMask.GetMask(LayerMask.LayerToName(7));
+
+        //Debug.Log(occlusionLayer);
     }
 
     private void FixedUpdate()
@@ -52,12 +59,22 @@ public class FirstPersonOcclusion : MonoBehaviour
 
             if (!audioIsVirtual && pb == PLAYBACK_STATE.PLAYING && listenerDistance <= maxDistance)
             {
-                obstruction = ObjectsBetweenCount(CalculateObjectsBetween(transform.position, listener.transform.position));
-                //Debug.Log("Objects between " + gameObject.name + " and listener: " + objectsBetweenCount);
+               /* obstructionCount = CalculateObjectsBetween(transform.position, listener.transform.position);
+                currentObstruction = ObjectsBetweenCount(obstructionCount);
+                if (checkLayer)
+                {
+                   Debug.Log("Objects between " + gameObject.name + " and listener: " + obstructionCount);
+                }
+
+                */
+
                 OccludeBetween(transform.position, listener.transform.position);
+
+
             }
 
-            lineCastHitCount = 0f;
+            lineCastOcclusionHitCount = 0f;
+            lineCastObstructionHitCount = 0f;
         }
     }
 
@@ -128,20 +145,33 @@ public class FirstPersonOcclusion : MonoBehaviour
 
         if (hit.collider)
         {
-            lineCastHitCount++;
+            lineCastOcclusionHitCount++;
             Debug.DrawLine(Start, End, Color.red);
-
         }
+
         else
             Debug.DrawLine(Start, End, colour);
 
-        // Debug.Log(gameObject.name + ": " + lineCastHitCount);
+        Physics.Linecast(Start, End, out hit, obstructionLayer);
+
+        if (hit.collider)
+        {
+            lineCastObstructionHitCount++;
+            Debug.DrawLine(Start, End, Color.black);
+        }
+
     }
 
     private void SetParameters()
     {
-        audio.setParameterByNameWithLabel("Obstruction", obstruction);
-        audio.setParameterByName("Occlusion", lineCastHitCount / 11);
+
+        SetObstructionParamater();
+
+        if (checkLayer)
+        {
+            Debug.Log(currentObstruction);
+        }
+        audio.setParameterByName("Occlusion", lineCastOcclusionHitCount / 11);
     }
 
     private void OnEnable()
@@ -176,21 +206,37 @@ public class FirstPersonOcclusion : MonoBehaviour
         return objectsBetweenCount;
     }
 
-    private string ObjectsBetweenCount(int obstructions)
+    private string GetObstructionName()
     {
-        if (obstructions == 0)
+        if (lineCastObstructionHitCount <= 0)
         {
             return "NoObstruction";
         }
 
-        else if (obstructions >= 1 && obstructions <= 3 && lineCastHitCount >= 10)
+        else if (lineCastObstructionHitCount < 11)
         {
-            return "Obstruction_" + obstructions.ToString() + "_Wall";
-
+            return "Obstruction_1_Wall";
         }
 
-        else return "Obstruction_3_Wall";
+        else return "Full_Obstruction";
                     
     }
 
+
+    private void SetObstructionParamater()
+    {
+        string newObstruction = GetObstructionName();
+
+
+        if (currentObstruction.Equals(newObstruction))
+        {
+            return;
+        }
+
+        else
+        {
+            currentObstruction = newObstruction;
+            audio.setParameterByNameWithLabel("Obstruction", currentObstruction);
+        }
+    }
 }

@@ -16,13 +16,12 @@
 			<value>2</value>
 		</property>
 		<property name="maximum">
-			<value>4</value>
+			<value>3</value>
 		</property>
 		<property name="enumerationLabels">
 			<value>NoObstruction</value>
 			<value>Obstruction_1_Wall</value>
-			<value>Obstruction_2_Wall</value>
-			<value>Obstruction_3_Wall</value>
+			<value>Full_Obstruction</value>
 		</property>
 		<property name="initialValue">
 			<value>0</value>

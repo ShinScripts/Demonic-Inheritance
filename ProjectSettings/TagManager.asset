@@ -13,6 +13,7 @@ TagManager:
   - Hallway
   - DinningTable
   - NoSignal
+  - Door
   layers:
   - Default
   - TransparentFX
@@ -20,9 +21,9 @@ TagManager:
   - 
   - Water
   - UI
-  - Walls
+  - Walls_Occlusion
+  - Walls_Obstruction
   - SoundZones
-  - 
   - 
   - 
   - 
