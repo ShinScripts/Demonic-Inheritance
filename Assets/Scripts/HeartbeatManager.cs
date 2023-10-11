@@ -17,8 +17,6 @@ public class HeartbeatManager : MonoBehaviour
 
     [Header("Heartbeat")]
     [Header("INFO: When player is spotted the heartbeatdelay can go below the minHeartbeatdelay")]
-    [SerializeField] private float minHeartbeatDelay = 1.0f;
-    [SerializeField] private float maxHeartbeatDelay = 2.5f;
     [SerializeField] private float heartbeatDelay = 2.5f;
     public bool isPlayerSpotted;
 
