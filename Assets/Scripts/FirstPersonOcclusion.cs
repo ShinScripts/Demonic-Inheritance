@@ -23,7 +23,7 @@ public class FirstPersonOcclusion : MonoBehaviour
     private static LayerMask occlusionLayer; 
     private static LayerMask obstructionLayer;
 
-    [SerializeField] private bool checkLayer = false;
+    [SerializeField] private bool debugOcclusion = false;
 
     private bool audioIsVirtual;
     private float minDistance;
@@ -59,14 +59,14 @@ public class FirstPersonOcclusion : MonoBehaviour
 
             if (!audioIsVirtual && pb == PLAYBACK_STATE.PLAYING && listenerDistance <= maxDistance)
             {
-               /* obstructionCount = CalculateObjectsBetween(transform.position, listener.transform.position);
-                currentObstruction = ObjectsBetweenCount(obstructionCount);
-                if (checkLayer)
+                obstructionCount = CalculateObjectsBetween(transform.position, listener.transform.position);
+                //currentObstruction = ObjectsBetweenCount(obstructionCount);
+                if (debugOcclusion)
                 {
                    Debug.Log("Objects between " + gameObject.name + " and listener: " + obstructionCount);
                 }
 
-                */
+               
 
                 OccludeBetween(transform.position, listener.transform.position);
 
@@ -147,17 +147,21 @@ public class FirstPersonOcclusion : MonoBehaviour
         {
             lineCastOcclusionHitCount++;
             Debug.DrawLine(Start, End, Color.red);
+            return;
         }
-
-        else
-            Debug.DrawLine(Start, End, colour);
-
+        
         Physics.Linecast(Start, End, out hit, obstructionLayer);
 
         if (hit.collider)
         {
             lineCastObstructionHitCount++;
             Debug.DrawLine(Start, End, Color.black);
+            return;
+        }
+
+        if (!hit.collider)
+        {
+            Debug.DrawLine(Start, End, colour);
         }
 
     }
@@ -167,11 +171,13 @@ public class FirstPersonOcclusion : MonoBehaviour
 
         SetObstructionParamater();
 
-        if (checkLayer)
+        if (debugOcclusion)
         {
-            Debug.Log(currentObstruction);
+           // Debug.Log("Free lines: " + (11 - lineCastOcclusionHitCount - lineCastObstructionHitCount) +
+           //     " Occlusion lines: " + lineCastOcclusionHitCount + 
+           //     " Obstruction lines: " + lineCastObstructionHitCount);
         }
-        audio.setParameterByName("Occlusion", lineCastOcclusionHitCount / 11);
+        audio.setParameterByName("Occlusion", lineCastOcclusionHitCount / 11 + 2 * lineCastObstructionHitCount / 11);
     }
 
     private void OnEnable()
@@ -193,7 +199,7 @@ public class FirstPersonOcclusion : MonoBehaviour
     private int CalculateObjectsBetween(Vector3 start, Vector3 end)
     {
         int objectsBetweenCount = 0;
-        RaycastHit[] hits = Physics.RaycastAll(start, (end - start).normalized, Vector3.Distance(start, end), occlusionLayer);
+        RaycastHit[] hits = Physics.RaycastAll(start, (end - start).normalized, Vector3.Distance(start, end), obstructionLayer);
 
         foreach (RaycastHit hit in hits)
         {
@@ -208,18 +214,33 @@ public class FirstPersonOcclusion : MonoBehaviour
 
     private string GetObstructionName()
     {
-        if (lineCastObstructionHitCount <= 0)
+
+        /*  if (lineCastObstructionHitCount <= 0)
+          {
+              return "NoObstruction";
+          }
+
+          else if (lineCastObstructionHitCount < 11)
+          {
+              return "Obstruction_1_Wall";
+          }
+
+          else return "Full_Obstruction"; 
+
+      */
+
+        if (obstructionCount <= 0)
         {
             return "NoObstruction";
         }
 
-        else if (lineCastObstructionHitCount < 11)
+        else if (obstructionCount < 2)
         {
             return "Obstruction_1_Wall";
         }
 
         else return "Full_Obstruction";
-                    
+
     }
 
 

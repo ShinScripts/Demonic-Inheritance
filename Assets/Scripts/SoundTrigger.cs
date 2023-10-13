@@ -3,12 +3,11 @@ using FMOD.Studio;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor.Experimental.GraphView;
 
 public class SoundTrigger : MonoBehaviour
 {
     [SerializeField] private EventReference TriggerEvent;
-    [SerializeField] private bool isPersistent = false;
-
     private EventInstance soundTriggerIstance;
 
     void Start()
@@ -20,16 +19,16 @@ public class SoundTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            print("block reached");
-            soundTriggerIstance.start();         
+            soundTriggerIstance.start();            
         }
     }
 
     private void OnTriggerExit(Collider other) 
     {
-        if (other.CompareTag("Player") && !isPersistent)
+        if (other.CompareTag("Player"))
         {
             soundTriggerIstance.release();
         }
+
     }
 }

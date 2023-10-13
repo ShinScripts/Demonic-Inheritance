@@ -2404,7 +2404,7 @@ MonoBehaviour:
     Path: event:/SFX_TV_Long_Corridor
   soundOcclusionWidening: 1.3
   playerOcclusionWidening: 0.8
-  checkLayer: 0
+  debugOcclusion: 0
 --- !u!1 &95002406
 GameObject:
   m_ObjectHideFlags: 0
@@ -2436,6 +2436,130 @@ Transform:
   m_Father: {fileID: 80398221}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &95498990
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 95498991}
+  - component: {fileID: 95498995}
+  - component: {fileID: 95498994}
+  - component: {fileID: 95498993}
+  - component: {fileID: 95498992}
+  m_Layer: 6
+  m_Name: Door_SoundTrigger_6
+  m_TagString: Door
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &95498991
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 95498990}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -27.897, y: -2.46, z: 40.2}
+  m_LocalScale: {x: 0.56223, y: 4.5448, z: 15.611171}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2055954919}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &95498992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 95498990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd01832e5a4c84241883fbb9ae12cfcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OpenDoorDirectionalEvent:
+    Guid:
+      Data1: 1809153744
+      Data2: 1269557963
+      Data3: -767565168
+      Data4: -418869447
+    Path: event:/SFX_ST_OpenDoor_Directional
+  EnemyOpenDoorEvent:
+    Guid:
+      Data1: -11581101
+      Data2: 1091292627
+      Data3: -1283404397
+      Data4: -932031794
+    Path: event:/SFX_SoundTrigger_OpenDoor_Enemy
+--- !u!65 &95498993
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 95498990}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &95498994
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 95498990}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 5d620c1d4baffa2429cc7b3e216f1ea8, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &95498995
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 95498990}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &99605716
 GameObject:
   m_ObjectHideFlags: 0
@@ -3052,7 +3176,7 @@ MonoBehaviour:
     Path: event:/SFX_Bedroom_2
   soundOcclusionWidening: 1.3
   playerOcclusionWidening: 0.8
-  checkLayer: 0
+  debugOcclusion: 0
 --- !u!1 &126865656
 GameObject:
   m_ObjectHideFlags: 0
@@ -3311,6 +3435,130 @@ Transform:
   m_Father: {fileID: 786608803}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &133248541
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 133248542}
+  - component: {fileID: 133248546}
+  - component: {fileID: 133248545}
+  - component: {fileID: 133248544}
+  - component: {fileID: 133248547}
+  m_Layer: 6
+  m_Name: Door_SoundTrigger_2
+  m_TagString: Door
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &133248542
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 133248541}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -19.85, y: -2.46, z: 8.72}
+  m_LocalScale: {x: 0.56223, y: 4.5448, z: 14.714596}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2055954919}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &133248544
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 133248541}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &133248545
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 133248541}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 5d620c1d4baffa2429cc7b3e216f1ea8, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &133248546
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 133248541}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &133248547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 133248541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd01832e5a4c84241883fbb9ae12cfcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OpenDoorDirectionalEvent:
+    Guid:
+      Data1: 1809153744
+      Data2: 1269557963
+      Data3: -767565168
+      Data4: -418869447
+    Path: event:/SFX_ST_OpenDoor_Directional
+  EnemyOpenDoorEvent:
+    Guid:
+      Data1: -11581101
+      Data2: 1091292627
+      Data3: -1283404397
+      Data4: -932031794
+    Path: event:/SFX_SoundTrigger_OpenDoor_Enemy
 --- !u!1 &138907695
 GameObject:
   m_ObjectHideFlags: 0
@@ -8603,7 +8851,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 449643884}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -17.08, y: 0, z: 7.96}
+  m_LocalPosition: {x: 1.5, y: 0, z: 1.16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8855,7 +9103,7 @@ MonoBehaviour:
     Path: event:/SFX_Corridor_2
   soundOcclusionWidening: 1.3
   playerOcclusionWidening: 0.8
-  checkLayer: 0
+  debugOcclusion: 0
 --- !u!1 &464282183
 GameObject:
   m_ObjectHideFlags: 0
@@ -9833,7 +10081,7 @@ MonoBehaviour:
     Path: event:/SFX_Garage
   soundOcclusionWidening: 1.3
   playerOcclusionWidening: 0.8
-  checkLayer: 0
+  debugOcclusion: 0
 --- !u!1 &517882785
 GameObject:
   m_ObjectHideFlags: 0
@@ -11164,7 +11412,7 @@ MonoBehaviour:
     Path: event:/SFX_Bedroom_1
   soundOcclusionWidening: 1.3
   playerOcclusionWidening: 0.8
-  checkLayer: 0
+  debugOcclusion: 0
 --- !u!1 &637784400
 GameObject:
   m_ObjectHideFlags: 0
@@ -11326,6 +11574,130 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 641048874}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &646366062
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 646366063}
+  - component: {fileID: 646366067}
+  - component: {fileID: 646366066}
+  - component: {fileID: 646366065}
+  - component: {fileID: 646366064}
+  m_Layer: 6
+  m_Name: Door_SoundTrigger_5
+  m_TagString: Door
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &646366063
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 646366062}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.8, y: -2.46, z: 40.28}
+  m_LocalScale: {x: 0.56223, y: 4.5448, z: 15.638673}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2055954919}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &646366064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 646366062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd01832e5a4c84241883fbb9ae12cfcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OpenDoorDirectionalEvent:
+    Guid:
+      Data1: 1809153744
+      Data2: 1269557963
+      Data3: -767565168
+      Data4: -418869447
+    Path: event:/SFX_ST_OpenDoor_Directional
+  EnemyOpenDoorEvent:
+    Guid:
+      Data1: -11581101
+      Data2: 1091292627
+      Data3: -1283404397
+      Data4: -932031794
+    Path: event:/SFX_SoundTrigger_OpenDoor_Enemy
+--- !u!65 &646366065
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 646366062}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &646366066
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 646366062}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 5d620c1d4baffa2429cc7b3e216f1ea8, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &646366067
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 646366062}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &647994136
 GameObject:
   m_ObjectHideFlags: 0
@@ -14836,6 +15208,130 @@ Transform:
   m_Father: {fileID: 416756414}
   m_RootOrder: 67
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &903365552
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 903365553}
+  - component: {fileID: 903365557}
+  - component: {fileID: 903365556}
+  - component: {fileID: 903365555}
+  - component: {fileID: 903365554}
+  m_Layer: 6
+  m_Name: Door_SoundTrigger_10
+  m_TagString: Door
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &903365553
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 903365552}
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -50.06, y: -2.4335485, z: 32.307}
+  m_LocalScale: {x: 0.56223, y: 4.5347, z: 18.061602}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2055954919}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!114 &903365554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 903365552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd01832e5a4c84241883fbb9ae12cfcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OpenDoorDirectionalEvent:
+    Guid:
+      Data1: 1809153744
+      Data2: 1269557963
+      Data3: -767565168
+      Data4: -418869447
+    Path: event:/SFX_ST_OpenDoor_Directional
+  EnemyOpenDoorEvent:
+    Guid:
+      Data1: -11581101
+      Data2: 1091292627
+      Data3: -1283404397
+      Data4: -932031794
+    Path: event:/SFX_SoundTrigger_OpenDoor_Enemy
+--- !u!65 &903365555
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 903365552}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &903365556
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 903365552}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 5d620c1d4baffa2429cc7b3e216f1ea8, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &903365557
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 903365552}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &911378904
 GameObject:
   m_ObjectHideFlags: 0
@@ -16063,7 +16559,7 @@ MonoBehaviour:
     Path: event:/SFX_LivingRoom
   soundOcclusionWidening: 1.3
   playerOcclusionWidening: 0.8
-  checkLayer: 0
+  debugOcclusion: 0
 --- !u!1 &1001505693
 GameObject:
   m_ObjectHideFlags: 0
@@ -16481,7 +16977,7 @@ MonoBehaviour:
     Path: event:/SFX_TV_Short_Corridor
   soundOcclusionWidening: 1.3
   playerOcclusionWidening: 0.8
-  checkLayer: 0
+  debugOcclusion: 0
 --- !u!1 &1032564160
 GameObject:
   m_ObjectHideFlags: 0
@@ -16810,6 +17306,130 @@ Transform:
   m_Father: {fileID: 771667000}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1039858451
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1039858452}
+  - component: {fileID: 1039858456}
+  - component: {fileID: 1039858455}
+  - component: {fileID: 1039858454}
+  - component: {fileID: 1039858453}
+  m_Layer: 6
+  m_Name: Door_SoundTrigger_3
+  m_TagString: Door
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1039858452
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1039858451}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -39.833, y: -2.46, z: 8.72}
+  m_LocalScale: {x: 0.56223, y: 4.5448, z: 14.714596}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2055954919}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1039858453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1039858451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd01832e5a4c84241883fbb9ae12cfcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OpenDoorDirectionalEvent:
+    Guid:
+      Data1: 1809153744
+      Data2: 1269557963
+      Data3: -767565168
+      Data4: -418869447
+    Path: event:/SFX_ST_OpenDoor_Directional
+  EnemyOpenDoorEvent:
+    Guid:
+      Data1: -11581101
+      Data2: 1091292627
+      Data3: -1283404397
+      Data4: -932031794
+    Path: event:/SFX_SoundTrigger_OpenDoor_Enemy
+--- !u!65 &1039858454
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1039858451}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1039858455
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1039858451}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 5d620c1d4baffa2429cc7b3e216f1ea8, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1039858456
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1039858451}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1042018146
 GameObject:
   m_ObjectHideFlags: 0
@@ -17002,6 +17622,130 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1051121607}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1055513449
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1055513450}
+  - component: {fileID: 1055513454}
+  - component: {fileID: 1055513453}
+  - component: {fileID: 1055513452}
+  - component: {fileID: 1055513451}
+  m_Layer: 6
+  m_Name: Door_SoundTrigger_8
+  m_TagString: Door
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1055513450
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055513449}
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 22.01, y: -2.4335485, z: 16.238}
+  m_LocalScale: {x: 0.56223, y: 4.5347, z: 18.983759}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2055954919}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!114 &1055513451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055513449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd01832e5a4c84241883fbb9ae12cfcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OpenDoorDirectionalEvent:
+    Guid:
+      Data1: 1809153744
+      Data2: 1269557963
+      Data3: -767565168
+      Data4: -418869447
+    Path: event:/SFX_ST_OpenDoor_Directional
+  EnemyOpenDoorEvent:
+    Guid:
+      Data1: -11581101
+      Data2: 1091292627
+      Data3: -1283404397
+      Data4: -932031794
+    Path: event:/SFX_SoundTrigger_OpenDoor_Enemy
+--- !u!65 &1055513452
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055513449}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1055513453
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055513449}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 5d620c1d4baffa2429cc7b3e216f1ea8, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1055513454
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1055513449}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1060771373
 GameObject:
   m_ObjectHideFlags: 0
@@ -18207,7 +18951,7 @@ MonoBehaviour:
     Path: event:/SFX_Entrance
   soundOcclusionWidening: 1.3
   playerOcclusionWidening: 0.8
-  checkLayer: 0
+  debugOcclusion: 0
 --- !u!1 &1123343956
 GameObject:
   m_ObjectHideFlags: 0
@@ -19570,7 +20314,7 @@ GameObject:
   - component: {fileID: 1182314209}
   - component: {fileID: 1182314208}
   - component: {fileID: 1182314207}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Cube (40)
   m_TagString: Furniture
   m_Icon: {fileID: 0}
@@ -19768,7 +20512,7 @@ GameObject:
   - component: {fileID: 1187531805}
   - component: {fileID: 1187531808}
   m_Layer: 6
-  m_Name: Cube (31)
+  m_Name: Door_SoundTrigger_1
   m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19783,7 +20527,7 @@ Transform:
   m_GameObject: {fileID: 1187531803}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: -3.83, y: -2.4335485, z: 0.27}
-  m_LocalScale: {x: 0.56223, y: 5, z: 7.1367793}
+  m_LocalScale: {x: 0.56223, y: 4.5347, z: 7.007273}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2055954919}
@@ -19861,17 +20605,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1187531803}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ba92ec80e3bab544d9a48708ac665dca, type: 3}
+  m_Script: {fileID: 11500000, guid: cd01832e5a4c84241883fbb9ae12cfcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TriggerEvent:
+  OpenDoorDirectionalEvent:
     Guid:
-      Data1: -1236385680
-      Data2: 1324788976
-      Data3: 710013350
-      Data4: -467491261
-    Path: event:/SFX_SoundTrigger_OpenDoor
-  isPersistent: 1
+      Data1: 1809153744
+      Data2: 1269557963
+      Data3: -767565168
+      Data4: -418869447
+    Path: event:/SFX_ST_OpenDoor_Directional
+  EnemyOpenDoorEvent:
+    Guid:
+      Data1: -11581101
+      Data2: 1091292627
+      Data3: -1283404397
+      Data4: -932031794
+    Path: event:/SFX_SoundTrigger_OpenDoor_Enemy
 --- !u!1 &1188272863
 GameObject:
   m_ObjectHideFlags: 0
@@ -23247,6 +23997,130 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1416990026}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1417608531
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1417608532}
+  - component: {fileID: 1417608536}
+  - component: {fileID: 1417608535}
+  - component: {fileID: 1417608534}
+  - component: {fileID: 1417608533}
+  m_Layer: 6
+  m_Name: Door_SoundTrigger_9
+  m_TagString: Door
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1417608532
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1417608531}
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -17.78, y: -2.4335485, z: 32.202}
+  m_LocalScale: {x: 0.56223, y: 4.5347, z: 19.948704}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2055954919}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!114 &1417608533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1417608531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd01832e5a4c84241883fbb9ae12cfcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OpenDoorDirectionalEvent:
+    Guid:
+      Data1: 1809153744
+      Data2: 1269557963
+      Data3: -767565168
+      Data4: -418869447
+    Path: event:/SFX_ST_OpenDoor_Directional
+  EnemyOpenDoorEvent:
+    Guid:
+      Data1: -11581101
+      Data2: 1091292627
+      Data3: -1283404397
+      Data4: -932031794
+    Path: event:/SFX_SoundTrigger_OpenDoor_Enemy
+--- !u!65 &1417608534
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1417608531}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1417608535
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1417608531}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 5d620c1d4baffa2429cc7b3e216f1ea8, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1417608536
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1417608531}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1417697510
 GameObject:
   m_ObjectHideFlags: 0
@@ -23476,7 +24350,7 @@ MonoBehaviour:
     Path: event:/SFX_Kitchen
   soundOcclusionWidening: 1.3
   playerOcclusionWidening: 0.8
-  checkLayer: 0
+  debugOcclusion: 0
 --- !u!1001 &1427443385
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24008,6 +24882,130 @@ Transform:
   m_Father: {fileID: 1680048916}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1455715908
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1455715909}
+  - component: {fileID: 1455715913}
+  - component: {fileID: 1455715912}
+  - component: {fileID: 1455715911}
+  - component: {fileID: 1455715910}
+  m_Layer: 6
+  m_Name: Door_SoundTrigger_4
+  m_TagString: Door
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1455715909
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1455715908}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 12.133, y: -2.46, z: 8.72}
+  m_LocalScale: {x: 0.56223, y: 4.5448, z: 14.714596}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2055954919}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1455715910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1455715908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd01832e5a4c84241883fbb9ae12cfcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OpenDoorDirectionalEvent:
+    Guid:
+      Data1: 1809153744
+      Data2: 1269557963
+      Data3: -767565168
+      Data4: -418869447
+    Path: event:/SFX_ST_OpenDoor_Directional
+  EnemyOpenDoorEvent:
+    Guid:
+      Data1: -11581101
+      Data2: 1091292627
+      Data3: -1283404397
+      Data4: -932031794
+    Path: event:/SFX_SoundTrigger_OpenDoor_Enemy
+--- !u!65 &1455715911
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1455715908}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1455715912
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1455715908}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 5d620c1d4baffa2429cc7b3e216f1ea8, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1455715913
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1455715908}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1461408176
 GameObject:
   m_ObjectHideFlags: 0
@@ -24892,6 +25890,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1886178191}
     m_Modifications:
+    - target: {fileID: 8715230443046452044, guid: d83b6aa1ab818174a8ffe96f8521b37c, type: 3}
+      propertyPath: debugOcclusion
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8715230443046452050, guid: d83b6aa1ab818174a8ffe96f8521b37c, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -24902,7 +25904,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8715230443046452050, guid: d83b6aa1ab818174a8ffe96f8521b37c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 13
+      value: 14.39
       objectReference: {fileID: 0}
     - target: {fileID: 8715230443046452050, guid: d83b6aa1ab818174a8ffe96f8521b37c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -25318,7 +26320,7 @@ MonoBehaviour:
     Path: event:/SFX_Corridor_1
   soundOcclusionWidening: 1.3
   playerOcclusionWidening: 0.8
-  checkLayer: 0
+  debugOcclusion: 0
 --- !u!1 &1525346994
 GameObject:
   m_ObjectHideFlags: 0
@@ -26422,7 +27424,7 @@ MonoBehaviour:
     Path: event:/SFX_Bathroom
   soundOcclusionWidening: 1.3
   playerOcclusionWidening: 0.8
-  checkLayer: 0
+  debugOcclusion: 0
 --- !u!1 &1592563410
 GameObject:
   m_ObjectHideFlags: 0
@@ -29554,15 +30556,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8715230443046452050, guid: d83b6aa1ab818174a8ffe96f8521b37c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1
+      value: -10.45
       objectReference: {fileID: 0}
     - target: {fileID: 8715230443046452050, guid: d83b6aa1ab818174a8ffe96f8521b37c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 13
+      value: 14.39
       objectReference: {fileID: 0}
     - target: {fileID: 8715230443046452050, guid: d83b6aa1ab818174a8ffe96f8521b37c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2
+      value: 5.74
       objectReference: {fileID: 0}
     - target: {fileID: 8715230443046452050, guid: d83b6aa1ab818174a8ffe96f8521b37c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -32066,6 +33068,130 @@ Transform:
   m_Father: {fileID: 797617330}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1921198797
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1921198798}
+  - component: {fileID: 1921198802}
+  - component: {fileID: 1921198801}
+  - component: {fileID: 1921198800}
+  - component: {fileID: 1921198799}
+  m_Layer: 6
+  m_Name: Door_SoundTrigger_7
+  m_TagString: Door
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1921198798
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1921198797}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 12.133, y: -2.46, z: 40.25}
+  m_LocalScale: {x: 0.56223, y: 4.5448, z: 15.630387}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2055954919}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1921198799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1921198797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd01832e5a4c84241883fbb9ae12cfcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OpenDoorDirectionalEvent:
+    Guid:
+      Data1: 1809153744
+      Data2: 1269557963
+      Data3: -767565168
+      Data4: -418869447
+    Path: event:/SFX_ST_OpenDoor_Directional
+  EnemyOpenDoorEvent:
+    Guid:
+      Data1: -11581101
+      Data2: 1091292627
+      Data3: -1283404397
+      Data4: -932031794
+    Path: event:/SFX_SoundTrigger_OpenDoor_Enemy
+--- !u!65 &1921198800
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1921198797}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1921198801
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1921198797}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 5d620c1d4baffa2429cc7b3e216f1ea8, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1921198802
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1921198797}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1921759911
 GameObject:
   m_ObjectHideFlags: 0
@@ -32119,7 +33245,7 @@ MonoBehaviour:
     Path: event:/SFX_TV_Middle
   soundOcclusionWidening: 1.3
   playerOcclusionWidening: 0.8
-  checkLayer: 0
+  debugOcclusion: 0
 --- !u!1 &1925703102
 GameObject:
   m_ObjectHideFlags: 0
@@ -32333,7 +33459,7 @@ GameObject:
   - component: {fileID: 1928958448}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32439,7 +33565,7 @@ MonoBehaviour:
     Path: event:/EnemyFoley
   soundOcclusionWidening: 1.56
   playerOcclusionWidening: 0.68
-  checkLayer: 1
+  debugOcclusion: 0
 --- !u!1 &1929675821
 GameObject:
   m_ObjectHideFlags: 0
@@ -32960,6 +34086,130 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1949835019}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1952913449
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1952913450}
+  - component: {fileID: 1952913454}
+  - component: {fileID: 1952913453}
+  - component: {fileID: 1952913452}
+  - component: {fileID: 1952913451}
+  m_Layer: 6
+  m_Name: Door_SoundTrigger_11
+  m_TagString: Door
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1952913450
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952913449}
+  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -50.06, y: -2.4335485, z: 16.25}
+  m_LocalScale: {x: 0.56223, y: 4.5347, z: 18.061602}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2055954919}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!114 &1952913451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952913449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd01832e5a4c84241883fbb9ae12cfcd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OpenDoorDirectionalEvent:
+    Guid:
+      Data1: 1809153744
+      Data2: 1269557963
+      Data3: -767565168
+      Data4: -418869447
+    Path: event:/SFX_ST_OpenDoor_Directional
+  EnemyOpenDoorEvent:
+    Guid:
+      Data1: -11581101
+      Data2: 1091292627
+      Data3: -1283404397
+      Data4: -932031794
+    Path: event:/SFX_SoundTrigger_OpenDoor_Enemy
+--- !u!65 &1952913452
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952913449}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1952913453
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952913449}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 5d620c1d4baffa2429cc7b3e216f1ea8, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1952913454
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952913449}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1959107481
 GameObject:
   m_ObjectHideFlags: 0
@@ -34013,7 +35263,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2030439589}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.73, y: 0, z: 7.79}
+  m_LocalPosition: {x: 24.75, y: 0, z: 13.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -34445,6 +35695,16 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1187531804}
+  - {fileID: 133248542}
+  - {fileID: 1039858452}
+  - {fileID: 1455715909}
+  - {fileID: 646366063}
+  - {fileID: 95498991}
+  - {fileID: 1921198798}
+  - {fileID: 1055513450}
+  - {fileID: 1417608532}
+  - {fileID: 903365553}
+  - {fileID: 1952913450}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -36588,15 +37848,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8715230443046452050, guid: d83b6aa1ab818174a8ffe96f8521b37c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 47
+      value: 56.76
       objectReference: {fileID: 0}
     - target: {fileID: 8715230443046452050, guid: d83b6aa1ab818174a8ffe96f8521b37c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 13
+      value: 14.39
       objectReference: {fileID: 0}
     - target: {fileID: 8715230443046452050, guid: d83b6aa1ab818174a8ffe96f8521b37c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 20
+      value: 21.94
       objectReference: {fileID: 0}
     - target: {fileID: 8715230443046452050, guid: d83b6aa1ab818174a8ffe96f8521b37c, type: 3}
       propertyPath: m_LocalRotation.w
