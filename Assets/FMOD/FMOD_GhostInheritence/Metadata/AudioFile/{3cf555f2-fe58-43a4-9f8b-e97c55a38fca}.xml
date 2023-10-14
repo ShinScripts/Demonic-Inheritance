@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="AudioFile" id="{7e9cd682-4ef2-41d3-a17b-065c5ca616ab}">
+	<object class="AudioFile" id="{3cf555f2-fe58-43a4-9f8b-e97c55a38fca}">
 		<property name="assetPath">
-			<value>Menu/HowToPlay.mp3</value>
+			<value>Menu/HowToPlay_Explanation.mp3</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>22.0499992</value>
@@ -11,7 +11,7 @@
 			<value>1</value>
 		</property>
 		<property name="length">
-			<value>0.80979591836734699</value>
+			<value>9.5608163265306114</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{e859f30b-e6e0-442d-b14d-aa53359f7ec9}</destination>
