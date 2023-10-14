@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="AudioFile" id="{ce0184f6-db86-4218-bb19-da5720b59f38}">
+	<object class="AudioFile" id="{9256742b-0d9a-488d-b21a-0f76db254b8f}">
 		<property name="assetPath">
-			<value>Menu/Audio Cues_Explanation.wav</value>
+			<value>Menu/MenuNavigationTutorial.mp3</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>
@@ -14,7 +14,7 @@
 			<value>1</value>
 		</property>
 		<property name="length">
-			<value>17.710113378684806</value>
+			<value>11.075918367346938</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{e859f30b-e6e0-442d-b14d-aa53359f7ec9}</destination>

@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 4251297732040067226}
   - component: {fileID: 4251297732040067205}
   - component: {fileID: 4251297732040067204}
-  - component: {fileID: 4251297732040067207}
   m_Layer: 0
   m_Name: MenuManager
   m_TagString: Untagged
@@ -111,112 +110,63 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 371a6af39ad6795408a7cf57da9bc49d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuItemCips:
-  - {fileID: 8300000, guid: e6d3244e329a7654dbbf20f088ed28c5, type: 3}
-  - {fileID: 8300000, guid: a72c4c0cfe6eb324196b22d2451db086, type: 3}
-  - {fileID: 8300000, guid: 4a39bfde127585f438e6ccbe10276370, type: 3}
-  - {fileID: 8300000, guid: b55f73d8932b653409c7edba3862db4b, type: 3}
-  source: {fileID: 4251297732040067207}
-  sceneIndexToLoad: 0
-  tutorialClips:
-  - {fileID: 8300000, guid: 938e6563fe479f6409cd57acf9a03e44, type: 3}
-  - {fileID: 8300000, guid: 5d93248ea5205804f8d30c04fb9eacc5, type: 3}
-  - {fileID: 8300000, guid: 762d8569d9aa314458656a51a857ac0d, type: 3}
-  - {fileID: 8300000, guid: 30ab7de3cfbeb5d46bb7605f8fe7440e, type: 3}
-  - {fileID: 8300000, guid: b55f73d8932b653409c7edba3862db4b, type: 3}
---- !u!82 &4251297732040067207
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4251297732040067206}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
+  menuNavigationTutorial:
+    Guid:
+      Data1: 1179938834
+      Data2: 1137488356
+      Data3: 189129141
+      Data4: -696669142
+    Path: event:/Menu VO/MenuNavigationTutorial
+  menuItemEvents:
+  - Guid:
+      Data1: -263893392
+      Data2: 1076428584
+      Data3: 1697003929
+      Data4: 606537180
+    Path: event:/Menu VO/Start
+  - Guid:
+      Data1: -1450951896
+      Data2: 1235454965
+      Data3: -58574685
+      Data4: -730999766
+    Path: event:/Menu VO/HowToPlay
+  - Guid:
+      Data1: -783270929
+      Data2: 1154176894
+      Data3: -1951832175
+      Data4: -1878902830
+    Path: event:/Menu VO/Controls
+  - Guid:
+      Data1: 2041053890
+      Data2: 1174922801
+      Data3: 677515960
+      Data4: 2089652817
+    Path: event:/Menu VO/Audio Cues
+  - Guid:
+      Data1: 535599927
+      Data2: 1231010317
+      Data3: -1442392181
+      Data4: -1582792040
+    Path: event:/Menu VO/Quit
+  howToPlayExplanation:
+    Guid:
+      Data1: 344530332
+      Data2: 1178524750
+      Data3: -686089335
+      Data4: -753115372
+    Path: event:/Menu VO/HowToPlay_Explanation
+  controlsExplanation:
+    Guid:
+      Data1: -592660197
+      Data2: 1302536686
+      Data3: -410616405
+      Data4: 1527724765
+    Path: event:/Menu VO/Controls_Explanation
+  audioCuesExplanation:
+    Guid:
+      Data1: 1705679557
+      Data2: 1204119207
+      Data3: 490066582
+      Data4: -1683757929
+    Path: event:/Menu VO/Audio Cues_Explanation
+  sceneIndexToLoad: 1
