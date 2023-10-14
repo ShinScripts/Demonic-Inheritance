@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="AudioFile" id="{3cf555f2-fe58-43a4-9f8b-e97c55a38fca}">
+	<object class="AudioFile" id="{d7834945-ab4b-4415-b4e3-c43da1fba342}">
 		<property name="assetPath">
-			<value>Menu/HowToPlay_Explanation.mp3</value>
+			<value>Menu/Controls_Explanation.mp3</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>22.0499992</value>
