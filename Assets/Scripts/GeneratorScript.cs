@@ -24,7 +24,8 @@ public class GeneratorScript : MonoBehaviour
         {
             beenTaken = true;
 
-            generatorCollectedAudio.start();         
+            generatorCollectedAudio.start();
+            generatorCollectedAudio.release();
             Debug.Log("Generator " + generatorNumber + " has been taken!");
 
         }

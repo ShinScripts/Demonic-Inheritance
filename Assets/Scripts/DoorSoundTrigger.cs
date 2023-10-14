@@ -25,7 +25,6 @@ public class DoorSoundTrigger : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            Debug.Log("WTF?");
             enemySoundTriggerIstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(other.transform.position));
             enemySoundTriggerIstance.start();
         }
@@ -33,7 +32,6 @@ public class DoorSoundTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerEnterPosition = other.transform.position;
-
         }
     }
 

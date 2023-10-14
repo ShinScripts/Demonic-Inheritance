@@ -23,6 +23,8 @@ public class FirstPersonOcclusion : MonoBehaviour
     private static LayerMask occlusionLayer; 
     private static LayerMask obstructionLayer;
 
+    [Tooltip("Set to true in case the game object is a generator or an enemy.")]
+    [SerializeField] private bool shouldUseObstruction = false;
     [SerializeField] private bool debugOcclusion = false;
 
     private bool audioIsVirtual;
@@ -34,7 +36,8 @@ public class FirstPersonOcclusion : MonoBehaviour
     private Color colour;
     private int obstructionCount;
     private string currentObstruction;
-    private string objectsBetweenCount;
+
+
 
     private void Start()
     {
@@ -168,14 +171,16 @@ public class FirstPersonOcclusion : MonoBehaviour
 
     private void SetParameters()
     {
-
-        SetObstructionParamater();
+        if (shouldUseObstruction)
+        {
+            SetObstructionParamater();
+        }
 
         if (debugOcclusion)
         {
-           // Debug.Log("Free lines: " + (11 - lineCastOcclusionHitCount - lineCastObstructionHitCount) +
-           //     " Occlusion lines: " + lineCastOcclusionHitCount + 
-           //     " Obstruction lines: " + lineCastObstructionHitCount);
+            Debug.Log("Free lines: " + (11 - lineCastOcclusionHitCount - lineCastObstructionHitCount) +
+                " Occlusion lines: " + lineCastOcclusionHitCount + 
+                " Obstruction lines: " + lineCastObstructionHitCount);
         }
         audio.setParameterByName("Occlusion", lineCastOcclusionHitCount / 11 + 2 * lineCastObstructionHitCount / 11);
     }
@@ -227,7 +232,8 @@ public class FirstPersonOcclusion : MonoBehaviour
 
           else return "Full_Obstruction"; 
 
-      */
+        */
+      
 
         if (obstructionCount <= 0)
         {
@@ -242,7 +248,7 @@ public class FirstPersonOcclusion : MonoBehaviour
         else return "Full_Obstruction";
 
     }
-
+    
 
     private void SetObstructionParamater()
     {
@@ -260,4 +266,5 @@ public class FirstPersonOcclusion : MonoBehaviour
             audio.setParameterByNameWithLabel("Obstruction", currentObstruction);
         }
     }
+
 }
