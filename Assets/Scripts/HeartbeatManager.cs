@@ -17,15 +17,13 @@ public class HeartbeatManager : MonoBehaviour
 
     [Header("Heartbeat")]
     [Header("INFO: When player is spotted the heartbeatdelay can go below the minHeartbeatdelay")]
-    [SerializeField] private float heartbeatDelay = 2.5f;
+    public float heartbeatDelay = 2.5f;
     public bool isPlayerSpotted;
 
     [SerializeField] private EventReference HeartbeatEvent;
     private EventInstance heartbeat;
 
     [Header("Audio Settings")]
-    private AudioSource source;
-    public AudioClip[] clips;
     public float minPitch = 0.875f;
     public float maxPitch = 1.065f;
     //[Space(10)]
@@ -39,8 +37,6 @@ public class HeartbeatManager : MonoBehaviour
     {
         heartbeat = RuntimeManager.CreateInstance(HeartbeatEvent);
         heartbeat.start();
-
-        source = GetComponent<AudioSource>();
 
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         enemy = GameObject.FindGameObjectWithTag("Enemy").GetComponent<Transform>();
@@ -111,9 +107,9 @@ public class HeartbeatManager : MonoBehaviour
         float distance = Vector3.Distance(playerPosition, enemyPosition);
 
         normDistanceEnemy = Mathf.Clamp01(distance / maxDistance);
-        print(distance);
-        print("Distance to enemy: " + normDistanceEnemy);
-
+        //print(distance);
+        //print("Distance to enemy: " + normDistanceEnemy);
+        
         UpdateHeartbeatDelay();
     }
 
@@ -122,12 +118,7 @@ public class HeartbeatManager : MonoBehaviour
         heartbeatDelay = 1 - normDistanceEnemy;
         heartbeatDelay = heartbeatDelay * (isPlayerSpotted ? 1.65f : 1);
         heartbeat.setParameterByName("DistanceToEnemy", heartbeatDelay);
+        UnityEngine.Debug.Log(heartbeatDelay);
     }
     
-    
-    void PlayHeartbeat() {
-
-        heartbeat.start();
-
-    }
 }

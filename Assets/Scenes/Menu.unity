@@ -214,6 +214,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4251297732040067204, guid: 46a1b3be7d97c9e41922cfd932a70990, type: 3}
+      propertyPath: controlsExplanation.Guid.Data1
+      value: 920757914
+      objectReference: {fileID: 0}
+    - target: {fileID: 4251297732040067204, guid: 46a1b3be7d97c9e41922cfd932a70990, type: 3}
+      propertyPath: controlsExplanation.Guid.Data2
+      value: 1133461893
+      objectReference: {fileID: 0}
+    - target: {fileID: 4251297732040067204, guid: 46a1b3be7d97c9e41922cfd932a70990, type: 3}
+      propertyPath: controlsExplanation.Guid.Data3
+      value: -2009759062
+      objectReference: {fileID: 0}
+    - target: {fileID: 4251297732040067204, guid: 46a1b3be7d97c9e41922cfd932a70990, type: 3}
+      propertyPath: controlsExplanation.Guid.Data4
+      value: -1362182914
+      objectReference: {fileID: 0}
     - target: {fileID: 4251297732040067206, guid: 46a1b3be7d97c9e41922cfd932a70990, type: 3}
       propertyPath: m_Name
       value: MenuManager
