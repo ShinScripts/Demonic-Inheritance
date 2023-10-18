@@ -12,10 +12,12 @@ public class AI_Companion : MonoBehaviour
     [SerializeField] private GeneratorManager generatorManager;
     [SerializeField] private EventReference NestedEvent;
     private EventInstance ai_assitance;
+    private float tresholdTime = 0.25f;
+    private float startHoldingTime = 0f;
 
     //int totalGenerators;
 
-  //  public EventInstance Ai_assitance { get => ai_assitance;}
+    //  public EventInstance Ai_assitance { get => ai_assitance;}
 
     // Start is called before the first frame update
     void Start()
@@ -30,24 +32,37 @@ public class AI_Companion : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                ai_assitance.setParameterByNameWithLabel("RoomZone", playerMovement.CurrentSoundZoneName);
-                ai_assitance.start();
+                //GetAIAssistence();
+                //Debug.Log("Space down at: " +  startHoldingTime);
+                startHoldingTime = Time.time;
+            }
 
-                /*
-                totalGenerators = generatorManager.GeneratorsLeft();
-                Debug.Log("Asking for help" + " generators left: " + totalGenerators);
+            if (Input.GetKeyUp(KeyCode.Space))
+            {
+                float holdTime = Time.time - startHoldingTime;
 
-                */
+                if(holdTime <= tresholdTime)
+                {
+                    FMODUnity.RuntimeManager.StudioSystem.setParameterByNameWithLabel("AssistenceLength", "Short");
+                    Debug.Log("Short assistence");
+                }
+                else
+                {
+                    FMODUnity.RuntimeManager.StudioSystem.setParameterByNameWithLabel("AssistenceLength", "Long");
+                    Debug.Log("Long assistence");
+                }
+
+                GetAIAssistence();
+
+                //Debug.Log("Space up with difference: " + holdTime);
+
             }
         }
-
-        /* 
-        float voiceActing;
-        float outValue;
-        FMODUnity.RuntimeManager.StudioSystem.getParameterByName("VoiceActingOngoing", out outValue, out voiceActing); ;
-        Debug.Log("voice acting is: " + voiceActing);
-        */
-
     }
 
+    private void GetAIAssistence()
+    {
+        ai_assitance.setParameterByNameWithLabel("RoomZone", playerMovement.CurrentSoundZoneName);
+        ai_assitance.start();
+    }
 }

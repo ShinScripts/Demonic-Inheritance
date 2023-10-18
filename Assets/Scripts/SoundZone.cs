@@ -7,7 +7,6 @@ using System;
 public class SoundZone : MonoBehaviour { 
 
     [SerializeField] private SoundZone[] activeZones;
-    private FirstPersonOcclusion firstPersonOcclusion;
 
     private void Start ()
     {
@@ -20,9 +19,6 @@ public class SoundZone : MonoBehaviour {
                 activeZones[i].AddActiveZone(this);
             }
         }
-
-        firstPersonOcclusion = gameObject.GetComponentInChildren<FirstPersonOcclusion>();
-
     }
 
     private void AddActiveZone (SoundZone neighbor)

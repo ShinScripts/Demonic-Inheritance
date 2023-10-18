@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{2603bb05-7254-4fbe-8eb9-aa2af5bcb81e}">
 		<property name="name">
-			<value>VO_AssistList</value>
+			<value>VO_AssistList_Long</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
@@ -91,7 +91,6 @@
 		</relationship>
 	</object>
 	<object class="EventSound" id="{76f92b03-bccb-4d29-aa1f-57d2b5d0888a}">
-		<property name="name" />
 		<relationship name="event">
 			<destination>{417b23a5-423b-445a-bb6a-4cfa5cd61cf2}</destination>
 		</relationship>

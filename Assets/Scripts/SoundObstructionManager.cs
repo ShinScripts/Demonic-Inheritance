@@ -17,7 +17,6 @@ public class SoundObstructionManager : MonoBehaviour
     public void SetZoneActive(SoundZone zone)
     {
         SwitchOtherZones(zone.GetNeighbors());
-        //zone.gameObject.SetActive(true);
  
     }
 
@@ -26,8 +25,6 @@ public class SoundObstructionManager : MonoBehaviour
         for (int i = 0; i < soundZoneList.Length; i++)
         {
             bool foundZone = false;
-
-            //if (soundZoneList[i] == null) continue;
 
             //Debug.Log("soundZoneList size: " + soundZoneList.Length);
             for (int j = 0; j < activeNeighboors.Length; j++)
