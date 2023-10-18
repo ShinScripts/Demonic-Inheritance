@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="AudioFile" id="{d7834945-ab4b-4415-b4e3-c43da1fba342}">
+	<object class="AudioFile" id="{46a5f906-2751-4b92-a00e-6dcca84a9bd3}">
 		<property name="assetPath">
 			<value>Menu/Controls_Explanation.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>22.0499992</value>
@@ -11,7 +14,7 @@
 			<value>1</value>
 		</property>
 		<property name="length">
-			<value>9.5608163265306114</value>
+			<value>14.445714285714285</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{e859f30b-e6e0-442d-b14d-aa53359f7ec9}</destination>
