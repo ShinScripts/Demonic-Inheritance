@@ -275,12 +275,15 @@ MonoBehaviour:
   rotation_speed: 90
   rotation_smoothness: 5
   movementSpeed: 3.3
-  audioFrontPosition: {fileID: 0}
-  audioBehindPosition: {fileID: 0}
-  audioLeftPosition: {fileID: 0}
-  audioRightPosition: {fileID: 0}
-  obstacleTags: []
-  playerAudioManager: {fileID: 0}
+  audioFrontPosition: {fileID: 7642822655399181}
+  audioBehindPosition: {fileID: 3074912213798670035}
+  audioLeftPosition: {fileID: 6495156922622153797}
+  audioRightPosition: {fileID: 4187191842826247541}
+  obstacleTags:
+  - Wall
+  - Furniture
+  - LockedDoor
+  playerAudioManager: {fileID: 1240699072861892969}
 --- !u!54 &1736591108206439961
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -313,34 +316,34 @@ MonoBehaviour:
   enemyPosition: {fileID: 0}
   FootStepsEvent:
     Guid:
-      Data1: 638739511
-      Data2: 1233157270
-      Data3: 1859060865
-      Data4: -1568605865
-    Path: event:/PlayerFoley
+      Data1: 474124402
+      Data2: 1321171470
+      Data3: -1913099637
+      Data4: -1195930019
+    Path: event:/PlayerFoley_Footsteps
   BreathingEvent:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -2093506517
+      Data2: 1174515441
+      Data3: 1867968178
+      Data4: -480091773
+    Path: event:/PlayerFoley_Breathing
   HeartbeatEvent:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -520590321
+      Data2: 1152551810
+      Data3: -586051436
+      Data4: 1697505232
+    Path: event:/PlayerFoley_Heartbeat
   WallhitEvent:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
-  minDistanceThreshold: 0
-  maxDistanceThreshold: 0
+      Data1: -394688862
+      Data2: 1295590220
+      Data3: -962501502
+      Data4: -244977721
+    Path: event:/PlayerFoley_WallHit
+  minDistanceThreshold: 10
+  maxDistanceThreshold: 38
   distanceParameter: 0
 --- !u!114 &5774368647889398949
 MonoBehaviour:
@@ -358,11 +361,11 @@ MonoBehaviour:
   generatorManager: {fileID: 0}
   NestedEvent:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 1618281243
+      Data2: 1247318190
+      Data3: -611222099
+      Data4: -807112313
+    Path: event:/VO_NestedEvent
 --- !u!1 &4127993121949838038
 GameObject:
   m_ObjectHideFlags: 0
