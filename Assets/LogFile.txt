@@ -1,0 +1,480 @@
+[19/10/2023 20:38:11]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:38:11]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:38:12]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:38:12]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:38:12]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:38:12]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:38:12]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:38:12]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:38:12]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:38:12]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:38:12]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:38:12]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:38:12]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:38:12]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:38:12]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:38:12]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:38:12]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:38:12]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:38:12]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:38:12]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:38:12]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:38:12]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:38:12]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:38:12]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:38:12]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:38:12]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:38:12]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:38:12]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:38:12]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:38:12]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:38:12]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:38:12]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:38:12]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:38:12]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:38:12]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:38:12]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:38:12]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:38:12]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:38:13]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:38:13]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:38:13]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:38:13]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:38:13]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:38:13]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:38:13]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:38:13]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:38:13]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:38:13]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:38:13]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:38:13]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:38:13]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:38:13]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:43:40]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:43:40]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:43:41]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:43:41]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:43:41]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:43:41]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:43:41]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:43:41]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:43:41]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:43:41]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:43:41]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:43:41]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:43:41]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:43:41]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:43:41]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:43:41]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:43:41]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:43:41]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:43:41]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:43:41]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:43:41]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:43:41]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:43:41]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:43:41]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:43:41]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:43:41]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:43:41]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:43:41]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:43:41]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:43:41]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:43:41]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:43:41]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:43:41]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:43:41]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:43:41]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:43:41]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:43:41]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:43:41]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:43:41]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:43:41]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:43:41]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:43:41]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:43:41]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:43:41]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 20:46:10]Short assistence
+[19/10/2023 20:56:09]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:09]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:09]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:09]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:09]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:09]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:09]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:09]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:09]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:09]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:09]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:09]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:09]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:09]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:09]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:09]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:56:10]MissingComponentException: There is no 'NavMeshAgent' attached to the "Enemy" game object, but a script is trying to access it.
+You probably need to add a NavMeshAgent to the game object "Enemy". Or your script needs to check if the component is attached before using it.
+[19/10/2023 20:58:43]"SetDestination" can only be called on an active agent that has been placed on a NavMesh.
+[19/10/2023 20:58:43]"SetDestination" can only be called on an active agent that has been placed on a NavMesh.
+[19/10/2023 20:58:44]"SetDestination" can only be called on an active agent that has been placed on a NavMesh.
+[19/10/2023 20:58:44]"SetDestination" can only be called on an active agent that has been placed on a NavMesh.
+[19/10/2023 20:58:44]"SetDestination" can only be called on an active agent that has been placed on a NavMesh.
+[19/10/2023 20:58:44]"SetDestination" can only be called on an active agent that has been placed on a NavMesh.
+[19/10/2023 20:58:44]"SetDestination" can only be called on an active agent that has been placed on a NavMesh.
+[19/10/2023 20:58:44]"SetDestination" can only be called on an active agent that has been placed on a NavMesh.
+[19/10/2023 20:58:44]"SetDestination" can only be called on an active agent that has been placed on a NavMesh.
+[19/10/2023 20:58:44]"SetDestination" can only be called on an active agent that has been placed on a NavMesh.
+[19/10/2023 20:58:44]"SetDestination" can only be called on an active agent that has been placed on a NavMesh.
+[19/10/2023 20:58:44]"SetDestination" can only be called on an active agent that has been placed on a NavMesh.
+[19/10/2023 20:58:44]"SetDestination" can only be called on an active agent that has been placed on a NavMesh.
+[19/10/2023 20:58:44]"SetDestination" can only be called on an active agent that has been placed on a NavMesh.
+[19/10/2023 20:58:44]"SetDestination" can only be called on an active agent that has been placed on a NavMesh.
+[19/10/2023 20:58:44]"SetDestination" can only be called on an active agent that has been placed on a NavMesh.
+[19/10/2023 20:58:44]"SetDestination" can only be called on an active agent that has been placed on a NavMesh.
+[19/10/2023 20:58:44]"SetDestination" can only be called on an active agent that has been placed on a NavMesh.
+[19/10/2023 20:58:44]"SetDestination" can only be called on an active agent that has been placed on a NavMesh.
+[19/10/2023 20:58:44]"SetDestination" can only be called on an active agent that has been placed on a NavMesh.
+[19/10/2023 20:58:44]"SetDestination" can only be called on an active agent that has been placed on a NavMesh.
+[19/10/2023 20:58:44]"SetDestination" can only be called on an active agent that has been placed on a NavMesh.
+[19/10/2023 20:58:44]"SetDestination" can only be called on an active agent that has been placed on a NavMesh.
+[19/10/2023 20:58:44]"SetDestination" can only be called on an active agent that has been placed on a NavMesh.
+[19/10/2023 20:58:44]"SetDestination" can only be called on an active agent that has been placed on a NavMesh.
+[19/10/2023 20:58:44]"SetDestination" can only be called on an active agent that has been placed on a NavMesh.
+[19/10/2023 20:58:44]"SetDestination" can only be called on an active agent that has been placed on a NavMesh.
+[19/10/2023 20:58:44]"SetDestination" can only be called on an active agent that has been placed on a NavMesh.
+[19/10/2023 20:58:44]"SetDestination" can only be called on an active agent that has been placed on a NavMesh.
+[19/10/2023 20:58:44]"SetDestination" can only be called on an active agent that has been placed on a NavMesh.
+[19/10/2023 20:58:44]"SetDestination" can only be called on an active agent that has been placed on a NavMesh.
+[19/10/2023 20:58:44]"SetDestination" can only be called on an active agent that has been placed on a NavMesh.
+[19/10/2023 20:58:44]"SetDestination" can only be called on an active agent that has been placed on a NavMesh.
+[19/10/2023 20:58:44]"SetDestination" can only be called on an active agent that has been placed on a NavMesh.
+[19/10/2023 20:58:44]"SetDestination" can only be called on an active agent that has been placed on a NavMesh.
+[19/10/2023 20:58:44]"SetDestination" can only be called on an active agent that has been placed on a NavMesh.
+[19/10/2023 20:58:44]"SetDestination" can only be called on an active agent that has been placed on a NavMesh.
+[19/10/2023 20:58:44]"SetDestination" can only be called on an active agent that has been placed on a NavMesh.
+[19/10/2023 20:58:44]"SetDestination" can only be called on an active agent that has been placed on a NavMesh.
+[19/10/2023 20:58:44]"SetDestination" can only be called on an active agent that has been placed on a NavMesh.
+[19/10/2023 20:58:44]"SetDestination" can only be called on an active agent that has been placed on a NavMesh.
+[19/10/2023 20:58:44]"SetDestination" can only be called on an active agent that has been placed on a NavMesh.
+[19/10/2023 20:58:44]"SetDestination" can only be called on an active agent that has been placed on a NavMesh.
+[19/10/2023 20:58:44]"SetDestination" can only be called on an active agent that has been placed on a NavMesh.
+[19/10/2023 20:58:44]"SetDestination" can only be called on an active agent that has been placed on a NavMesh.
+[19/10/2023 20:58:44]"SetDestination" can only be called on an active agent that has been placed on a NavMesh.
+[19/10/2023 20:58:44]"SetDestination" can only be called on an active agent that has been placed on a NavMesh.
+[19/10/2023 20:58:44]"SetDestination" can only be called on an active agent that has been placed on a NavMesh.
+[19/10/2023 20:58:44]"SetDestination" can only be called on an active agent that has been placed on a NavMesh.

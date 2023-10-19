@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731713, g: 0.13414738, b: 0.121078536, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -199,14 +199,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1573411266}
-  m_LocalRotation: {x: 0.9978057, y: -0, z: -0, w: -0.06620979}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: 0.8437039, y: -0, z: -0, w: 0.5368088}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 187.593, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 115.067, y: 0, z: 0}
 --- !u!1001 &4251297732068875402
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -214,42 +214,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4251297732040067204, guid: 46a1b3be7d97c9e41922cfd932a70990, type: 3}
-      propertyPath: sceneIndexToLoad
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4251297732040067204, guid: 46a1b3be7d97c9e41922cfd932a70990, type: 3}
-      propertyPath: menuItemCips.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4251297732040067204, guid: 46a1b3be7d97c9e41922cfd932a70990, type: 3}
-      propertyPath: tutorialClips.Array.size
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4251297732040067204, guid: 46a1b3be7d97c9e41922cfd932a70990, type: 3}
-      propertyPath: tutorialClips.Array.data[1]
-      value: 
-      objectReference: {fileID: 8300000, guid: aa5876d1c746d38498f2581c1d59d8a4, type: 3}
-    - target: {fileID: 4251297732040067204, guid: 46a1b3be7d97c9e41922cfd932a70990, type: 3}
-      propertyPath: tutorialClips.Array.data[3]
-      value: 
-      objectReference: {fileID: 8300000, guid: 6391c6a5e21b9ba4d9b8689f66f37a41, type: 3}
-    - target: {fileID: 4251297732040067204, guid: 46a1b3be7d97c9e41922cfd932a70990, type: 3}
-      propertyPath: tutorialClips.Array.data[4]
-      value: 
-      objectReference: {fileID: 8300000, guid: f5b260976cc74cb47b99f1ee974589d6, type: 3}
-    - target: {fileID: 4251297732040067204, guid: 46a1b3be7d97c9e41922cfd932a70990, type: 3}
-      propertyPath: tutorialClips.Array.data[5]
-      value: 
-      objectReference: {fileID: 8300000, guid: 43cd6200e02e11d4b804644093ac3107, type: 3}
-    - target: {fileID: 4251297732040067204, guid: 46a1b3be7d97c9e41922cfd932a70990, type: 3}
-      propertyPath: tutorialClips.Array.data[6]
-      value: 
-      objectReference: {fileID: 8300000, guid: 30ab7de3cfbeb5d46bb7605f8fe7440e, type: 3}
-    - target: {fileID: 4251297732040067204, guid: 46a1b3be7d97c9e41922cfd932a70990, type: 3}
-      propertyPath: tutorialClips.Array.data[7]
-      value: 
-      objectReference: {fileID: 8300000, guid: b55f73d8932b653409c7edba3862db4b, type: 3}
     - target: {fileID: 4251297732040067206, guid: 46a1b3be7d97c9e41922cfd932a70990, type: 3}
       propertyPath: m_Name
       value: MenuManager
@@ -260,15 +224,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4251297732040067224, guid: 46a1b3be7d97c9e41922cfd932a70990, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.22009
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4251297732040067224, guid: 46a1b3be7d97c9e41922cfd932a70990, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.24
+      value: 2.92
       objectReference: {fileID: 0}
     - target: {fileID: 4251297732040067224, guid: 46a1b3be7d97c9e41922cfd932a70990, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.05823493
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4251297732040067224, guid: 46a1b3be7d97c9e41922cfd932a70990, type: 3}
       propertyPath: m_LocalRotation.w
