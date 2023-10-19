@@ -13,8 +13,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float movementSpeed = 3.3f;
     private float movementTime;
 
+    public bool is_killed = false;
+
     public bool isMoving = false;
     private bool isRotating = false;
+
 
     private float movementStartTime;
     private Vector3 startPosition;
@@ -37,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
 
         Physics.Raycast(transform.position, forward ? transform.forward : transform.forward * -1, out hit, increment);
 
-        return !(hit.collider && !hit.collider.CompareTag("Generator"));
+        return !(hit.collider && !hit.collider.CompareTag("Generator") && !hit.collider.CompareTag("Enemy"));
     }
 
     private void Update()

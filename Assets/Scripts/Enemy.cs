@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -8,13 +9,14 @@ public class Enemy : MonoBehaviour
     public GameObject start;
     public GameObject end;
     public float speed = 2f;
-
     private GameObject target;
     private GameObject player;
 
     private NavMeshAgent agent;
 
     bool follow_player = false;
+
+    bool detected = false;
 
 
     void Start()
@@ -33,11 +35,7 @@ public class Enemy : MonoBehaviour
             StartCoroutine(StartFollowing(2));
         }
 
-        transform.LookAt(player.transform);
-
-        bool has_hit = Physics.Raycast(transform.position + transform.forward, transform.forward, out RaycastHit hit, 200f);
-
-        if (has_hit && hit.transform.CompareTag("Player") && follow_player)
+        if (CanSeePlayer() && follow_player)
         {
             agent.SetDestination(player.transform.position);
             return;
@@ -65,6 +63,45 @@ public class Enemy : MonoBehaviour
         yield return new WaitForSeconds(duration);
 
         follow_player = false;
+
+        yield return null;
+    }
+
+    bool CanSeePlayer()
+    {
+        transform.LookAt(player.transform);
+
+        bool has_hit = Physics.Raycast(transform.position + transform.forward, transform.forward, out RaycastHit hit, 200f);
+
+        return has_hit && hit.transform.CompareTag("Player");
+    }
+
+    // Detection and stuff
+    private void OnTriggerStay(Collider collider)
+    {
+        if (CanSeePlayer() && collider.CompareTag("Player") && !detected && follow_player)
+        {
+            StartCoroutine(DetectionTrigger());
+        }
+    }
+
+    private IEnumerator DetectionTrigger()
+    {
+        detected = true;
+
+        print("detected: " + detected);
+
+
+        // play activation sound
+
+        yield return new WaitForSeconds(3);
+
+        detected = false;
+
+        print("detected: " + detected);
+
+        // play deactivation sound
+
 
         yield return null;
     }
