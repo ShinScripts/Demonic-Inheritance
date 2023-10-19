@@ -478,3 +478,229 @@ You probably need to add a NavMeshAgent to the game object "Enemy". Or your scri
 [19/10/2023 20:58:44]"SetDestination" can only be called on an active agent that has been placed on a NavMesh.
 [19/10/2023 20:58:44]"SetDestination" can only be called on an active agent that has been placed on a NavMesh.
 [19/10/2023 20:58:44]"SetDestination" can only be called on an active agent that has been placed on a NavMesh.
+[19/10/2023 21:25:49]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:50]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:50]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:50]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:50]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:50]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:50]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:50]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:50]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:50]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:50]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:50]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:50]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:50]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:50]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:50]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:50]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:50]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:50]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:50]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:50]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:50]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:50]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:50]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:50]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:51]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:51]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:51]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:51]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:51]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:51]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:51]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:51]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:51]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:51]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:51]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:51]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:51]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:51]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:51]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:51]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:51]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:51]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:51]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:51]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:51]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:51]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:51]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:51]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:51]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:51]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:51]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:51]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:51]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:51]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:51]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:51]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:51]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:51]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:51]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:51]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:51]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:51]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:51]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:51]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:51]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:51]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:51]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:51]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:51]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:51]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:51]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:51]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:51]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:51]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:51]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:52]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:52]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:52]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:52]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:52]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:52]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:52]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:52]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:52]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:52]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:52]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:52]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:52]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:52]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:52]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:52]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:52]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:52]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:52]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:52]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:52]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:52]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:52]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:52]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:52]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:52]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:52]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:52]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:52]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:52]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:52]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:52]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:52]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:52]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:52]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:52]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
+[19/10/2023 21:25:52]UnassignedReferenceException: The variable enemyPosition of PlayerAudioManager has not been assigned.
+You probably need to assign the enemyPosition variable of the PlayerAudioManager script in the inspector.
