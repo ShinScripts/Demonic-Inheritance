@@ -1,5 +1,8 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
+using FMODUnity;
+using Unity.VisualScripting;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -8,123 +11,262 @@ public class PlayerMovement : MonoBehaviour
     float target_rotation = 0f;
     public float rotation_speed = 90f;
     public float rotation_smoothness = 5f;
+    [SerializeField] private float movementSpeed = 3.3f;
+    private float movementTime;
+
+    [SerializeField] private Transform audioFrontPosition;
+    [SerializeField] private Transform audioBehindPosition;
+    [SerializeField] private Transform audioLeftPosition;
+    [SerializeField] private Transform audioRightPosition;
 
     private bool isMoving = false;
+    private bool isRotating = false;
 
-    public SoundSource sourceFront;
-    public SoundSource sourceBack;
-    public AudioSource sourceCenter;
+    private float movementStartTime;
+    private Vector3 startPosition;
+    private Vector3 targetPosition;
+    private Quaternion startRotation;
+    private Quaternion targetRotation;
 
-    [Space(10)]
-    [Header("~SoundClips")]
-    public AudioClip[] footsteps_clips;
-    public AudioClip[] rotations_clips;
-    public AudioClip[] wall_bump_clips; //front array[0], back array[1]
-    
-    [Space(10)]
-    public float maxSoundPitch = 1.2f;
-    public float minSoundPitch = 0.8f;
+    private string currentSoundZoneName;
 
-    private void Start() {
-        if (footsteps_clips == null) Debug.Log("ERROR: No footsteps clips");
-        if (rotations_clips == null) Debug.Log("ERROR: No rotation clips");
-        if (wall_bump_clips == null) Debug.Log("ERROR: No wall bump clips");
+    [SerializeField] private string[] obstacleTags;
+
+    [SerializeField] private PlayerAudioManager playerAudioManager;
+
+    public bool IsBusy { get => (isMoving || isRotating); }
+    public string CurrentSoundZoneName { get => currentSoundZoneName; }
+
+    private string currentObstacle;
+
+    private void Start()
+    {
+        movementTime = 1 / movementSpeed;
+
+        currentObstacle = string.Empty;
+
     }
 
-    private bool ClearToMove(bool forward = true)
+    private bool ClearToMove(string direction)
     {
         RaycastHit hit;
 
-        Physics.Raycast(transform.position, forward ? transform.forward : transform.forward * -1, out hit, increment);
+        switch (direction)
+        {
+            case "forward":
+                if (Physics.Raycast(transform.position, transform.forward, out hit, increment))
+                {
+                    currentObstacle = hit.collider.tag;
 
-        return !(hit.collider && !hit.collider.CompareTag("Item"));
+                    //Debug.Log(currentObstacle);
+                    return !IsObstacleTag(currentObstacle);
+                }
+                break;
+            case "backward":
+                if (Physics.Raycast(transform.position, transform.forward * -1f, out hit, increment))
+                {
+                    currentObstacle = hit.collider.tag;
+
+                    //Debug.Log(currentObstacle);
+                    return !IsObstacleTag(currentObstacle);
+                }
+                break;
+            case "left":
+                if (Physics.Raycast(transform.position, transform.right * -1f, out hit, increment))
+                {
+                    currentObstacle = hit.collider.tag;
+
+                    //Debug.Log(currentObstacle);
+                    return !IsObstacleTag(currentObstacle);
+                }
+                break;
+            case "right":
+                if (Physics.Raycast(transform.position, transform.right, out hit, increment))
+                {
+                    currentObstacle = hit.collider.tag;
+
+                    //Debug.Log(currentObstacle);
+                    return !IsObstacleTag(currentObstacle);
+                }
+                break;
+        }
+
+        currentObstacle = string.Empty;
+        return true;
+    }
+
+    private void FixedUpdate()
+    {
+        Debug.DrawRay(transform.position, transform.forward);
     }
 
     private void Update()
     {
         if (isMoving)
-            return;
-
-        // ** ROTATION **
-        if (Input.GetKeyDown(KeyCode.A)) {
-            target_rotation -= 90f;
-            PlayRotation();
-        } else if (Input.GetKeyDown(KeyCode.D)) {
-            target_rotation += 90f;
-            PlayRotation();
-        }
-
-        Quaternion current_rotation = transform.rotation;
-        Quaternion target_quaternion = Quaternion.Euler(0f, target_rotation, 0f);
-        transform.rotation = Quaternion.RotateTowards(current_rotation, target_quaternion, rotation_speed * Time.deltaTime * rotation_smoothness);
-
-        //Don't continue unless rotation is done.
-        if (Quaternion.Angle(current_rotation, target_quaternion) != 0f) {
-            return;
-        }
-
-        // ** MOVEMENT **
-        if (Input.GetKeyDown(KeyCode.W))
         {
-            if (ClearToMove())
-            {
-                transform.localPosition += transform.forward * increment;
-                StartCoroutine(PlayFootsteps());
-            }
-            else
-            {
-                print("obstacle in front");
-                float pitch = Random.Range(minSoundPitch, maxSoundPitch);
-                //front array[0], back array[1]
-                sourceFront.PlayOneShot(wall_bump_clips[0], pitch);
-            }
+            MovePlayer();
         }
-        else if (Input.GetKeyDown(KeyCode.S))
+        else if (isRotating)
         {
-            if (ClearToMove(false))
-            {
-                transform.localPosition -= transform.forward * increment;
-                StartCoroutine(PlayFootsteps());
-            }
-            else
-            {
-                print("obstacle behind");
-                float pitch = Random.Range(minSoundPitch, maxSoundPitch);
-                //front array[0], back array[1]
-                sourceBack.PlayOneShot(wall_bump_clips[1], pitch);
-            }
+            RotatePlayer();
         }
-
+        else
+        {
+            HandleInput();
+        }
     }
 
-    // ** SOUND ***
-    private void PlayRotation() {
-        float rotationVolume = 4f;
-        int clip = Random.Range(0, rotations_clips.Length);
-        sourceCenter.pitch = Random.Range(0.75f, 1.05f);
-        sourceCenter.clip = rotations_clips[clip];
-        sourceCenter.PlayOneShot(sourceCenter.clip, rotationVolume);
-    }
-
-    IEnumerator PlayFootsteps()
+    private void MovePlayer()
     {
-        float footSteepVolume = 2f;
+        // Lerping position
+        float t = Mathf.Clamp01((Time.time - movementStartTime) / movementTime);
+        transform.localPosition = Vector3.Lerp(startPosition, targetPosition, t);
 
-        for (int i = 0; i < 3; i++)
+        if (t >= 1.0f)
         {
-            isMoving = true;
-            RandomizeFootstep();
-            sourceCenter.PlayOneShot(sourceCenter.clip, footSteepVolume);
-            yield return new WaitForSeconds(sourceCenter.clip.length + Random.Range(0.07f, 0.13f));
             isMoving = false;
         }
     }
 
-    private void RandomizeFootstep() {
-        int clip = Random.Range(0, footsteps_clips.Length);
-        sourceCenter.pitch = Random.Range(0.8f, 1.1f);
-        sourceCenter.clip = footsteps_clips[clip];
+    private void RotatePlayer()
+    {
+        // Lerping rotation
+        float t = Mathf.Clamp01((Time.time - movementStartTime) / movementTime);
+        transform.rotation = Quaternion.Slerp(startRotation, targetRotation, t);
 
+        if (t >= 1.0f)
+        {
+            isRotating = false;
+        }
     }
 
+    private void HandleInput()
+    {
+        if (Input.GetKeyDown(KeyCode.W) && !isMoving)
+        {
+            if (ClearToMove("forward"))
+            {
+                StartCoroutine(FootstepsDelay());
+                StartMovement(transform.forward);
+            }
+            else
+            {
+                print("obstacle in front");
+                playerAudioManager.PlayWallHitSound(currentObstacle, audioFrontPosition, "Front");
+            }
+        }
+        else if (Input.GetKeyDown(KeyCode.S) && !isMoving)
+        {
+            if (ClearToMove("backward"))
+            {
+                StartCoroutine(FootstepsDelay());
+                StartMovement(-transform.forward);
+            }
+            else
+            {
+                print("obstacle behind");
+                playerAudioManager.PlayWallHitSound(currentObstacle, audioBehindPosition, "Back");
+            }
+        }
+        else if (Input.GetKeyDown(KeyCode.A) && !isMoving)
+        {
+            if (ClearToMove("left"))
+            {
+                StartCoroutine(FootstepsDelay());
+                StartMovement(-transform.right);
+            }
+            else
+            {
+                print("obstacle to the left");
+                playerAudioManager.PlayWallHitSound(currentObstacle, audioLeftPosition, "Left");
+            }
+        }
+        else if (Input.GetKeyDown(KeyCode.D) && !isMoving)
+        {
+            if (ClearToMove("right"))
+            {
+                StartCoroutine(FootstepsDelay());
+                StartMovement(transform.right);
+            }
+            else
+            {
+                print("obstacle to the right");
+                playerAudioManager.PlayWallHitSound(currentObstacle, audioRightPosition, "Right");
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftArrow) && !isRotating)
+        {
+            StartRotation(-90f);
+        }
+        else if (Input.GetKeyDown(KeyCode.RightArrow) && !isRotating)
+        {
+            StartRotation(90f);
+        }
+    }
+
+    private void StartMovement(Vector3 direction)
+    {
+        isMoving = true;
+        targetPosition = transform.localPosition + direction * increment;
+        movementStartTime = Time.time;
+        startPosition = transform.localPosition;
+    }
+
+    private void StartRotation(float rotation)
+    {
+        isRotating = true;
+        target_rotation += rotation;
+        startRotation = transform.rotation;
+        movementStartTime = Time.time;
+        targetRotation = Quaternion.Euler(0f, target_rotation, 0f);
+    }
+
+
+    /* public void RandomizeFootstep()
+     {
+         int clip = Random.Range(0, footsteps.Length);
+         sourceCenter.pitch = Random.Range(0.8f, 1.1f);
+         sourceCenter.clip = footsteps[clip];
+
+     }
+    */
+
+    IEnumerator FootstepsDelay()
+    {
+        isMoving = true;
+        yield return new WaitForSeconds(movementTime);
+        isMoving = false;
+    }
+
+    /* IEnumerator PlayFootsteps()
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            isMoving = true;
+            RandomizeFootstep();
+            sourceCenter.PlayOneShot(sourceCenter.clip);
+            yield return new WaitForSeconds(sourceCenter.clip.length + Random.Range(0.125f, 0.17f));
+            isMoving = false;
+        }
+    }
+    */
+
+    private bool IsObstacleTag(string tag)
+    {
+        for (int i = 0; i < obstacleTags.Length; i++)
+        {
+            if (obstacleTags[i].Equals(tag))
+                return true;
+        }
+        return false;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.layer == LayerMask.NameToLayer("SoundZones"))
+        {
+            currentSoundZoneName = other.tag;
+        }
+    }
 }

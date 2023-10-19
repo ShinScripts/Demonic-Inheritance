@@ -4,7 +4,17 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Item
+  - Generator
+  - Wall
+  - Furniture
+  - LockedDoor
+  - Bathroom
+  - LongCorridor
+  - Hallway
+  - DinningTable
+  - NoSignal
+  - Door
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -12,9 +22,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Walls_Occlusion
+  - Walls_Obstruction
+  - SoundZones
   - 
   - 
   - 

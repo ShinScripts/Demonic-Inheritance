@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{ae106de2-75fb-4726-9bb5-5eda98d980e1}">
+		<property name="name">
+			<value>AssistenceLength</value>
+		</property>
+		<relationship name="folder">
+			<destination>{ac082d7b-88d9-43cd-865b-26e36b29ce5c}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{c078fafc-ba2b-415a-8a93-4b37ac4b1b81}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{c078fafc-ba2b-415a-8a93-4b37ac4b1b81}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>Short</value>
+			<value>Long</value>
+		</property>
+		<property name="isGlobal">
+			<value>true</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>
