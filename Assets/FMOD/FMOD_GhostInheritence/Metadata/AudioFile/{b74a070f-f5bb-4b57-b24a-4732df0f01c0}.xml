@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{b74a070f-f5bb-4b57-b24a-4732df0f01c0}">
+		<property name="assetPath">
+			<value>Foley/EnemyFoley/Foley_Enemy_8.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.57376417233560095</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e859f30b-e6e0-442d-b14d-aa53359f7ec9}</destination>
+		</relationship>
+	</object>
+</objects>
