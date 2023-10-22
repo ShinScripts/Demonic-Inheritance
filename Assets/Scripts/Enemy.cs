@@ -45,7 +45,7 @@ public class Enemy : MonoBehaviour
             agent.SetDestination(target.transform.position);
         }
 
-        if (Vector3.Distance(transform.position, target.transform.position) < 0.5f)
+        if (Vector3.Distance(transform.position, target.transform.position) < 1f)
         {
             ChangeTargets();
         }
@@ -89,8 +89,7 @@ public class Enemy : MonoBehaviour
     {
         detected = true;
 
-        print("detected: " + detected);
-
+        
 
         // play activation sound
 
@@ -98,10 +97,7 @@ public class Enemy : MonoBehaviour
 
         detected = false;
 
-        print("detected: " + detected);
-
         // play deactivation sound
-
 
         yield return null;
     }
