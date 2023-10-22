@@ -3,7 +3,7 @@ using System.IO;
 using UnityEngine;
 
 public class Logger : MonoBehaviour {
-    private string logFileName = "";
+    private string logFileName = "LogFile.txt";
 
     private void OnEnable() {
         Application.logMessageReceived += HandleLog;
