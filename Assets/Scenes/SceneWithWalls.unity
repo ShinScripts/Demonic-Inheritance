@@ -51224,6 +51224,13 @@ MonoBehaviour:
   start: {fileID: 449643884}
   end: {fileID: 2030439589}
   speed: 2
+  EnemyDetection:
+    Guid:
+      Data1: 1377241279
+      Data2: 1330866457
+      Data3: 562585521
+      Data4: 1537177908
+    Path: event:/EnemyDetection
 --- !u!1 &1929675821
 GameObject:
   m_ObjectHideFlags: 0
