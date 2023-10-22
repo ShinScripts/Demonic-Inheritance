@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{6aaa98d2-f8d2-4170-b4b3-bb7e3235d907}">
+		<property name="assetPath">
+			<value>VO/VO_WeaponPart2.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>6.1126530612244894</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e859f30b-e6e0-442d-b14d-aa53359f7ec9}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -1,12 +1,12 @@
-using UnityEngine;
-using FMODUnity;
 using FMOD.Studio;
+using FMODUnity;
+using UnityEngine;
 
 public class FirstPersonOcclusion : MonoBehaviour
 {
     [Header("FMOD Event")]
     [SerializeField]
-    private EventReference selectAudio; // Use EventReference instead of string
+    private EventReference selectAudio;
     private new EventInstance audio;
     private EventDescription audioDes;
     private StudioListener listener;
@@ -19,23 +19,37 @@ public class FirstPersonOcclusion : MonoBehaviour
     [SerializeField]
     [Range(0f, 10f)]
     private float playerOcclusionWidening = 1f;
-    [SerializeField]
-    private LayerMask occlusionLayer;
+
+    private static LayerMask occlusionLayer; 
+    private static LayerMask obstructionLayer;
+
+    [Tooltip("Set to true in case the game object is a generator or an enemy.")]
+    [SerializeField] private bool shouldUseObstruction = false;
+    [SerializeField] private bool debugOcclusion = false;
 
     private bool audioIsVirtual;
     private float minDistance;
     private float maxDistance;
     private float listenerDistance;
-    private float lineCastHitCount = 0f;
+    private float lineCastOcclusionHitCount = 0f;
+    private float lineCastObstructionHitCount = 0f;
     private Color colour;
+    private int obstructionCount;
+    private string currentObstruction;
+
+
 
     private void Start()
     {
         audioDes = RuntimeManager.GetEventDescription(selectAudio);
         audioDes.getMinMaxDistance(out minDistance, out maxDistance);
         listener = FindObjectOfType<StudioListener>();
+        currentObstruction = "hello world";
 
-        // Debug.Log(maxDistance);
+        occlusionLayer = LayerMask.GetMask(LayerMask.LayerToName(6));
+        obstructionLayer = LayerMask.GetMask(LayerMask.LayerToName(7));
+
+        //Debug.Log(occlusionLayer);
     }
 
     private void FixedUpdate()
@@ -47,9 +61,23 @@ public class FirstPersonOcclusion : MonoBehaviour
             listenerDistance = Vector3.Distance(transform.position, listener.transform.position);
 
             if (!audioIsVirtual && pb == PLAYBACK_STATE.PLAYING && listenerDistance <= maxDistance)
+            {
+                obstructionCount = CalculateObjectsBetween(transform.position, listener.transform.position);
+                //currentObstruction = ObjectsBetweenCount(obstructionCount);
+                if (debugOcclusion)
+                {
+                   Debug.Log("Objects between " + gameObject.name + " and listener: " + obstructionCount);
+                }
+
+               
+
                 OccludeBetween(transform.position, listener.transform.position);
 
-            lineCastHitCount = 0f;
+
+            }
+
+            lineCastOcclusionHitCount = 0f;
+            lineCastObstructionHitCount = 0f;
         }
     }
 
@@ -91,7 +119,7 @@ public class FirstPersonOcclusion : MonoBehaviour
             colour = Color.green;
         }
 
-        SetParameter();
+        SetParameters();
     }
 
     private Vector3 CalculatePoint(Vector3 a, Vector3 b, float m, bool posOrNeg)
@@ -120,19 +148,41 @@ public class FirstPersonOcclusion : MonoBehaviour
 
         if (hit.collider)
         {
-            lineCastHitCount++;
+            lineCastOcclusionHitCount++;
             Debug.DrawLine(Start, End, Color.red);
-
+            return;
         }
-        else
-            Debug.DrawLine(Start, End, colour);
+        
+        Physics.Linecast(Start, End, out hit, obstructionLayer);
 
-        // Debug.Log(gameObject.name + ": " + lineCastHitCount);
+        if (hit.collider)
+        {
+            lineCastObstructionHitCount++;
+            Debug.DrawLine(Start, End, Color.black);
+            return;
+        }
+
+        if (!hit.collider)
+        {
+            Debug.DrawLine(Start, End, colour);
+        }
+
     }
 
-    private void SetParameter()
+    private void SetParameters()
     {
-        audio.setParameterByName("Occlusion", lineCastHitCount / 11);
+        if (shouldUseObstruction)
+        {
+            SetObstructionParamater();
+        }
+
+        if (debugOcclusion)
+        {
+            Debug.Log("Free lines: " + (11 - lineCastOcclusionHitCount - lineCastObstructionHitCount) +
+                " Occlusion lines: " + lineCastOcclusionHitCount + 
+                " Obstruction lines: " + lineCastObstructionHitCount);
+        }
+        audio.setParameterByName("Occlusion", lineCastOcclusionHitCount / 11 + 2 * lineCastObstructionHitCount / 11);
     }
 
     private void OnEnable()
@@ -150,4 +200,71 @@ public class FirstPersonOcclusion : MonoBehaviour
             audio.release();
         }
     }
+
+    private int CalculateObjectsBetween(Vector3 start, Vector3 end)
+    {
+        int objectsBetweenCount = 0;
+        RaycastHit[] hits = Physics.RaycastAll(start, (end - start).normalized, Vector3.Distance(start, end), obstructionLayer);
+
+        foreach (RaycastHit hit in hits)
+        {
+            if (hit.collider)
+            {
+                objectsBetweenCount++;
+            }
+        }
+
+        return objectsBetweenCount;
+    }
+
+    private string GetObstructionName()
+    {
+
+        /*  if (lineCastObstructionHitCount <= 0)
+          {
+              return "NoObstruction";
+          }
+
+          else if (lineCastObstructionHitCount < 11)
+          {
+              return "Obstruction_1_Wall";
+          }
+
+          else return "Full_Obstruction"; 
+
+        */
+      
+
+        if (obstructionCount <= 0)
+        {
+            return "NoObstruction";
+        }
+
+        else if (obstructionCount < 2)
+        {
+            return "Obstruction_1_Wall";
+        }
+
+        else return "Full_Obstruction";
+
+    }
+    
+
+    private void SetObstructionParamater()
+    {
+        string newObstruction = GetObstructionName();
+
+
+        if (currentObstruction.Equals(newObstruction))
+        {
+            return;
+        }
+
+        else
+        {
+            currentObstruction = newObstruction;
+            audio.setParameterByNameWithLabel("Obstruction", currentObstruction);
+        }
+    }
+
 }

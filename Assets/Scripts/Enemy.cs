@@ -30,7 +30,7 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
-        if (player.GetComponent<PlayerMovement>().isMoving && !follow_player)
+        if (player.GetComponent<PlayerMovement>().IsBusy && !follow_player)
         {
             StartCoroutine(StartFollowing(2));
         }

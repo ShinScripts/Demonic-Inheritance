@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{5d5f5a84-1a36-4383-8cc4-51a593c4ffe3}">
+		<property name="assetPath">
+			<value>VO/VO_DiningRoom_Wweapon.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>7.732244897959184</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e859f30b-e6e0-442d-b14d-aa53359f7ec9}</destination>
+		</relationship>
+	</object>
+</objects>

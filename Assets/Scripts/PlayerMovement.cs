@@ -2,6 +2,7 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using FMODUnity;
+using Unity.VisualScripting;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -13,9 +14,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float movementSpeed = 3.3f;
     private float movementTime;
 
-    public bool is_killed = false;
+    [SerializeField] private Transform audioFrontPosition;
+    [SerializeField] private Transform audioBehindPosition;
+    [SerializeField] private Transform audioLeftPosition;
+    [SerializeField] private Transform audioRightPosition;
 
-    public bool isMoving = false;
+    private bool isMoving = false;
     private bool isRotating = false;
 
 
@@ -25,22 +29,76 @@ public class PlayerMovement : MonoBehaviour
     private Quaternion startRotation;
     private Quaternion targetRotation;
 
+    private string currentSoundZoneName;
+
+    [SerializeField] private string[] obstacleTags;
+
     [SerializeField] private PlayerAudioManager playerAudioManager;
 
     public bool IsBusy { get => (isMoving || isRotating); }
+    public string CurrentSoundZoneName { get => currentSoundZoneName; }
+
+    private string currentObstacle;
 
     private void Start()
     {
         movementTime = 1 / movementSpeed;
+
+        currentObstacle = string.Empty;
+
     }
 
-    private bool ClearToMove(bool forward = true)
+    private bool ClearToMove(string direction)
     {
         RaycastHit hit;
 
-        Physics.Raycast(transform.position, forward ? transform.forward : transform.forward * -1, out hit, increment);
+        switch (direction)
+        {
+            case "forward":
+                if (Physics.Raycast(transform.position, transform.forward, out hit, increment))
+                {
+                    currentObstacle = hit.collider.tag;
 
-        return !(hit.collider && !hit.collider.CompareTag("Generator") && !hit.collider.CompareTag("Enemy"));
+                    //Debug.Log(currentObstacle);
+                    return !IsObstacleTag(currentObstacle);
+                }
+                break;
+            case "backward":
+                if (Physics.Raycast(transform.position, transform.forward * -1f, out hit, increment))
+                {
+                    currentObstacle = hit.collider.tag;
+
+                    //Debug.Log(currentObstacle);
+                    return !IsObstacleTag(currentObstacle);
+                }
+                break;
+            case "left":
+                if (Physics.Raycast(transform.position, transform.right * -1f, out hit, increment))
+                {
+                    currentObstacle = hit.collider.tag;
+
+                    //Debug.Log(currentObstacle);
+                    return !IsObstacleTag(currentObstacle);
+                }
+                break;
+            case "right":
+                if (Physics.Raycast(transform.position, transform.right, out hit, increment))
+                {
+                    currentObstacle = hit.collider.tag;
+
+                    //Debug.Log(currentObstacle);
+                    return !IsObstacleTag(currentObstacle);
+                }
+                break;
+        }
+
+        currentObstacle = string.Empty;
+        return true;
+    }
+
+    private void FixedUpdate()
+    {
+        Debug.DrawRay(transform.position, transform.forward);
     }
 
     private void Update()
@@ -87,37 +145,62 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.W) && !isMoving)
         {
-            if (ClearToMove())
+            if (ClearToMove("forward"))
             {
-                StartCoroutine(PlayFootsteps());
+                StartCoroutine(FootstepsDelay());
                 StartMovement(transform.forward);
             }
             else
             {
                 print("obstacle in front");
-                playerAudioManager.PlayWallHitSoundFront();
-
+                playerAudioManager.PlayWallHitSound(currentObstacle, audioFrontPosition, "Front");
             }
         }
         else if (Input.GetKeyDown(KeyCode.S) && !isMoving)
         {
-            if (ClearToMove(false))
+            if (ClearToMove("backward"))
             {
-                StartCoroutine(PlayFootsteps());
+                StartCoroutine(FootstepsDelay());
                 StartMovement(-transform.forward);
             }
             else
             {
                 print("obstacle behind");
-                playerAudioManager.PlayWallHitSoundBack();
+                playerAudioManager.PlayWallHitSound(currentObstacle, audioBehindPosition, "Back");
+            }
+        }
+        else if (Input.GetKeyDown(KeyCode.A) && !isMoving)
+        {
+            if (ClearToMove("left"))
+            {
+                StartCoroutine(FootstepsDelay());
+                StartMovement(-transform.right);
+            }
+            else
+            {
+                print("obstacle to the left");
+                playerAudioManager.PlayWallHitSound(currentObstacle, audioLeftPosition, "Left");
+            }
+        }
+        else if (Input.GetKeyDown(KeyCode.D) && !isMoving)
+        {
+            if (ClearToMove("right"))
+            {
+                StartCoroutine(FootstepsDelay());
+                StartMovement(transform.right);
+            }
+            else
+            {
+                print("obstacle to the right");
+                playerAudioManager.PlayWallHitSound(currentObstacle, audioRightPosition, "Right");
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.A) && !isRotating)
+        if (Input.GetKeyDown(KeyCode.LeftArrow) && !isRotating)
         {
             StartRotation(-90f);
         }
-        else if (Input.GetKeyDown(KeyCode.D) && !isRotating)
+        else if (Input.GetKeyDown(KeyCode.RightArrow) && !isRotating)
         {
             StartRotation(90f);
         }
@@ -150,10 +233,9 @@ public class PlayerMovement : MonoBehaviour
      }
     */
 
-    IEnumerator PlayFootsteps()
+    IEnumerator FootstepsDelay()
     {
         isMoving = true;
-        //playerAudioManager.PlayFootstep();
         yield return new WaitForSeconds(movementTime);
         isMoving = false;
     }
@@ -170,4 +252,22 @@ public class PlayerMovement : MonoBehaviour
         }
     }
     */
+
+    private bool IsObstacleTag(string tag)
+    {
+        for (int i = 0; i < obstacleTags.Length; i++)
+        {
+            if (obstacleTags[i].Equals(tag))
+                return true;
+        }
+        return false;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.layer == LayerMask.NameToLayer("SoundZones"))
+        {
+            currentSoundZoneName = other.tag;
+        }
+    }
 }

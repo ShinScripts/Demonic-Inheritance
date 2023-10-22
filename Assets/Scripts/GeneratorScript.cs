@@ -23,7 +23,9 @@ public class GeneratorScript : MonoBehaviour
         if (!beenTaken && collision.CompareTag("Player"))
         {
             beenTaken = true;
+
             generatorCollectedAudio.start();
+            generatorCollectedAudio.release();
             Debug.Log("Generator " + generatorNumber + " has been taken!");
 
         }
