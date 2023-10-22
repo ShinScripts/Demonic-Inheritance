@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/FMOD/FMOD_GhostInheritence/Build/Desktop/EnemyFoley.bank.meta
 guid: 477049dbf62ff8949a79153d4e7d5873
+========
+guid: fbc9e6ffa36108e4aa903dbb4c430f1b
+>>>>>>>> main:Assets/Enhanced Audio Source/Enhanced Audio Source Quickstart.pdf.meta
 DefaultImporter:
   externalObjects: {}
   userData: 

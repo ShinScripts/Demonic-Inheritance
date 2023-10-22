@@ -5,7 +5,15 @@ TagManager:
   serializedVersion: 2
   tags:
   - Generator
-  - Item
+  - Wall
+  - Furniture
+  - LockedDoor
+  - Bathroom
+  - LongCorridor
+  - Hallway
+  - DinningTable
+  - NoSignal
+  - Door
   - Enemy
   layers:
   - Default
@@ -14,12 +22,12 @@ TagManager:
   - 
   - Water
   - UI
-  - Walls
+  - Walls_Occlusion
+  - Walls_Obstruction
+  - SoundZones
   - 
   - 
-  - Wood
-  - Stone
-  - Tiles
+  - 
   - 
   - 
   - 

@@ -1,12 +1,18 @@
+using FMOD.Studio;
+using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.Antlr3.Runtime.Tree;
 using UnityEngine;
 
 public class GeneratorManager : MonoBehaviour
 {
+   // [SerializeField] private AI_Companion ai_companion;
+
     GameObject[] generators;
     GameObject current_generator;
     int index = 0;
+
 
     // Start is called before the first frame update
     void Start()
@@ -28,12 +34,13 @@ public class GeneratorManager : MonoBehaviour
         }
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (current_generator.GetComponent<GeneratorScript>().beenTaken)
         {
             current_generator.SetActive(false);
             index++;
+            FMODUnity.RuntimeManager.StudioSystem.setParameterByName("PiecesCollected", index);
 
             if (index >= generators.Length)
                 return;
@@ -49,5 +56,10 @@ public class GeneratorManager : MonoBehaviour
                 }
             }
         }
+    }
+
+    public int GeneratorsLeft()
+    {
+        return generators.Length - index;
     }
 }

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5778273588120834397}
-  - component: {fileID: 5778273588120834398}
+  - component: {fileID: 111396820}
   m_Layer: 0
   m_Name: GeneratorManager
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5778273588120834398
+--- !u!114 &111396820
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,6 +41,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 5778273588120834396}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a768733471a7c24fab949d071983007, type: 3}
+  m_Script: {fileID: 11500000, guid: 3f2a29eceaee4124c8c029c3a6be4dcd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

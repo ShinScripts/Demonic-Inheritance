@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/FMOD/FMOD_GhostInheritence/Assets/Foley/PlayerFoley/Foley_Heavy_breathing.wav.meta
 guid: 65712a5049e0d184b922f498132195df
+========
+guid: 934292fcf011cfd43bfdc342bff2373a
+>>>>>>>> main:Assets/Audio/Foley/scoreboard_winner_announced_01.wav.meta
 AudioImporter:
   externalObjects: {}
   serializedVersion: 6

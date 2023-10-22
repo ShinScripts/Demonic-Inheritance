@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SceneWithWalls.unity
-    guid: a196728d08056c8419100d3a556233fb
+    path: Assets/Scenes/Daniel_Jens_AI.unity
+    guid: 78f4551d8a0bafc45864ade404da03e7
   m_configObjects: {}
