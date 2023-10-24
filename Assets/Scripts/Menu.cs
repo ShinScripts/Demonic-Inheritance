@@ -27,14 +27,6 @@ public class Menu : MonoBehaviour {
     private bool hasPlayedCurrentItem = false;
 
     private void Start() {
-        /* totalItems = menuItemEvents.Length;
-
-         // Initialize EventInstances for menu items
-         menuItemEventInstances = new EventInstance[totalItems];
-         for (int i = 0; i < totalItems; i++) {
-             menuItemEventInstances[i] = RuntimeManager.CreateInstance(menuItemEvents[i]);
-         }
-        */
 
         menuItemEventInstance = RuntimeManager.CreateInstance(menuItemEvent);
 
