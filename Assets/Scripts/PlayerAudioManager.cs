@@ -4,6 +4,7 @@ using System.Drawing;
 using FMOD.Studio;
 using FMODUnity;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerAudioManager : MonoBehaviour
 {
@@ -26,6 +27,8 @@ public class PlayerAudioManager : MonoBehaviour
     private EventInstance wallhitAudioInstance;
     private EventInstance footStepsAudioInstance;
 
+
+
     [SerializeField] private float distanceParameter = 0;
 
     private float distanceToEnemy;
@@ -37,19 +40,31 @@ public class PlayerAudioManager : MonoBehaviour
 
     private int furnitureCounter = 0;
 
+    private bool playEnemyAudio = true;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        breathingAudioInstance = RuntimeManager.CreateInstance(BreathingEvent);
-        heartbeatAudioInstance = RuntimeManager.CreateInstance(HeartbeatEvent);
+        // Check if we need to skip enemy-related audio
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        playEnemyAudio = currentSceneIndex > 1;
+
+        print("skip enemy audio: " + playEnemyAudio);
+
+        if (playEnemyAudio)
+        {
+            breathingAudioInstance = RuntimeManager.CreateInstance(BreathingEvent);
+            heartbeatAudioInstance = RuntimeManager.CreateInstance(HeartbeatEvent);
+            breathingAudioInstance.start();
+            heartbeatAudioInstance.start();
+
+        }
+
         wallhitAudioInstance = RuntimeManager.CreateInstance(WallhitEvent);
         footStepsAudioInstance = RuntimeManager.CreateInstance(FootStepsEvent);
-
-        breathingAudioInstance.start();
-        heartbeatAudioInstance.start();
-
         wallhitAudioInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(playerMovement.transform.position));
+
     }
 
     // Update is called once per frame
@@ -68,10 +83,13 @@ public class PlayerAudioManager : MonoBehaviour
             shouldPlay = true;
         }
 
-        ParseDistance();
+        if (playEnemyAudio)
+        {
+            ParseDistance();
 
-        heartbeatAudioInstance.setParameterByName(DIST_TO_ENEMY_H, distanceParameter);
-        breathingAudioInstance.setParameterByName(DIST_TO_ENEMY_B, distanceParameter);
+            heartbeatAudioInstance.setParameterByName(DIST_TO_ENEMY_H, distanceParameter);
+            breathingAudioInstance.setParameterByName(DIST_TO_ENEMY_B, distanceParameter);
+        }
 
         //  Debug.Log("distance to enemy:" + distanceToEnemy);
         //  Debug.Log("distance parameter:" + distanceParameter);
