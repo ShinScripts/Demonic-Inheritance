@@ -8,27 +8,29 @@ using FMODUnity;
 
 public class Enemy : MonoBehaviour
 {
-    public GameObject start;
-    public GameObject end;
-    public float speed = 2f;
+    public GameObject[] patrol;
+    private int patrol_index = 0;
+    public float speed = 5f;
     private GameObject target;
     private GameObject player;
     [SerializeField] private EventReference EnemyDetection;
     private NavMeshAgent agent;
 
-    bool follow_player = false;
-
-    bool detected = false;
+    private bool follow_player = false;
+    private bool detected = false;
 
     private EventInstance enemyDetectionSound;
 
     void Start()
     {
+        if (!GameObject.Find("Rules").GetComponent<ExternalParameters>().doEnemiesSpawn)
+            gameObject.SetActive(false);
+
         player = GameObject.FindGameObjectWithTag("Player");
         agent = GetComponent<NavMeshAgent>();
 
-        transform.position = start.transform.position;
-        target = end;
+        transform.position = patrol[patrol_index].transform.position;
+        target = patrol[++patrol_index];
 
         enemyDetectionSound = RuntimeManager.CreateInstance(EnemyDetection);
         enemyDetectionSound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform.position));
@@ -36,6 +38,12 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
+        if (detected && follow_player && !player.GetComponent<PlayerMovement>().is_dead && Vector3.Distance(transform.position, player.transform.position) < 1.5f)
+        {
+            player.GetComponent<PlayerMovement>().is_dead = true;
+            print("dead");
+        }
+
         if (player.GetComponent<PlayerMovement>().IsBusy && !follow_player)
         {
             StartCoroutine(StartFollowing(2));
@@ -59,7 +67,15 @@ public class Enemy : MonoBehaviour
 
     void ChangeTargets()
     {
-        target = (target == start) ? end : start;
+        if (patrol.Length == patrol_index)
+        {
+            patrol_index = 0;
+            target = patrol[patrol_index];
+        }
+        else
+        {
+            target = patrol[patrol_index++];
+        }
     }
 
     private IEnumerator StartFollowing(float duration)
@@ -87,36 +103,29 @@ public class Enemy : MonoBehaviour
     {
         if (CanSeePlayer() && collider.CompareTag("Player") && !detected && follow_player)
         {
-            StartCoroutine(DetectionTrigger());
+            detected = true;
+
+            // play activation sound
+            /**
+             * Set atributes for transform and label before calling start(); 
+             * 
+             * Detection Type labels for now: PlayerDetected, PlayerNoDetected
+             */
+            enemyDetectionSound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform.position));
+            enemyDetectionSound.setParameterByNameWithLabel("DetectionType", "PlayerDetected");
+            enemyDetectionSound.start();
         }
     }
 
-    private IEnumerator DetectionTrigger()
+    private void OnTriggerExit(Collider collider)
     {
-        detected = true;
+        if (collider.CompareTag("Player") && detected)
+        {
+            detected = false;
 
-
-
-        // play activation sound
-        /**
-         * Set atributes for transform and label before calling start(); 
-         * 
-         * Detection Type labels for now: PlayerDetected, PlayerNoDetected
-         */
-        enemyDetectionSound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform.position));
-        enemyDetectionSound.setParameterByNameWithLabel("DetectionType", "PlayerDetected");
-        enemyDetectionSound.start();
-
-        yield return new WaitForSeconds(3);
-
-        detected = false;
-
-        // play deactivation sound
-
-        enemyDetectionSound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform.position));
-        enemyDetectionSound.setParameterByNameWithLabel("DetectionType", "PlayerNoDetected");
-        enemyDetectionSound.start();
-
-        yield return null;
+            enemyDetectionSound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform.position));
+            enemyDetectionSound.setParameterByNameWithLabel("DetectionType", "PlayerNoDetected");
+            enemyDetectionSound.start();
+        }
     }
 }
