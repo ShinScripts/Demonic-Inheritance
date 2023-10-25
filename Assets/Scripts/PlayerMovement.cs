@@ -3,6 +3,12 @@ using TMPro;
 using UnityEngine;
 using FMODUnity;
 using Unity.VisualScripting;
+<<<<<<< Updated upstream
+=======
+using UnityEngine.SceneManagement;
+using System.Collections.Generic;
+using FMOD.Studio;
+>>>>>>> Stashed changes
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -22,6 +28,13 @@ public class PlayerMovement : MonoBehaviour
     private bool isMoving = false;
     private bool isRotating = false;
 
+<<<<<<< Updated upstream
+=======
+    private Transform lastGeneratorPosition;
+
+    public EventInstance lastSoundTriggerReference;
+
+>>>>>>> Stashed changes
     private float movementStartTime;
     private Vector3 startPosition;
     private Vector3 targetPosition;
@@ -38,6 +51,7 @@ public class PlayerMovement : MonoBehaviour
     public string CurrentSoundZoneName { get => currentSoundZoneName; }
 
     private string currentObstacle;
+    private float rightDirection;
 
     private void Start()
     {
@@ -102,6 +116,23 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+<<<<<<< Updated upstream
+=======
+
+        if (is_dead)
+        {
+            //dead
+
+            return;
+        }
+
+        if (!CanMove)
+        {
+            //is locked to move
+            return;
+        }
+
+>>>>>>> Stashed changes
         if (isMoving)
         {
             MovePlayer();
@@ -268,5 +299,50 @@ public class PlayerMovement : MonoBehaviour
         {
             currentSoundZoneName = other.tag;
         }
+
+        if (other.gameObject.layer == LayerMask.NameToLayer("DirectionZones"))
+        {
+            rightDirection = other.GetComponent<RightOrientation>().orientation;
+        }
+
     }
+<<<<<<< Updated upstream
+=======
+
+    public void SetCheckPoint(Transform transform)
+    {
+        lastGeneratorPosition = transform;
+    }
+
+    public string GetCorrentDirection()
+    {
+
+        print(rightDirection);
+
+
+        float playerRotation = transform.rotation.eulerAngles.y < 0 ? transform.eulerAngles.y + 360f : transform.eulerAngles.y;
+
+        float direction = (rightDirection - playerRotation >= 0) ? rightDirection - playerRotation : rightDirection - playerRotation + 360f;
+
+        print(direction);
+
+        switch (direction)
+        {
+            case 0:
+                return "Front";
+            case 90f:
+                return "Right";
+            case 180f:
+                return "Back";
+            case 270f:
+                return "Left";
+            default:
+                return "Front";
+
+        }
+        
+    }
+
+
+>>>>>>> Stashed changes
 }

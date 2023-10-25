@@ -15,6 +15,12 @@ TagManager:
   - NoSignal
   - Door
   - Enemy
+  - Front
+  - Right
+  - Left
+  - Far
+  - Close
+  - Tree
   layers:
   - Default
   - TransparentFX
@@ -25,9 +31,15 @@ TagManager:
   - Walls_Occlusion
   - Walls_Obstruction
   - SoundZones
+<<<<<<< Updated upstream
   - 
   - 
   - 
+=======
+  - Kitchen
+  - Bathroom
+  - DirectionZones
+>>>>>>> Stashed changes
   - 
   - 
   - 

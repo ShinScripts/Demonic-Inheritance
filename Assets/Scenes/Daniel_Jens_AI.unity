@@ -328,6 +328,29 @@ PrefabInstance:
       propertyPath: generatorManager
       value: 
       objectReference: {fileID: 111396820}
+<<<<<<< Updated upstream
+=======
+    - target: {fileID: 5774368647889398949, guid: 171ada5a24e9e6a47bf58753649d49a2, type: 3}
+      propertyPath: NestedEvent.Guid.Data1
+      value: -1747433033
+      objectReference: {fileID: 0}
+    - target: {fileID: 5774368647889398949, guid: 171ada5a24e9e6a47bf58753649d49a2, type: 3}
+      propertyPath: NestedEvent.Guid.Data2
+      value: 1183514097
+      objectReference: {fileID: 0}
+    - target: {fileID: 5774368647889398949, guid: 171ada5a24e9e6a47bf58753649d49a2, type: 3}
+      propertyPath: NestedEvent.Guid.Data3
+      value: -597066864
+      objectReference: {fileID: 0}
+    - target: {fileID: 5774368647889398949, guid: 171ada5a24e9e6a47bf58753649d49a2, type: 3}
+      propertyPath: NestedEvent.Guid.Data4
+      value: 1918977719
+      objectReference: {fileID: 0}
+    - target: {fileID: 7883751729260701020, guid: 171ada5a24e9e6a47bf58753649d49a2, type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 0}
+>>>>>>> Stashed changes
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 171ada5a24e9e6a47bf58753649d49a2, type: 3}
 --- !u!1001 &1868527214

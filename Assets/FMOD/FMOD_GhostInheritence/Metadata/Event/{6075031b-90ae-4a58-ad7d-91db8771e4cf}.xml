@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{6075031b-90ae-4a58-ad7d-91db8771e4cf}">
 		<property name="name">
-			<value>VO_NestedEvent</value>
+			<value>VO_AssistOutside</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
@@ -33,9 +33,6 @@
 		</relationship>
 		<relationship name="parameters">
 			<destination>{b8f2df0d-8f0c-4be9-9f40-79ccee9f8bcf}</destination>
-		</relationship>
-		<relationship name="banks">
-			<destination>{d6e39339-b428-4029-9a9d-18d6816c2483}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixer" id="{59f213ae-1982-4b65-b98c-4bb1a3478cac}">
@@ -93,8 +90,8 @@
 	<object class="MultiSound" id="{28455cf3-318c-4b99-856e-67bd0f4fd212}">
 		<relationship name="sounds">
 			<destination>{d455ca11-a2ad-4787-8435-c4db019769e4}</destination>
-			<destination>{5591d112-9ba1-414b-9200-d48bc789c859}</destination>
-			<destination>{be85f597-3bc5-4ef2-94db-39d6fd1fcdf7}</destination>
+			<destination>{3e99d833-23ab-465c-9f30-855052e98bbb}</destination>
+			<destination>{49afba5c-e998-44f4-ba52-5ed6dd9b77e4}</destination>
 			<destination>{40d4c5a3-6680-4850-a280-3af42f80143a}</destination>
 		</relationship>
 	</object>
@@ -135,14 +132,17 @@
 			<destination>{15d356e4-174d-4bb6-a342-63be9f540f14}</destination>
 		</relationship>
 	</object>
-	<object class="EventSound" id="{5591d112-9ba1-414b-9200-d48bc789c859}">
+	<object class="EventSound" id="{3e99d833-23ab-465c-9f30-855052e98bbb}">
 		<relationship name="event">
-			<destination>{e97005fd-040f-4b51-9ee2-43e2215db926}</destination>
+			<destination>{8b3b05e8-251a-43c6-b683-ee96d28c3d10}</destination>
 		</relationship>
 	</object>
-	<object class="EventSound" id="{be85f597-3bc5-4ef2-94db-39d6fd1fcdf7}">
+	<object class="EventSound" id="{49afba5c-e998-44f4-ba52-5ed6dd9b77e4}">
+		<relationship name="parameters">
+			<destination>{0f710056-be03-42b6-ae4c-7e537a213135}</destination>
+		</relationship>
 		<relationship name="event">
-			<destination>{f19e8bdf-214e-462f-8d07-b4c7861c7221}</destination>
+			<destination>{f3872a59-0fd8-4472-9175-980bc53350f2}</destination>
 		</relationship>
 	</object>
 	<object class="CommandSound" id="{40d4c5a3-6680-4850-a280-3af42f80143a}">
@@ -161,5 +161,10 @@
 	</object>
 	<object class="MixerBusPanner" id="{121a47eb-55d3-41df-9fd6-76568b5e54cb}" />
 	<object class="MixerBusFader" id="{48e5596b-7358-4fa5-9da1-43a538c9b42d}" />
+	<object class="ParameterProperty" id="{0f710056-be03-42b6-ae4c-7e537a213135}">
+		<relationship name="parameter">
+			<destination>{29badbdb-a655-4418-be39-50c8736cefa8}</destination>
+		</relationship>
+	</object>
 	<object class="MixerBusFader" id="{dcc603f4-cb51-4d8c-a89e-ad23cd0b905e}" />
 </objects>

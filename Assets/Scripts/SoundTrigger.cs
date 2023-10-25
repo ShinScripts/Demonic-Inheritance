@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor.Experimental.GraphView;
+using static UnityEngine.ParticleSystem;
 
 public class SoundTrigger : MonoBehaviour
 {
@@ -19,7 +20,15 @@ public class SoundTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            soundTriggerIstance.start();            
+            PLAYBACK_STATE state;
+            other.GetComponent<PlayerMovement>().lastSoundTriggerReference.getPlaybackState(out state);
+
+            if(state == PLAYBACK_STATE.PLAYING)
+            {
+                other.GetComponent<PlayerMovement>().lastSoundTriggerReference.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            }
+            soundTriggerIstance.start();
+            other.GetComponent<PlayerMovement>().lastSoundTriggerReference = soundTriggerIstance;
         }
     }
 

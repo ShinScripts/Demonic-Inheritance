@@ -4,6 +4,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AI_Companion : MonoBehaviour
 {
@@ -15,14 +16,21 @@ public class AI_Companion : MonoBehaviour
     private float tresholdTime = 0.25f;
     private float startHoldingTime = 0f;
 
-    //int totalGenerators;
-
-    //  public EventInstance Ai_assitance { get => ai_assitance;}
+    private bool isPlayerInTutorial;
 
     // Start is called before the first frame update
     void Start()
     {
+        isPlayerInTutorial = SceneManager.GetActiveScene().buildIndex == 2 ? true : false;
+
         ai_assitance = RuntimeManager.CreateInstance(NestedEvent);
+
+        string location = isPlayerInTutorial ? "Outside" : "Inside";
+
+        ai_assitance.setParameterByNameWithLabel("Location", location);
+
+        print(location);
+
     }
 
     // Update is called once per frame
@@ -62,7 +70,17 @@ public class AI_Companion : MonoBehaviour
 
     private void GetAIAssistence()
     {
-        ai_assitance.setParameterByNameWithLabel("RoomZone", playerMovement.CurrentSoundZoneName);
+        if (isPlayerInTutorial)
+        {
+            ai_assitance.setParameterByNameWithLabel("DirectionGoal", playerMovement.GetCorrentDirection());
+            ai_assitance.setParameterByNameWithLabel("DistanceToGoal", playerMovement.CurrentSoundZoneName);
+
+        }
+        else
+        {
+            ai_assitance.setParameterByNameWithLabel("RoomZone", playerMovement.CurrentSoundZoneName);
+
+        }
         ai_assitance.start();
     }
 }
