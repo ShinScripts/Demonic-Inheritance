@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="AudioFile" id="{8d2035c4-73be-4278-8f3a-074a0b07495a}">
+	<object class="AudioFile" id="{5cfdf646-140d-4f56-b501-5a1044895d4c}">
 		<property name="assetPath">
-			<value>Foley/PlayerFoley/Footsteps/Grass/Foley_Footsteps_Grass_2.mp3</value>
+			<value>IntroScene/DemonicInheritanceIntro.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
 		</property>
 		<property name="frequencyInKHz">
-			<value>48</value>
+			<value>44.0999985</value>
 		</property>
 		<property name="channelCount">
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>0.81599999999999995</value>
+			<value>96.156734693877553</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{e859f30b-e6e0-442d-b14d-aa53359f7ec9}</destination>

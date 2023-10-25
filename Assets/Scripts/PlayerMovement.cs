@@ -39,8 +39,11 @@ public class PlayerMovement : MonoBehaviour
 
     public bool IsBusy { get => (isMoving || isRotating); }
     public string CurrentSoundZoneName { get => currentSoundZoneName; }
+    public bool CanMove { get => canMove; set => canMove = value; }
 
     private string currentObstacle;
+
+    private bool canMove = true;
 
     private void Start()
     {
@@ -109,6 +112,12 @@ public class PlayerMovement : MonoBehaviour
         {
             //dead
 
+            return;
+        }
+
+        if (!CanMove)
+        {
+            //is locked to move
             return;
         }
 

@@ -207,113 +207,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 115.067, y: 0, z: 0}
---- !u!1001 &4251297732068875402
+--- !u!1001 &8233400158518824054
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4251297732040067204, guid: 46a1b3be7d97c9e41922cfd932a70990, type: 3}
-      propertyPath: menuItemEvent.Path
-      value: event:/Menu_Items
-      objectReference: {fileID: 0}
-    - target: {fileID: 4251297732040067204, guid: 46a1b3be7d97c9e41922cfd932a70990, type: 3}
-      propertyPath: controlsExplanation.Path
-      value: event:/Menu_Controls_Explanation
-      objectReference: {fileID: 0}
-    - target: {fileID: 4251297732040067204, guid: 46a1b3be7d97c9e41922cfd932a70990, type: 3}
-      propertyPath: menuItemEvent.Guid.Data1
-      value: -913052549
-      objectReference: {fileID: 0}
-    - target: {fileID: 4251297732040067204, guid: 46a1b3be7d97c9e41922cfd932a70990, type: 3}
-      propertyPath: menuItemEvent.Guid.Data2
-      value: 1090071731
-      objectReference: {fileID: 0}
-    - target: {fileID: 4251297732040067204, guid: 46a1b3be7d97c9e41922cfd932a70990, type: 3}
-      propertyPath: menuItemEvent.Guid.Data3
-      value: 1666888587
-      objectReference: {fileID: 0}
-    - target: {fileID: 4251297732040067204, guid: 46a1b3be7d97c9e41922cfd932a70990, type: 3}
-      propertyPath: menuItemEvent.Guid.Data4
-      value: 899987377
-      objectReference: {fileID: 0}
-    - target: {fileID: 4251297732040067204, guid: 46a1b3be7d97c9e41922cfd932a70990, type: 3}
-      propertyPath: audioCuesExplanation.Path
-      value: event:/Menu_Audio_Cues_Explanation
-      objectReference: {fileID: 0}
-    - target: {fileID: 4251297732040067204, guid: 46a1b3be7d97c9e41922cfd932a70990, type: 3}
-      propertyPath: howToPlayExplanation.Path
-      value: event:/Menu_HowToPlay_Explanation
-      objectReference: {fileID: 0}
-    - target: {fileID: 4251297732040067204, guid: 46a1b3be7d97c9e41922cfd932a70990, type: 3}
-      propertyPath: menuNavigationTutorial.Path
-      value: event:/Menu_NavigationTutorial
-      objectReference: {fileID: 0}
-    - target: {fileID: 4251297732040067204, guid: 46a1b3be7d97c9e41922cfd932a70990, type: 3}
-      propertyPath: controlsExplanation.Guid.Data1
-      value: 1467241293
-      objectReference: {fileID: 0}
-    - target: {fileID: 4251297732040067204, guid: 46a1b3be7d97c9e41922cfd932a70990, type: 3}
-      propertyPath: controlsExplanation.Guid.Data2
-      value: 1205130932
-      objectReference: {fileID: 0}
-    - target: {fileID: 4251297732040067204, guid: 46a1b3be7d97c9e41922cfd932a70990, type: 3}
-      propertyPath: controlsExplanation.Guid.Data3
-      value: 1269533369
-      objectReference: {fileID: 0}
-    - target: {fileID: 4251297732040067204, guid: 46a1b3be7d97c9e41922cfd932a70990, type: 3}
-      propertyPath: controlsExplanation.Guid.Data4
-      value: 790622396
-      objectReference: {fileID: 0}
-    - target: {fileID: 4251297732040067204, guid: 46a1b3be7d97c9e41922cfd932a70990, type: 3}
-      propertyPath: audioCuesExplanation.Guid.Data1
-      value: -1583817099
-      objectReference: {fileID: 0}
-    - target: {fileID: 4251297732040067204, guid: 46a1b3be7d97c9e41922cfd932a70990, type: 3}
-      propertyPath: audioCuesExplanation.Guid.Data2
-      value: 1310245710
-      objectReference: {fileID: 0}
-    - target: {fileID: 4251297732040067204, guid: 46a1b3be7d97c9e41922cfd932a70990, type: 3}
-      propertyPath: audioCuesExplanation.Guid.Data3
-      value: -969017950
-      objectReference: {fileID: 0}
-    - target: {fileID: 4251297732040067204, guid: 46a1b3be7d97c9e41922cfd932a70990, type: 3}
-      propertyPath: audioCuesExplanation.Guid.Data4
-      value: -876410871
-      objectReference: {fileID: 0}
-    - target: {fileID: 4251297732040067204, guid: 46a1b3be7d97c9e41922cfd932a70990, type: 3}
-      propertyPath: howToPlayExplanation.Guid.Data1
-      value: 89551177
-      objectReference: {fileID: 0}
-    - target: {fileID: 4251297732040067204, guid: 46a1b3be7d97c9e41922cfd932a70990, type: 3}
-      propertyPath: howToPlayExplanation.Guid.Data2
-      value: 1319459766
-      objectReference: {fileID: 0}
-    - target: {fileID: 4251297732040067204, guid: 46a1b3be7d97c9e41922cfd932a70990, type: 3}
-      propertyPath: howToPlayExplanation.Guid.Data3
-      value: -1305682042
-      objectReference: {fileID: 0}
-    - target: {fileID: 4251297732040067204, guid: 46a1b3be7d97c9e41922cfd932a70990, type: 3}
-      propertyPath: howToPlayExplanation.Guid.Data4
-      value: -1399634897
-      objectReference: {fileID: 0}
-    - target: {fileID: 4251297732040067204, guid: 46a1b3be7d97c9e41922cfd932a70990, type: 3}
-      propertyPath: menuNavigationTutorial.Guid.Data1
-      value: -912946374
-      objectReference: {fileID: 0}
-    - target: {fileID: 4251297732040067204, guid: 46a1b3be7d97c9e41922cfd932a70990, type: 3}
-      propertyPath: menuNavigationTutorial.Guid.Data2
-      value: 1117564388
-      objectReference: {fileID: 0}
-    - target: {fileID: 4251297732040067204, guid: 46a1b3be7d97c9e41922cfd932a70990, type: 3}
-      propertyPath: menuNavigationTutorial.Guid.Data3
-      value: 1362021543
-      objectReference: {fileID: 0}
-    - target: {fileID: 4251297732040067204, guid: 46a1b3be7d97c9e41922cfd932a70990, type: 3}
-      propertyPath: menuNavigationTutorial.Guid.Data4
-      value: -669983366
-      objectReference: {fileID: 0}
     - target: {fileID: 4251297732040067206, guid: 46a1b3be7d97c9e41922cfd932a70990, type: 3}
       propertyPath: m_Name
       value: MenuManager
@@ -324,15 +224,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4251297732040067224, guid: 46a1b3be7d97c9e41922cfd932a70990, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 11.22009
       objectReference: {fileID: 0}
     - target: {fileID: 4251297732040067224, guid: 46a1b3be7d97c9e41922cfd932a70990, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.92
+      value: -4.24
       objectReference: {fileID: 0}
     - target: {fileID: 4251297732040067224, guid: 46a1b3be7d97c9e41922cfd932a70990, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.05823493
       objectReference: {fileID: 0}
     - target: {fileID: 4251297732040067224, guid: 46a1b3be7d97c9e41922cfd932a70990, type: 3}
       propertyPath: m_LocalRotation.w

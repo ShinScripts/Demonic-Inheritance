@@ -48,9 +48,9 @@ public class PlayerAudioManager : MonoBehaviour
     {
         // Check if we need to skip enemy-related audio
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        playEnemyAudio = currentSceneIndex > 1;
+        playEnemyAudio = currentSceneIndex > 3;
 
-        print("skip enemy audio: " + playEnemyAudio);
+        print("play enemy audio: " + playEnemyAudio);
 
         if (playEnemyAudio)
         {

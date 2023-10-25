@@ -112,61 +112,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuNavigationTutorial:
     Guid:
-      Data1: 1179938834
-      Data2: 1137488356
-      Data3: 189129141
-      Data4: -696669142
-    Path: event:/Menu VO/MenuNavigationTutorial
-  menuItemEvents:
-  - Guid:
-      Data1: -263893392
-      Data2: 1076428584
-      Data3: 1697003929
-      Data4: 606537180
-    Path: event:/Menu VO/Start
-  - Guid:
-      Data1: -1450951896
-      Data2: 1235454965
-      Data3: -58574685
-      Data4: -730999766
-    Path: event:/Menu VO/HowToPlay
-  - Guid:
-      Data1: -783270929
-      Data2: 1154176894
-      Data3: -1951832175
-      Data4: -1878902830
-    Path: event:/Menu VO/Controls
-  - Guid:
-      Data1: 2041053890
-      Data2: 1174922801
-      Data3: 677515960
-      Data4: 2089652817
-    Path: event:/Menu VO/Audio Cues
-  - Guid:
-      Data1: 535599927
-      Data2: 1231010317
-      Data3: -1442392181
-      Data4: -1582792040
-    Path: event:/Menu VO/Quit
+      Data1: -912946374
+      Data2: 1117564388
+      Data3: 1362021543
+      Data4: -669983366
+    Path: event:/Menu_NavigationTutorial
+  menuItemEvent:
+    Guid:
+      Data1: -913052549
+      Data2: 1090071731
+      Data3: 1666888587
+      Data4: 899987377
+    Path: event:/Menu_Items
   howToPlayExplanation:
     Guid:
-      Data1: 344530332
-      Data2: 1178524750
-      Data3: -686089335
-      Data4: -753115372
-    Path: event:/Menu VO/HowToPlay_Explanation
+      Data1: 89551177
+      Data2: 1319459766
+      Data3: -1305682042
+      Data4: -1399634897
+    Path: event:/Menu_HowToPlay_Explanation
   controlsExplanation:
     Guid:
-      Data1: 920757914
-      Data2: 1133461893
-      Data3: -2009759062
-      Data4: -1362182914
-    Path: event:/Menu VO/Controls_Explanation
+      Data1: 1467241293
+      Data2: 1205130932
+      Data3: 1269533369
+      Data4: 790622396
+    Path: event:/Menu_Controls_Explanation
   audioCuesExplanation:
     Guid:
-      Data1: 1705679557
-      Data2: 1204119207
-      Data3: 490066582
-      Data4: -1683757929
-    Path: event:/Menu VO/Audio Cues_Explanation
-  sceneIndexToLoad: 1
+      Data1: -1583817099
+      Data2: 1310245710
+      Data3: -969017950
+      Data4: -876410871
+    Path: event:/Menu_Audio_Cues_Explanation
