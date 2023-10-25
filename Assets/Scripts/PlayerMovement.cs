@@ -194,7 +194,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (ClearToMove("left"))
             {
-                playerAudioManager.PlayFootstep("Rotate");
+                playerAudioManager.PlayFootstep("Move");
                 StartCoroutine(FootstepsDelay());
                 StartMovement(-transform.right);
             }
@@ -208,7 +208,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (ClearToMove("right"))
             {
-                playerAudioManager.PlayFootstep("Rotate");
+                playerAudioManager.PlayFootstep("Move");
                 StartCoroutine(FootstepsDelay());
                 StartMovement(transform.right);
             }
@@ -222,10 +222,12 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftArrow) && !isRotating)
         {
             StartRotation(-90f);
+            playerAudioManager.PlayFootstep("Rotate");
         }
         else if (Input.GetKeyDown(KeyCode.RightArrow) && !isRotating)
         {
             StartRotation(90f);
+            playerAudioManager.PlayFootstep("Rotate");
         }
     }
 

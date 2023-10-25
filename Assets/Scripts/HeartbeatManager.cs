@@ -31,24 +31,18 @@ public class HeartbeatManager : MonoBehaviour
 
     private float timer = 0f;
 
-    private bool enemyfound;
-
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        enemy = GameObject.FindGameObjectWithTag("Enemy").GetComponent<Transform>();
-        enemyfound = true;
-
-        if(enemy == null) {
-            enemyfound = false;
-            //gameObject.SetActive(false);
-            //enabled = false;
-            return;
-        }
-
         heartbeat = RuntimeManager.CreateInstance(HeartbeatEvent);
         heartbeat.start();
+
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        enemy = GameObject.FindGameObjectWithTag("Enemy")?.GetComponent<Transform>();
+        if (enemy == null) {
+            gameObject.SetActive(false);
+            Destroy(this);
+        }
 
         Vector3 playerPosition = player.transform.position;
         Vector3 enemyPosition = enemy.transform.position;
@@ -56,19 +50,12 @@ public class HeartbeatManager : MonoBehaviour
         normDistanceEnemy = Mathf.Clamp01(distance / maxDistance);
         print(distance);
         print(normDistanceEnemy);
-
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!enemyfound)
-        {
-            gameObject.SetActive(false);
-            return;
-        }
-
         UpdateEnemyDistance();
 
         if (doUpdate) UpdateHeartbeatDelay();
