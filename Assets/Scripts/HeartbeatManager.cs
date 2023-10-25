@@ -38,7 +38,7 @@ public class HeartbeatManager : MonoBehaviour
         heartbeat.start();
 
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        enemy = GameObject.FindGameObjectWithTag("Enemy").GetComponent<Transform>();
+        enemy = GameObject.FindGameObjectWithTag("Enemy")?.GetComponent<Transform>();
         if (enemy == null) {
             gameObject.SetActive(false);
             Destroy(this);

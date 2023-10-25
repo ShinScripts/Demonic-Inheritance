@@ -27,8 +27,6 @@ public class PlayerAudioManager : MonoBehaviour
     private EventInstance wallhitAudioInstance;
     private EventInstance footStepsAudioInstance;
 
-
-
     [SerializeField] private float distanceParameter = 0;
 
     private float distanceToEnemy;
@@ -63,6 +61,7 @@ public class PlayerAudioManager : MonoBehaviour
 
         wallhitAudioInstance = RuntimeManager.CreateInstance(WallhitEvent);
         footStepsAudioInstance = RuntimeManager.CreateInstance(FootStepsEvent);
+
         wallhitAudioInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(playerMovement.transform.position));
 
     }
@@ -80,6 +79,23 @@ public class PlayerAudioManager : MonoBehaviour
 
         //  Debug.Log("distance to enemy:" + distanceToEnemy);
         //  Debug.Log("distance parameter:" + distanceParameter);
+        CheckLayer(); 
+        
+    }
+
+    private void CheckLayer() {
+        Vector3 raycastOrigin = transform.position - Vector3.up * 0.1f;
+        Vector3 raycastDirection = -Vector3.up;
+        float raycastDistance = 10f; 
+
+        RaycastHit hit;
+        if (Physics.Raycast(raycastOrigin, raycastDirection, out hit, raycastDistance)) {
+
+            if(hit.collider.gameObject.layer == LayerMask.NameToLayer("Kitchen")) footStepsAudioInstance.setParameterByNameWithLabel("FloorMaterial", "Wood");
+            if(hit.collider.gameObject.layer == LayerMask.NameToLayer("Bathroom")) footStepsAudioInstance.setParameterByNameWithLabel("FloorMaterial", "FloorTile");
+            if(hit.collider.gameObject.layer == LayerMask.NameToLayer("FloorTile2")) footStepsAudioInstance.setParameterByNameWithLabel("FloorMaterial", "FloorTile2");
+            if(hit.collider.gameObject.layer == LayerMask.NameToLayer("Default")) footStepsAudioInstance.setParameterByNameWithLabel("FloorMaterial", "Solid");
+        }
 
     }
 
