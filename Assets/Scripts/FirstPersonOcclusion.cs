@@ -182,7 +182,12 @@ public class FirstPersonOcclusion : MonoBehaviour
                 " Occlusion lines: " + lineCastOcclusionHitCount + 
                 " Obstruction lines: " + lineCastObstructionHitCount);
         }
-        audio.setParameterByName("Occlusion", lineCastOcclusionHitCount / 11 + 2 * lineCastObstructionHitCount / 11);
+
+        float occlusion = (lineCastOcclusionHitCount * 0.75f + lineCastObstructionHitCount) / 11;
+        if (debugOcclusion){
+            print("Occlusion value: " + occlusion);
+        }
+        audio.setParameterByName("Occlusion", occlusion);
     }
 
     private void OnEnable()
