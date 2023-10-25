@@ -40,6 +40,10 @@ public class HeartbeatManager : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         enemy = GameObject.FindGameObjectWithTag("Enemy").GetComponent<Transform>();
 
+        if(enemy == null) {
+            gameObject.SetActive(false);
+        }
+
         Vector3 playerPosition = player.transform.position;
         Vector3 enemyPosition = enemy.transform.position;
         float distance = Vector3.Distance(playerPosition, enemyPosition);
