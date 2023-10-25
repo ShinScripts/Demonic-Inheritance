@@ -46,7 +46,6 @@
 			<destination>{3f814215-36ee-42b8-8019-b7225c4cd49a}</destination>
 			<destination>{6c88b4cf-4e14-41af-b512-8d41cd1bc968}</destination>
 			<destination>{0211286d-3257-4b6c-b801-b49b9b990023}</destination>
-			<destination>{4192fce6-6e69-4379-be34-98109852a37c}</destination>
 			<destination>{a0fd51ce-0e48-4dac-92a4-ab39a6415d55}</destination>
 			<destination>{645d7562-3668-4eb3-baa7-3c68746d9b1d}</destination>
 			<destination>{b71895f1-806a-4d0a-af2c-fa4bbb2e86ab}</destination>
@@ -79,7 +78,6 @@
 			<destination>{3f814215-36ee-42b8-8019-b7225c4cd49a}</destination>
 			<destination>{6c88b4cf-4e14-41af-b512-8d41cd1bc968}</destination>
 			<destination>{0211286d-3257-4b6c-b801-b49b9b990023}</destination>
-			<destination>{4192fce6-6e69-4379-be34-98109852a37c}</destination>
 			<destination>{a0fd51ce-0e48-4dac-92a4-ab39a6415d55}</destination>
 			<destination>{645d7562-3668-4eb3-baa7-3c68746d9b1d}</destination>
 			<destination>{b71895f1-806a-4d0a-af2c-fa4bbb2e86ab}</destination>
@@ -164,17 +162,6 @@
 	<object class="EventSound" id="{0211286d-3257-4b6c-b801-b49b9b990023}">
 		<property name="start">
 			<value>1.2000000000000002</value>
-		</property>
-		<property name="length">
-			<value>0.96000000000000008</value>
-		</property>
-		<relationship name="event">
-			<destination>{7a2de0ec-15e8-4dd6-a09f-8bb6dac9875b}</destination>
-		</relationship>
-	</object>
-	<object class="EventSound" id="{4192fce6-6e69-4379-be34-98109852a37c}">
-		<property name="start">
-			<value>3.8000000000000003</value>
 		</property>
 		<property name="length">
 			<value>0.96000000000000008</value>

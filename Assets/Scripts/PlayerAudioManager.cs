@@ -14,7 +14,7 @@ public class PlayerAudioManager : MonoBehaviour
     [Header("FMOD Settings")]
     [SerializeField] private EventReference FootStepsEvent;
     [SerializeField] private EventReference BreathingEvent;
-    [SerializeField] private EventReference HeartbeatEvent;
+    //[SerializeField] private EventReference HeartbeatEvent;
     [SerializeField] private EventReference WallhitEvent;
 
     [SerializeField]
@@ -23,7 +23,7 @@ public class PlayerAudioManager : MonoBehaviour
     private float maxDistanceThreshold; // Maximum distance threshold
 
     private EventInstance breathingAudioInstance;
-    private EventInstance heartbeatAudioInstance;
+    //private EventInstance heartbeatAudioInstance;
     private EventInstance wallhitAudioInstance;
     private EventInstance footStepsAudioInstance;
 
@@ -48,16 +48,16 @@ public class PlayerAudioManager : MonoBehaviour
     {
         // Check if we need to skip enemy-related audio
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        playEnemyAudio = currentSceneIndex > 1;
+        playEnemyAudio = currentSceneIndex > 3;
 
-        print("skip enemy audio: " + playEnemyAudio);
+        print("play enemy audio: " + playEnemyAudio);
 
         if (playEnemyAudio)
         {
             breathingAudioInstance = RuntimeManager.CreateInstance(BreathingEvent);
-            heartbeatAudioInstance = RuntimeManager.CreateInstance(HeartbeatEvent);
+            //heartbeatAudioInstance = RuntimeManager.CreateInstance(HeartbeatEvent);
             breathingAudioInstance.start();
-            heartbeatAudioInstance.start();
+            //heartbeatAudioInstance.start();
 
         }
 
@@ -70,24 +70,11 @@ public class PlayerAudioManager : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (playerMovement.IsBusy)
-        {
-            if(shouldPlay) {
-                shouldPlay = false;
-                PlayFootstep();
-            }
-        }
-
-        else
-        {
-            shouldPlay = true;
-        }
-
         if (playEnemyAudio)
         {
             ParseDistance();
 
-            heartbeatAudioInstance.setParameterByName(DIST_TO_ENEMY_H, distanceParameter);
+            //heartbeatAudioInstance.setParameterByName(DIST_TO_ENEMY_H, distanceParameter);
             breathingAudioInstance.setParameterByName(DIST_TO_ENEMY_B, distanceParameter);
         }
 
@@ -96,8 +83,9 @@ public class PlayerAudioManager : MonoBehaviour
 
     }
 
-    private void PlayFootstep()
+    public void PlayFootstep(string type)
     {
+        footStepsAudioInstance.setParameterByNameWithLabel("MovementType", type);
         footStepsAudioInstance.start();
     }
 
