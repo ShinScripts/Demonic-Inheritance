@@ -23,6 +23,9 @@ public class Enemy : MonoBehaviour
 
     void Start()
     {
+        if (!GameObject.Find("Rules").GetComponent<ExternalParameters>().doEnemiesSpawn)
+            gameObject.SetActive(false);
+
         player = GameObject.FindGameObjectWithTag("Player");
         agent = GetComponent<NavMeshAgent>();
 
