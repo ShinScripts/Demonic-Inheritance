@@ -3,6 +3,7 @@ using TMPro;
 using UnityEngine;
 using FMODUnity;
 using Unity.VisualScripting;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform audioLeftPosition;
     [SerializeField] private Transform audioRightPosition;
 
+    public bool is_dead = false;
     private bool isMoving = false;
     private bool isRotating = false;
 
@@ -103,6 +105,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        if (is_dead)
+        {
+            //dead
+
+            return;
+        }
+
         if (isMoving)
         {
             MovePlayer();
