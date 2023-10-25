@@ -10,7 +10,7 @@ public class ExternalParameters : MonoBehaviour
 
     private HeartbeatManager heartbeatManager;
 
-    private void Start()
+    private void Awake()
     {
 
         heartbeatManager = FindAnyObjectByType<HeartbeatManager>();

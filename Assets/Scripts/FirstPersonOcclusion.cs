@@ -37,7 +37,7 @@ public class FirstPersonOcclusion : MonoBehaviour
     private int obstructionCount;
     private string currentObstruction;
 
-
+    public EventInstance AudioInstance { get => audio; set => audio = value; }
 
     private void Start()
     {

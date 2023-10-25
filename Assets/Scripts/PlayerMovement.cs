@@ -24,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
     private bool isMoving = false;
     private bool isRotating = false;
 
+    private Transform lastGeneratorPosition;
 
     private float movementStartTime;
     private Vector3 startPosition;
@@ -39,8 +40,11 @@ public class PlayerMovement : MonoBehaviour
 
     public bool IsBusy { get => (isMoving || isRotating); }
     public string CurrentSoundZoneName { get => currentSoundZoneName; }
+    public bool CanMove { get => canMove; set => canMove = value; }
 
     private string currentObstacle;
+
+    private bool canMove = true;
 
     private void Start()
     {
@@ -112,6 +116,12 @@ public class PlayerMovement : MonoBehaviour
             return;
         }
 
+        if (!CanMove)
+        {
+            //is locked to move
+            return;
+        }
+
         if (isMoving)
         {
             MovePlayer();
@@ -156,6 +166,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (ClearToMove("forward"))
             {
+                playerAudioManager.PlayFootstep("Move");
                 StartCoroutine(FootstepsDelay());
                 StartMovement(transform.forward);
             }
@@ -169,6 +180,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (ClearToMove("backward"))
             {
+                playerAudioManager.PlayFootstep("Move");
                 StartCoroutine(FootstepsDelay());
                 StartMovement(-transform.forward);
             }
@@ -182,6 +194,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (ClearToMove("left"))
             {
+                playerAudioManager.PlayFootstep("Rotate");
                 StartCoroutine(FootstepsDelay());
                 StartMovement(-transform.right);
             }
@@ -195,6 +208,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (ClearToMove("right"))
             {
+                playerAudioManager.PlayFootstep("Rotate");
                 StartCoroutine(FootstepsDelay());
                 StartMovement(transform.right);
             }
@@ -278,5 +292,10 @@ public class PlayerMovement : MonoBehaviour
         {
             currentSoundZoneName = other.tag;
         }
+    }
+
+    public void SetCheckPoint(Transform transform)
+    {
+        lastGeneratorPosition = transform;
     }
 }

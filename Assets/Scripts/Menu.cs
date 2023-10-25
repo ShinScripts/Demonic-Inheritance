@@ -22,12 +22,13 @@ public class Menu : MonoBehaviour {
     public EventReference controlsExplanation;
     public EventReference audioCuesExplanation;
 
-    public int sceneIndexToLoad = 1;
+    private int sceneIndexToLoad;
 
     private bool hasPlayedCurrentItem = false;
 
     private void Start() {
 
+        sceneIndexToLoad = SceneManager.GetActiveScene().buildIndex + 1;
         menuItemEventInstance = RuntimeManager.CreateInstance(menuItemEvent);
 
         // Start the introductory sound coroutine
