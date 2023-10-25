@@ -1,6 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 using FMOD.Studio;
@@ -10,7 +8,6 @@ public class Enemy : MonoBehaviour
 {
     public GameObject[] patrol;
     private int patrol_index = 0;
-    public float speed = 5f;
     private GameObject target;
     private GameObject player;
     [SerializeField] private EventReference EnemyDetection;
@@ -23,14 +20,12 @@ public class Enemy : MonoBehaviour
 
     void Start()
     {
-        print(GameObject.Find("Rules").GetComponent<ExternalParameters>().doEnemiesSpawn);
-        if (!GameObject.Find("Rules").GetComponent<ExternalParameters>().doEnemiesSpawn)
-        {
-            gameObject.SetActive(false);
-        }
-
         player = GameObject.FindGameObjectWithTag("Player");
         agent = GetComponent<NavMeshAgent>();
+
+        print(GameObject.Find("Rules").GetComponent<ExternalParameters>().enemy_speed);
+
+        agent.speed = GameObject.Find("Rules").GetComponent<ExternalParameters>().enemy_speed; 
 
         transform.position = patrol[patrol_index].transform.position;
         target = patrol[++patrol_index];

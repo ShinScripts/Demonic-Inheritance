@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ExternalParameters : MonoBehaviour
 {
-    [HideInInspector] public bool doEnemiesSpawn;
+    [HideInInspector] public float enemy_speed;
     [HideInInspector] public bool doHeartRaise;
     [HideInInspector] public bool enableCheats;
 
@@ -30,10 +30,10 @@ public class ExternalParameters : MonoBehaviour
                     string variableName = parts[0].Trim();
                     string variableValue = parts[1].Trim();
 
-                    if (variableName == "doEnemiesSpawn")
+                    if (variableName == "enemy_speed")
                     {
-                        doEnemiesSpawn = bool.Parse(variableValue);
-                        Debug.Log("doEnemiesSpawn = " + doEnemiesSpawn);
+                        enemy_speed = float.Parse(variableValue);
+                        Debug.Log("shouldEnemyGoFast = " + enemy_speed);
                     }
                     else if (variableName == "doHeartRaise")
                     {
@@ -44,7 +44,7 @@ public class ExternalParameters : MonoBehaviour
                     {
                         enableCheats = bool.Parse(variableValue);
                         Debug.Log("enableCheats = " + enableCheats);
-                    }
+                    }   
                 }
             }
         }

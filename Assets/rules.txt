@@ -1,3 +1,3 @@
-doEnemiesSpawn = true
+enemy_speed = 3,5
 doHeartRaise = true
 enableCheats = false
