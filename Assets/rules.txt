@@ -1,3 +1,3 @@
 doEnemiesSpawn = false
-doHeartRaise = false
+doHeartRaise = true
 enableCheats = false
