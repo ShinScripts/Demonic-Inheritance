@@ -74,7 +74,6 @@ public class HeartbeatManager : MonoBehaviour
         normDistanceEnemy = Mathf.Clamp01(distance / maxDistance);
    
     }
-
     
     private void UpdateHeartbeatDelay() {
         heartbeatDelay = 1 - normDistanceEnemy;
