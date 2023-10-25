@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     private bool isMoving = false;
     private bool isRotating = false;
 
+
     private float movementStartTime;
     private Vector3 startPosition;
     private Vector3 targetPosition;

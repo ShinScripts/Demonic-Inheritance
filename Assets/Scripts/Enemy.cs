@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
+using FMOD.Studio;
+using FMODUnity;
 
 public class Enemy : MonoBehaviour
 {
@@ -11,13 +13,14 @@ public class Enemy : MonoBehaviour
     public float speed = 2f;
     private GameObject target;
     private GameObject player;
-
+    [SerializeField] private EventReference EnemyDetection;
     private NavMeshAgent agent;
 
     bool follow_player = false;
 
     bool detected = false;
 
+    private EventInstance enemyDetectionSound;
 
     void Start()
     {
@@ -26,6 +29,9 @@ public class Enemy : MonoBehaviour
 
         transform.position = start.transform.position;
         target = end;
+
+        enemyDetectionSound = RuntimeManager.CreateInstance(EnemyDetection);
+        enemyDetectionSound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform.position));
     }
 
     void Update()
@@ -45,7 +51,7 @@ public class Enemy : MonoBehaviour
             agent.SetDestination(target.transform.position);
         }
 
-        if (Vector3.Distance(transform.position, target.transform.position) < 0.5f)
+        if (Vector3.Distance(transform.position, target.transform.position) < 1f)
         {
             ChangeTargets();
         }
@@ -89,19 +95,27 @@ public class Enemy : MonoBehaviour
     {
         detected = true;
 
-        print("detected: " + detected);
 
 
         // play activation sound
+        /**
+         * Set atributes for transform and label before calling start(); 
+         * 
+         * Detection Type labels for now: PlayerDetected, PlayerNoDetected
+         */
+        enemyDetectionSound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform.position));
+        enemyDetectionSound.setParameterByNameWithLabel("DetectionType", "PlayerDetected");
+        enemyDetectionSound.start();
 
         yield return new WaitForSeconds(3);
 
         detected = false;
 
-        print("detected: " + detected);
-
         // play deactivation sound
 
+        enemyDetectionSound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform.position));
+        enemyDetectionSound.setParameterByNameWithLabel("DetectionType", "PlayerNoDetected");
+        enemyDetectionSound.start();
 
         yield return null;
     }
