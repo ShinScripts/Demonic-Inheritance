@@ -38,10 +38,12 @@ public class HeartbeatManager : MonoBehaviour
         heartbeat.start();
 
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        enemy = GameObject.FindGameObjectWithTag("Enemy").GetComponent<Transform>();
-
-        if(enemy == null) {
+        if (TryGetComponent(out enemy)) {
+            // The component was found; you can use it here.
+        } else {
+            // The component was not found.
             gameObject.SetActive(false);
+            Destroy(this);
         }
 
         Vector3 playerPosition = player.transform.position;
@@ -50,7 +52,6 @@ public class HeartbeatManager : MonoBehaviour
         normDistanceEnemy = Mathf.Clamp01(distance / maxDistance);
         print(distance);
         print(normDistanceEnemy);
-
         
     }
 
