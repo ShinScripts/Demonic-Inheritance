@@ -23,7 +23,7 @@ public class PlayerAudioManager : MonoBehaviour
     private float maxDistanceThreshold; // Maximum distance threshold
 
     private EventInstance breathingAudioInstance;
-    private EventInstance heartbeatAudioInstance;
+    //private EventInstance heartbeatAudioInstance;
     private EventInstance wallhitAudioInstance;
     private EventInstance footStepsAudioInstance;
 
@@ -55,9 +55,9 @@ public class PlayerAudioManager : MonoBehaviour
         if (playEnemyAudio)
         {
             breathingAudioInstance = RuntimeManager.CreateInstance(BreathingEvent);
-            heartbeatAudioInstance = RuntimeManager.CreateInstance(HeartbeatEvent);
+            //heartbeatAudioInstance = RuntimeManager.CreateInstance(HeartbeatEvent);
             breathingAudioInstance.start();
-            heartbeatAudioInstance.start();
+            //heartbeatAudioInstance.start();
 
         }
 
@@ -87,7 +87,7 @@ public class PlayerAudioManager : MonoBehaviour
         {
             ParseDistance();
 
-            heartbeatAudioInstance.setParameterByName(DIST_TO_ENEMY_H, distanceParameter);
+            //heartbeatAudioInstance.setParameterByName(DIST_TO_ENEMY_H, distanceParameter);
             breathingAudioInstance.setParameterByName(DIST_TO_ENEMY_B, distanceParameter);
         }
 
