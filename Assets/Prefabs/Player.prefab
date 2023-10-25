@@ -192,6 +192,7 @@ Transform:
   m_Children:
   - {fileID: 1736591106977312865}
   - {fileID: 8446381769339467690}
+  - {fileID: 2565174979031871071}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -328,13 +329,6 @@ MonoBehaviour:
       Data3: 1867968178
       Data4: -480091773
     Path: event:/PlayerFoley_Breathing
-  HeartbeatEvent:
-    Guid:
-      Data1: -520590321
-      Data2: 1152551810
-      Data3: -586051436
-      Data4: 1697505232
-    Path: event:/PlayerFoley_Heartbeat
   WallhitEvent:
     Guid:
       Data1: -394688862
@@ -459,3 +453,65 @@ Transform:
   m_Father: {fileID: 8446381769339467690}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2114240262
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1736591108206439956}
+    m_Modifications:
+    - target: {fileID: 2565174977320882521, guid: b5ae0c968796270479c303e3b1288893, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2565174977320882521, guid: b5ae0c968796270479c303e3b1288893, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.071
+      objectReference: {fileID: 0}
+    - target: {fileID: 2565174977320882521, guid: b5ae0c968796270479c303e3b1288893, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.213
+      objectReference: {fileID: 0}
+    - target: {fileID: 2565174977320882521, guid: b5ae0c968796270479c303e3b1288893, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 2565174977320882521, guid: b5ae0c968796270479c303e3b1288893, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2565174977320882521, guid: b5ae0c968796270479c303e3b1288893, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2565174977320882521, guid: b5ae0c968796270479c303e3b1288893, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2565174977320882521, guid: b5ae0c968796270479c303e3b1288893, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2565174977320882521, guid: b5ae0c968796270479c303e3b1288893, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2565174977320882521, guid: b5ae0c968796270479c303e3b1288893, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2565174977320882521, guid: b5ae0c968796270479c303e3b1288893, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2565174977320882523, guid: b5ae0c968796270479c303e3b1288893, type: 3}
+      propertyPath: m_Name
+      value: HeartbeatManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b5ae0c968796270479c303e3b1288893, type: 3}
+--- !u!4 &2565174979031871071 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2565174977320882521, guid: b5ae0c968796270479c303e3b1288893, type: 3}
+  m_PrefabInstance: {fileID: 2114240262}
+  m_PrefabAsset: {fileID: 0}

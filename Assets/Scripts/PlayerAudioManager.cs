@@ -14,7 +14,7 @@ public class PlayerAudioManager : MonoBehaviour
     [Header("FMOD Settings")]
     [SerializeField] private EventReference FootStepsEvent;
     [SerializeField] private EventReference BreathingEvent;
-    [SerializeField] private EventReference HeartbeatEvent;
+    //[SerializeField] private EventReference HeartbeatEvent;
     [SerializeField] private EventReference WallhitEvent;
 
     [SerializeField]

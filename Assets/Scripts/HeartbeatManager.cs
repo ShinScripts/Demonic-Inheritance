@@ -29,6 +29,8 @@ public class HeartbeatManager : MonoBehaviour
 
     private bool doUpdate = true;
 
+    private float timer = 0f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -51,31 +53,33 @@ public class HeartbeatManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //TEMP This should only play when enemy makes sound
         UpdateEnemyDistance();
 
         if (doUpdate) UpdateHeartbeatDelay();
+
+        timer += Time.deltaTime;
         
+        if(timer >= 2f) {
+            UnityEngine.Debug.Log("Normdistance = " + normDistanceEnemy);
+            UnityEngine.Debug.Log("HeartbeatDelay = " + heartbeatDelay);
+            timer = 0f;
+        }
     }
 
-    //TODO: This method should play every time the enemy makes a sound.
     public void UpdateEnemyDistance() {
         Vector3 playerPosition = player.transform.position;
         Vector3 enemyPosition = enemy.transform.position;
         float distance = Vector3.Distance(playerPosition, enemyPosition);
 
         normDistanceEnemy = Mathf.Clamp01(distance / maxDistance);
-        //print(distance);
-        //print("Distance to enemy: " + normDistanceEnemy);
-        
+   
     }
 
     
     private void UpdateHeartbeatDelay() {
         heartbeatDelay = 1 - normDistanceEnemy;
         heartbeatDelay = heartbeatDelay * (isPlayerSpotted ? 1.65f : 1);
-        heartbeat.setParameterByName("DistanceToEnemy", heartbeatDelay);
-        UnityEngine.Debug.Log(heartbeatDelay);
+        heartbeat.setParameterByName("DistanceToEnemy_H", heartbeatDelay);
     }
 
     public void DisableUpdates() {
