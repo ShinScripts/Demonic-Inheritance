@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{fc521b46-75c6-4e37-93cc-27cdb6d759b4}">
+		<property name="assetPath">
+			<value>Foley/PlayerFoley/Footsteps/Wood/Footstep_Wood4.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>24</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.58304166666666668</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e859f30b-e6e0-442d-b14d-aa53359f7ec9}</destination>
+		</relationship>
+	</object>
+</objects>
