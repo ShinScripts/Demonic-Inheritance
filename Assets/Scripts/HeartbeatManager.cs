@@ -50,7 +50,6 @@ public class HeartbeatManager : MonoBehaviour
         heartbeat = RuntimeManager.CreateInstance(HeartbeatEvent);
         heartbeat.start();
 
-        print("we reached here anyway");
         Vector3 playerPosition = player.transform.position;
         Vector3 enemyPosition = enemy.transform.position;
         float distance = Vector3.Distance(playerPosition, enemyPosition);

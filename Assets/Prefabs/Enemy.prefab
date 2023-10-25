@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 2550656431857223066}
   - component: {fileID: 2550656431857223065}
   - component: {fileID: 6393595467068915499}
+  - component: {fileID: 1928958455}
+  - component: {fileID: 1928958454}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -151,9 +153,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a6819573f4df8e4a829d75b7f2198d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  start: {fileID: 0}
-  end: {fileID: 0}
-  speed: 2
+  patrol:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  speed: 10
   EnemyDetection:
     Guid:
       Data1: 1377241279
@@ -161,3 +173,38 @@ MonoBehaviour:
       Data3: 562585521
       Data4: 1537177908
     Path: event:/EnemyDetection
+--- !u!135 &1928958455
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2550656431857223041}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 10
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!195 &1928958454
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2550656431857223041}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 1
+  m_BaseOffset: 0.5
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
