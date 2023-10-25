@@ -7,14 +7,14 @@ using FMOD.Studio;
 
 public class Menu : MonoBehaviour {
     int menuItemSelected = -1;
-    int totalItems;
+    int totalItems = 5;
 
     private Coroutine introSoundCoroutine;
 
     public EventReference menuNavigationTutorial;
 
-    public EventReference[] menuItemEvents;
-    private EventInstance[] menuItemEventInstances;  // Store EventInstances for menu items
+    public EventReference menuItemEvent;
+    private EventInstance menuItemEventInstance;  // Store EventInstances for menu items
 
     private EventInstance currentPlayingEventInstance; // Store the currently playing event
 
@@ -27,13 +27,8 @@ public class Menu : MonoBehaviour {
     private bool hasPlayedCurrentItem = false;
 
     private void Start() {
-        totalItems = menuItemEvents.Length;
 
-        // Initialize EventInstances for menu items
-        menuItemEventInstances = new EventInstance[totalItems];
-        for (int i = 0; i < totalItems; i++) {
-            menuItemEventInstances[i] = RuntimeManager.CreateInstance(menuItemEvents[i]);
-        }
+        menuItemEventInstance = RuntimeManager.CreateInstance(menuItemEvent);
 
         // Start the introductory sound coroutine
         introSoundCoroutine = StartCoroutine(PlayIntroductorySound());
@@ -76,8 +71,9 @@ public class Menu : MonoBehaviour {
 
         if (!hasPlayedCurrentItem) {
             // Play the FMOD event and store it as the currently playing event
-            menuItemEventInstances[menuItemSelected].start();
-            currentPlayingEventInstance = menuItemEventInstances[menuItemSelected];
+            menuItemEventInstance.setParameterByNameWithLabel("Item", menuItemSelected.ToString());
+            menuItemEventInstance.start();
+            currentPlayingEventInstance = menuItemEventInstance;
             hasPlayedCurrentItem = true;
         }
 
@@ -89,22 +85,27 @@ public class Menu : MonoBehaviour {
 
             switch (menuItemSelected) {
                 case 0:
+                    menuItemEventInstance.release();
+                    currentPlayingEventInstance.release();
                     SceneManager.LoadScene(sceneIndexToLoad);
                     break;
 
                 case 1:
                     currentPlayingEventInstance = RuntimeManager.CreateInstance(howToPlayExplanation);
                     currentPlayingEventInstance.start();
+                    currentPlayingEventInstance.release();
                     break;
 
                 case 2:
                     currentPlayingEventInstance = RuntimeManager.CreateInstance(controlsExplanation);
                     currentPlayingEventInstance.start();
+                    currentPlayingEventInstance.release();
                     break;
 
                 case 3:
                     currentPlayingEventInstance = RuntimeManager.CreateInstance(audioCuesExplanation);
                     currentPlayingEventInstance.start();
+                    currentPlayingEventInstance.release();
                     break;
 
                 case 4:
@@ -119,6 +120,7 @@ public class Menu : MonoBehaviour {
             // Play the introductory sound here at regular intervals
             currentPlayingEventInstance = RuntimeManager.CreateInstance(menuNavigationTutorial);
             currentPlayingEventInstance.start();
+            currentPlayingEventInstance.release();
             yield return new WaitForSeconds(15f); // Adjust the interval as needed
         }
         

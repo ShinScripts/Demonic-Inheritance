@@ -5,13 +5,13 @@
 			<value>SFX/SFX_PickUpSound.mp3</value>
 		</property>
 		<property name="frequencyInKHz">
-			<value>48</value>
+			<value>44.0999985</value>
 		</property>
 		<property name="channelCount">
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>3.6960000000000002</value>
+			<value>1.4367346938775509</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{e859f30b-e6e0-442d-b14d-aa53359f7ec9}</destination>

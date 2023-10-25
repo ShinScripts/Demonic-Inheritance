@@ -309,6 +309,7 @@ MonoBehaviour:
   - Master
   Banks:
   - EnemyFoley
+  - Menu
   - PlayerFoley
   - SFX
   - VO
