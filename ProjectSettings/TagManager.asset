@@ -3,24 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Generator
-  - Wall
-  - Furniture
-  - LockedDoor
-  - Bathroom
-  - LongCorridor
-  - Hallway
-  - DinningTable
-  - NoSignal
-  - Door
-  - Enemy
-  - Front
-  - Right
-  - Left
-  - Far
-  - Close
-  - Tree
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -28,18 +11,12 @@ TagManager:
   - 
   - Water
   - UI
-  - Walls_Occlusion
-  - Walls_Obstruction
-  - SoundZones
-<<<<<<< Updated upstream
   - 
   - 
   - 
-=======
-  - Kitchen
-  - Bathroom
-  - DirectionZones
->>>>>>> Stashed changes
+  - 
+  - 
+  - 
   - 
   - 
   - 

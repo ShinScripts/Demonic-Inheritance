@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{0664e135-11c0-4774-a436-076e46422ddd}">
 		<property name="assetPath">
-			<value>Unsorted/AMB_InsideCarDrive.wav</value>
+			<value>AMB/AMB_InsideCarDrive.wav</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>

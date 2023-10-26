@@ -1,0 +1,7 @@
+[2023-10-22 15:58:51]Assets\Scripts\ExternalParameters.cs(12,57): error CS0117: 'Application' does not contain a definition for 'DataPath'
+[2023-10-22 15:58:52]Should not be capturing when there is a hotcontrol
+[2023-10-22 16:08:14]obstacle behind
+[2023-10-22 16:08:14]obstacle behind
+[2023-10-22 16:08:15]obstacle behind
+[2023-10-22 16:09:04]Should not grab hot control with an active capture
+[2023-10-22 16:09:04]Should not be capturing when there is a hotcontrol

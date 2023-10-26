@@ -4,6 +4,7 @@ using System.Drawing;
 using FMOD.Studio;
 using FMODUnity;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerAudioManager : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class PlayerAudioManager : MonoBehaviour
     [Header("FMOD Settings")]
     [SerializeField] private EventReference FootStepsEvent;
     [SerializeField] private EventReference BreathingEvent;
-    [SerializeField] private EventReference HeartbeatEvent;
+    //[SerializeField] private EventReference HeartbeatEvent;
     [SerializeField] private EventReference WallhitEvent;
 
     [SerializeField]
@@ -22,7 +23,7 @@ public class PlayerAudioManager : MonoBehaviour
     private float maxDistanceThreshold; // Maximum distance threshold
 
     private EventInstance breathingAudioInstance;
-    private EventInstance heartbeatAudioInstance;
+    //private EventInstance heartbeatAudioInstance;
     private EventInstance wallhitAudioInstance;
     private EventInstance footStepsAudioInstance;
 
@@ -37,49 +38,70 @@ public class PlayerAudioManager : MonoBehaviour
 
     private int furnitureCounter = 0;
 
+    private bool playEnemyAudio = true;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        breathingAudioInstance = RuntimeManager.CreateInstance(BreathingEvent);
-        heartbeatAudioInstance = RuntimeManager.CreateInstance(HeartbeatEvent);
+        // Check if we need to skip enemy-related audio
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        playEnemyAudio = currentSceneIndex > 3;
+
+        print("play enemy audio: " + playEnemyAudio);
+
+        if (playEnemyAudio)
+        {
+            breathingAudioInstance = RuntimeManager.CreateInstance(BreathingEvent);
+            //heartbeatAudioInstance = RuntimeManager.CreateInstance(HeartbeatEvent);
+            breathingAudioInstance.start();
+            //heartbeatAudioInstance.start();
+
+        }
+
         wallhitAudioInstance = RuntimeManager.CreateInstance(WallhitEvent);
         footStepsAudioInstance = RuntimeManager.CreateInstance(FootStepsEvent);
 
-        breathingAudioInstance.start();
-        heartbeatAudioInstance.start();
-
         wallhitAudioInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(playerMovement.transform.position));
+
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (playerMovement.IsBusy)
+        if (playEnemyAudio)
         {
-            if(shouldPlay) {
-                shouldPlay = false;
-                PlayFootstep();
-            }
+            ParseDistance();
+
+            //heartbeatAudioInstance.setParameterByName(DIST_TO_ENEMY_H, distanceParameter);
+            breathingAudioInstance.setParameterByName(DIST_TO_ENEMY_B, distanceParameter);
         }
-
-        else
-        {
-            shouldPlay = true;
-        }
-
-        ParseDistance();
-
-        heartbeatAudioInstance.setParameterByName(DIST_TO_ENEMY_H, distanceParameter);
-        breathingAudioInstance.setParameterByName(DIST_TO_ENEMY_B, distanceParameter);
 
         //  Debug.Log("distance to enemy:" + distanceToEnemy);
         //  Debug.Log("distance parameter:" + distanceParameter);
+        CheckLayer(); 
+        
+    }
+
+    private void CheckLayer() {
+        Vector3 raycastOrigin = transform.position - Vector3.up * 0.1f;
+        Vector3 raycastDirection = -Vector3.up;
+        float raycastDistance = 10f; 
+
+        RaycastHit hit;
+        if (Physics.Raycast(raycastOrigin, raycastDirection, out hit, raycastDistance)) {
+
+            if(hit.collider.gameObject.layer == LayerMask.NameToLayer("Kitchen")) footStepsAudioInstance.setParameterByNameWithLabel("FloorMaterial", "Wood");
+            if(hit.collider.gameObject.layer == LayerMask.NameToLayer("Bathroom")) footStepsAudioInstance.setParameterByNameWithLabel("FloorMaterial", "FloorTile");
+            if(hit.collider.gameObject.layer == LayerMask.NameToLayer("FloorTile2")) footStepsAudioInstance.setParameterByNameWithLabel("FloorMaterial", "FloorTile2");
+            if(hit.collider.gameObject.layer == LayerMask.NameToLayer("Default")) footStepsAudioInstance.setParameterByNameWithLabel("FloorMaterial", "Solid");
+        }
 
     }
 
-    private void PlayFootstep()
+    public void PlayFootstep(string type)
     {
+        footStepsAudioInstance.setParameterByNameWithLabel("MovementType", type);
         footStepsAudioInstance.start();
     }
 
