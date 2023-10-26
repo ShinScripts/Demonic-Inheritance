@@ -1,0 +1,4 @@
+enemy_speed = 3,5
+doHeartRaise = true
+enableTriggers = false
+enableCheats = false

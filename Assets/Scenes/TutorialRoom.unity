@@ -12021,6 +12021,10 @@ PrefabInstance:
       propertyPath: NestedEvent.Guid.Data4
       value: 1918977719
       objectReference: {fileID: 0}
+    - target: {fileID: 7883751729140147944, guid: 171ada5a24e9e6a47bf58753649d49a2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7883751730940442347, guid: 171ada5a24e9e6a47bf58753649d49a2, type: 3}
     - {fileID: 7883751729260701020, guid: 171ada5a24e9e6a47bf58753649d49a2, type: 3}

@@ -17,7 +17,7 @@ public class ExternalParameters : MonoBehaviour
 
         heartbeatManager = FindAnyObjectByType<HeartbeatManager>();
 
-        string rulesFilePath = Path.Combine(Application.dataPath, "rules.txt");
+        string rulesFilePath = Path.Combine(Application.streamingAssetsPath, "rules.txt");
 
         if (File.Exists(rulesFilePath))
         {

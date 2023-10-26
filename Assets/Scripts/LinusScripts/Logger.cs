@@ -13,7 +13,7 @@ public class Logger : MonoBehaviour {
     }
 
     private void Start() {
-        logFileName = Application.dataPath + "/LogFile.txt";
+        logFileName = Application.streamingAssetsPath + "/LogFile.txt";
     }
 
     private void HandleLog(string logString, string stackTrace, LogType type) {
