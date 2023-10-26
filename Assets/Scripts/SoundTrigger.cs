@@ -9,26 +9,32 @@ using static UnityEngine.ParticleSystem;
 public class SoundTrigger : MonoBehaviour
 {
     [SerializeField] private EventReference TriggerEvent;
-    private EventInstance soundTriggerIstance;
+    private EventInstance soundTriggerInstance;
+    private bool listened = false;
 
     void Start()
     {
-        soundTriggerIstance = RuntimeManager.CreateInstance(TriggerEvent);
+        soundTriggerInstance = RuntimeManager.CreateInstance(TriggerEvent);
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            PLAYBACK_STATE state;
-            other.GetComponent<PlayerMovement>().lastSoundTriggerReference.getPlaybackState(out state);
-
-            if(state == PLAYBACK_STATE.PLAYING)
+            if (!listened)
             {
-                other.GetComponent<PlayerMovement>().lastSoundTriggerReference.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+                PLAYBACK_STATE state;
+                other.GetComponent<PlayerMovement>().lastSoundTriggerReference.getPlaybackState(out state);
+
+                if(state == PLAYBACK_STATE.PLAYING)
+                {
+                    other.GetComponent<PlayerMovement>().lastSoundTriggerReference.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+                }
+                soundTriggerInstance.start();
+                other.GetComponent<PlayerMovement>().lastSoundTriggerReference = soundTriggerInstance;
+                listened = true;
+
             }
-            soundTriggerIstance.start();
-            other.GetComponent<PlayerMovement>().lastSoundTriggerReference = soundTriggerIstance;
         }
     }
 
@@ -36,8 +42,22 @@ public class SoundTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            soundTriggerIstance.release();
+            soundTriggerInstance.release();
         }
 
+    }
+
+    private void FixedUpdate()
+    {
+        if (listened)
+        {
+            PLAYBACK_STATE state;
+            soundTriggerInstance.getPlaybackState(out state);
+            if (state == PLAYBACK_STATE.STOPPED)
+            {
+                Destroy(this);
+            }
+
+        }
     }
 }

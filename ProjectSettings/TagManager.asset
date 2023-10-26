@@ -3,7 +3,18 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Wall
+  - Tree
+  - Right
+  - LockedDoor
+  - Door
+  - Close
+  - Front
+  - Far
+  - Generator
+  - Enemy
+  - Grass
   layers:
   - Default
   - TransparentFX
@@ -11,11 +22,11 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Walls_Occlusion
+  - Walls_Obstruction
+  - SoundZones
+  - DirectionZones
+  - Ground
   - 
   - 
   - 

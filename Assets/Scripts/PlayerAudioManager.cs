@@ -34,10 +34,8 @@ public class PlayerAudioManager : MonoBehaviour
     private const string DIST_TO_ENEMY_B = "DistanceToEnemy_B";
     private const string DIST_TO_ENEMY_H = "DistanceToEnemy_H";
 
-    private bool shouldPlay = true;
-
     private int furnitureCounter = 0;
-
+    private string groundTag;
     private bool playEnemyAudio = true;
 
 
@@ -89,13 +87,18 @@ public class PlayerAudioManager : MonoBehaviour
         float raycastDistance = 10f; 
 
         RaycastHit hit;
-        if (Physics.Raycast(raycastOrigin, raycastDirection, out hit, raycastDistance)) {
-
-            if(hit.collider.gameObject.layer == LayerMask.NameToLayer("Kitchen")) footStepsAudioInstance.setParameterByNameWithLabel("FloorMaterial", "Wood");
-            if(hit.collider.gameObject.layer == LayerMask.NameToLayer("Bathroom")) footStepsAudioInstance.setParameterByNameWithLabel("FloorMaterial", "FloorTile");
-            if(hit.collider.gameObject.layer == LayerMask.NameToLayer("FloorTile2")) footStepsAudioInstance.setParameterByNameWithLabel("FloorMaterial", "FloorTile2");
-            if(hit.collider.gameObject.layer == LayerMask.NameToLayer("Default")) footStepsAudioInstance.setParameterByNameWithLabel("FloorMaterial", "Solid");
+        if (Physics.Raycast(raycastOrigin, raycastDirection, out hit, raycastDistance, LayerMask.GetMask("Ground")))
+        {
+            groundTag = hit.collider.tag;
         }
+        else
+        {
+            // Handle the case when no "Ground" layer is detected
+            groundTag = "Solid";
+           
+        }
+
+        footStepsAudioInstance.setParameterByNameWithLabel("FloorMaterial", groundTag);
 
     }
 

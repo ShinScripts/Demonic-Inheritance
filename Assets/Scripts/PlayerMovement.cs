@@ -3,12 +3,9 @@ using TMPro;
 using UnityEngine;
 using FMODUnity;
 using Unity.VisualScripting;
-<<<<<<< Updated upstream
-=======
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 using FMOD.Studio;
->>>>>>> Stashed changes
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -28,13 +25,10 @@ public class PlayerMovement : MonoBehaviour
     private bool isMoving = false;
     private bool isRotating = false;
 
-<<<<<<< Updated upstream
-=======
     private Transform lastGeneratorPosition;
 
     public EventInstance lastSoundTriggerReference;
 
->>>>>>> Stashed changes
     private float movementStartTime;
     private Vector3 startPosition;
     private Vector3 targetPosition;
@@ -49,9 +43,12 @@ public class PlayerMovement : MonoBehaviour
 
     public bool IsBusy { get => (isMoving || isRotating); }
     public string CurrentSoundZoneName { get => currentSoundZoneName; }
+    public bool CanMove { get => canMove; set => canMove = value; }
 
     private string currentObstacle;
     private float rightDirection;
+    public bool is_dead;
+    private bool canMove = true;
 
     private void Start()
     {
@@ -116,8 +113,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-<<<<<<< Updated upstream
-=======
 
         if (is_dead)
         {
@@ -132,7 +127,6 @@ public class PlayerMovement : MonoBehaviour
             return;
         }
 
->>>>>>> Stashed changes
         if (isMoving)
         {
             MovePlayer();
@@ -177,6 +171,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (ClearToMove("forward"))
             {
+                playerAudioManager.PlayFootstep("Move");
                 StartCoroutine(FootstepsDelay());
                 StartMovement(transform.forward);
             }
@@ -190,6 +185,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (ClearToMove("backward"))
             {
+                playerAudioManager.PlayFootstep("Move");
                 StartCoroutine(FootstepsDelay());
                 StartMovement(-transform.forward);
             }
@@ -203,6 +199,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (ClearToMove("left"))
             {
+                playerAudioManager.PlayFootstep("Move");
                 StartCoroutine(FootstepsDelay());
                 StartMovement(-transform.right);
             }
@@ -216,6 +213,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (ClearToMove("right"))
             {
+                playerAudioManager.PlayFootstep("Move");
                 StartCoroutine(FootstepsDelay());
                 StartMovement(transform.right);
             }
@@ -228,10 +226,12 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.LeftArrow) && !isRotating)
         {
+            playerAudioManager.PlayFootstep("Rotate");
             StartRotation(-90f);
         }
         else if (Input.GetKeyDown(KeyCode.RightArrow) && !isRotating)
         {
+            playerAudioManager.PlayFootstep("Rotate");
             StartRotation(90f);
         }
     }
@@ -306,8 +306,6 @@ public class PlayerMovement : MonoBehaviour
         }
 
     }
-<<<<<<< Updated upstream
-=======
 
     public void SetCheckPoint(Transform transform)
     {
@@ -343,6 +341,4 @@ public class PlayerMovement : MonoBehaviour
         
     }
 
-
->>>>>>> Stashed changes
 }
