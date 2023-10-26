@@ -7,6 +7,9 @@ public class SoundObstructionManager : MonoBehaviour
 {
     [SerializeField] private SoundZone[] soundZoneList;
     [SerializeField] private SoundZone firstZone;
+    private SoundZone currentActiveZone;
+
+    public SoundZone CurrentActiveZone { get => currentActiveZone;}
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +20,7 @@ public class SoundObstructionManager : MonoBehaviour
     public void SetZoneActive(SoundZone zone)
     {
         SwitchOtherZones(zone.GetNeighbors());
- 
+        currentActiveZone = zone;
     }
 
     private void SwitchOtherZones(SoundZone[] activeNeighboors)
@@ -29,7 +32,7 @@ public class SoundObstructionManager : MonoBehaviour
             //Debug.Log("soundZoneList size: " + soundZoneList.Length);
             for (int j = 0; j < activeNeighboors.Length; j++)
             {
-                //Debug.Log("active Neightboors of: " + activeNeighboors[j] + " are: " + activeNeighboors.Length);
+               // Debug.Log("active Neightboors of: " + activeNeighboors[j] + " are: " + activeNeighboors.Length);
                 if (activeNeighboors[j] == soundZoneList[i])
                 {
                     activeNeighboors[j].gameObject.SetActive(true);
@@ -44,6 +47,5 @@ public class SoundObstructionManager : MonoBehaviour
             }
         }
     }
-
-  
+ 
 }

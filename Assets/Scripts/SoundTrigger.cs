@@ -3,8 +3,6 @@ using FMOD.Studio;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor.Experimental.GraphView;
-using static UnityEngine.ParticleSystem;
 
 public class SoundTrigger : MonoBehaviour
 {

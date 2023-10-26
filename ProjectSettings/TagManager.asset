@@ -15,6 +15,22 @@ TagManager:
   - Generator
   - Enemy
   - Grass
+  - Furniture
+  - NoSignal
+  - DinningTable
+  - Bathroom
+  - LongCorridor
+  - SmallCorridor
+  - PictureRoom
+  - Study
+  - TrophyRoom
+  - SmallBedroom
+  - WestBedroom
+  - Solid
+  - FloorTile
+  - Wood
+  - Entrance
+  - Kitchen
   layers:
   - Default
   - TransparentFX

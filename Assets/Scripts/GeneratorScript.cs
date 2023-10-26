@@ -23,7 +23,7 @@ public class GeneratorScript : MonoBehaviour
         if (!beenTaken && collision.CompareTag("Player"))
         {
             beenTaken = true;
-
+            collision.gameObject.GetComponent<PlayerMovement>().SetCheckPoint(transform.position);
             generatorCollectedAudio.start();
             generatorCollectedAudio.release();
             Debug.Log("Generator " + generatorNumber + " has been taken!");

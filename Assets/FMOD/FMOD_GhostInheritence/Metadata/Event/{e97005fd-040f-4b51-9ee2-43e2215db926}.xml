@@ -5,7 +5,7 @@
 			<value>VO_Asking_Assist</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>0</value>
 		</property>
 		<relationship name="folder">
 			<destination>{bd0640c1-62e7-499e-aee8-7ab15fa47883}</destination>

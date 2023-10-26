@@ -42,10 +42,10 @@
 	</object>
 	<object class="MasterTrack" id="{7b9ab258-33f4-425b-b035-2421980cbc69}">
 		<relationship name="modules">
-			<destination>{618fe388-6242-4d1f-8f10-f087572931d4}</destination>
 			<destination>{7a8ae8b0-af7c-418c-8a6d-0c6d4a0b7365}</destination>
 			<destination>{d6445c53-af60-4178-8602-bb63fa56338a}</destination>
 			<destination>{446fb4de-4523-42bf-a537-688f71b90e19}</destination>
+			<destination>{764b88e3-a16d-47f0-a19e-f2371cbb40d7}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{a569f277-fb7b-42bf-9a47-88ffb01558fd}</destination>
@@ -71,10 +71,10 @@
 	</object>
 	<object class="ParameterProxy" id="{ee2fe013-f890-46c3-917f-ab1e1a4e0c2a}">
 		<relationship name="modules">
-			<destination>{618fe388-6242-4d1f-8f10-f087572931d4}</destination>
 			<destination>{7a8ae8b0-af7c-418c-8a6d-0c6d4a0b7365}</destination>
 			<destination>{d6445c53-af60-4178-8602-bb63fa56338a}</destination>
 			<destination>{446fb4de-4523-42bf-a537-688f71b90e19}</destination>
+			<destination>{764b88e3-a16d-47f0-a19e-f2371cbb40d7}</destination>
 		</relationship>
 		<relationship name="preset">
 			<destination>{f7a5382d-61ea-4ca3-931a-8cdfe57c6094}</destination>
@@ -89,11 +89,6 @@
 		</relationship>
 		<relationship name="mixer">
 			<destination>{f5c6c248-1eb1-4ab8-87d4-d04baa636893}</destination>
-		</relationship>
-	</object>
-	<object class="SingleSound" id="{618fe388-6242-4d1f-8f10-f087572931d4}">
-		<relationship name="audioFile">
-			<destination>{0ca8209e-a036-421c-a024-922ffbc6336f}</destination>
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{7a8ae8b0-af7c-418c-8a6d-0c6d4a0b7365}">
@@ -118,6 +113,11 @@
 		</property>
 		<relationship name="audioFile">
 			<destination>{c23066f8-a034-461c-a205-8ce062f028c5}</destination>
+		</relationship>
+	</object>
+	<object class="SingleSound" id="{764b88e3-a16d-47f0-a19e-f2371cbb40d7}">
+		<relationship name="audioFile">
+			<destination>{40530046-df99-4160-9732-830f931dc286}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{beb8e20a-9e01-4f19-82f6-0c61c262c271}">

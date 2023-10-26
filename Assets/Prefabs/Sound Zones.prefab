@@ -60,61 +60,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activeZones: []
---- !u!1 &8812349902955392176
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8812349902955392179}
-  - component: {fileID: 8812349902955392178}
-  m_Layer: 8
-  m_Name: Location
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8812349902955392179
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8812349902955392176}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.293, y: 0, z: -1.03}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 8812349904703299171}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8812349902955392178
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8812349902955392176}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc2e5a0e8f6041d4dbf157004879adb1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  selectAudio:
-    Guid:
-      Data1: 211971812
-      Data2: 1340200959
-      Data3: -509004125
-      Data4: -1282019393
-    Path: event:/SFX_Garage
-  soundOcclusionWidening: 1.3
-  playerOcclusionWidening: 0.8
-  shouldUseObstruction: 0
-  debugOcclusion: 0
 --- !u!1 &8812349903041781766
 GameObject:
   m_ObjectHideFlags: 0
@@ -883,7 +828,7 @@ Transform:
   m_Children:
   - {fileID: 8812349903384788092}
   m_Father: {fileID: 8812349905023714619}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &8812349904255952964
 BoxCollider:
@@ -1088,66 +1033,6 @@ MonoBehaviour:
   playerOcclusionWidening: 0.8
   shouldUseObstruction: 0
   debugOcclusion: 0
---- !u!1 &8812349904703299168
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8812349904703299171}
-  - component: {fileID: 8812349904703299181}
-  - component: {fileID: 8812349904703299180}
-  m_Layer: 8
-  m_Name: Garage
-  m_TagString: NoSignal
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8812349904703299171
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8812349904703299168}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 34.532883, y: -2.8, z: 11.844112}
-  m_LocalScale: {x: 15.840919, y: 6.532691, z: 8.802801}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 8812349902955392179}
-  m_Father: {fileID: 8812349905023714619}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &8812349904703299181
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8812349904703299168}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.2211702, y: 1, z: 1.6311786}
-  m_Center: {x: -0.110585034, y: 0, z: -0.31558898}
---- !u!114 &8812349904703299180
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8812349904703299168}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e22b40ef56c29f6448d61b2771170dfd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  activeZones: []
 --- !u!1 &8812349904719573067
 GameObject:
   m_ObjectHideFlags: 0
@@ -1422,7 +1307,6 @@ Transform:
   - {fileID: 8812349904754518321}
   - {fileID: 8812349904149503168}
   - {fileID: 8812349903361413862}
-  - {fileID: 8812349904703299171}
   - {fileID: 8812349904255952986}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -1449,7 +1333,7 @@ MonoBehaviour:
   - {fileID: 8812349903361413859}
   - {fileID: 8812349902929134506}
   - {fileID: 8812349904136255050}
-  - {fileID: 8812349904703299180}
+  - {fileID: 0}
   - {fileID: 8812349904468476560}
   - {fileID: 8812349904255952967}
   firstZone: {fileID: 8812349903873947223}

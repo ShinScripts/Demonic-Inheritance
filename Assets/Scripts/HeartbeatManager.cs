@@ -63,8 +63,8 @@ public class HeartbeatManager : MonoBehaviour
         timer += Time.deltaTime;
         
         if(timer >= 2f) {
-            UnityEngine.Debug.Log("Normdistance = " + normDistanceEnemy);
-            UnityEngine.Debug.Log("HeartbeatDelay = " + heartbeatDelay);
+         //   UnityEngine.Debug.Log("Normdistance = " + normDistanceEnemy);
+         //   UnityEngine.Debug.Log("HeartbeatDelay = " + heartbeatDelay);
             timer = 0f;
         }
     }

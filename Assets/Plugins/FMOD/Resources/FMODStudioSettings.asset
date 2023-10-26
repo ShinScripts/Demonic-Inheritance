@@ -311,6 +311,7 @@ MonoBehaviour:
   - EnemyFoley
   - Menu
   - PlayerFoley
+  - Scenes
   - SFX
   - VO
   BanksToLoad: []

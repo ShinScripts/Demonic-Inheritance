@@ -59,12 +59,16 @@
 			<destination>{9caaff90-da6b-437c-8a04-6da540d9ec54}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{af092b75-20ef-4b8d-a9a6-51fc4da90aba}</destination>
+			<destination>{8ac638dd-d7f3-4d34-a60e-140fa5a843d6}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{a55e9249-abde-4895-86d2-e72fef7383e3}" />
 	<object class="MarkerTrack" id="{77736e8a-a6d6-41e5-afa0-1d998c5c5207}" />
-	<object class="Timeline" id="{de94b853-4846-47a2-a4de-2aebde74dae1}" />
+	<object class="Timeline" id="{de94b853-4846-47a2-a4de-2aebde74dae1}">
+		<property name="isProxyEnabled">
+			<value>false</value>
+		</property>
+	</object>
 	<object class="ParameterProxy" id="{e9b1e2d3-2af4-484b-8439-7b8ae057ce88}">
 		<relationship name="modules">
 			<destination>{dbeeed24-1975-41ad-bb09-0918f3c560ce}</destination>

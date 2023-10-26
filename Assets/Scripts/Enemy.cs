@@ -11,12 +11,14 @@ public class Enemy : MonoBehaviour
     private GameObject target;
     private GameObject player;
     [SerializeField] private EventReference EnemyDetection;
+    [SerializeField] private EventReference PlayerDead;
     private NavMeshAgent agent;
 
     private bool follow_player = false;
     private bool detected = false;
 
     private EventInstance enemyDetectionSound;
+    private EventInstance playerDeadSound;
 
     void Start()
     {
@@ -30,6 +32,7 @@ public class Enemy : MonoBehaviour
         transform.position = patrol[patrol_index].transform.position;
         target = patrol[++patrol_index];
 
+        playerDeadSound = RuntimeManager.CreateInstance(PlayerDead);
         enemyDetectionSound = RuntimeManager.CreateInstance(EnemyDetection);
         enemyDetectionSound.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(transform.position));
     }
@@ -40,6 +43,7 @@ public class Enemy : MonoBehaviour
         {
             player.GetComponent<PlayerMovement>().is_dead = true;
             print("dead");
+            StartCoroutine(PlayDeadSound());
         }
 
         if (player.GetComponent<PlayerMovement>().IsBusy && !follow_player)
@@ -125,5 +129,14 @@ public class Enemy : MonoBehaviour
             enemyDetectionSound.setParameterByNameWithLabel("DetectionType", "PlayerNoDetected");
             enemyDetectionSound.start();
         }
+    }
+
+    IEnumerator PlayDeadSound()
+    {
+        playerDeadSound.start();
+        player.GetComponent<PlayerMovement>().FreezePlayer();
+        yield return new WaitForSeconds(16f);
+        player.GetComponent<PlayerMovement>().Respawn();
+        yield return null;
     }
 }

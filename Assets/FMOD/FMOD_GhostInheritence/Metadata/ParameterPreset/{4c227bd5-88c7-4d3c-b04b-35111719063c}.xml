@@ -16,13 +16,20 @@
 			<value>2</value>
 		</property>
 		<property name="maximum">
-			<value>5</value>
+			<value>12</value>
 		</property>
 		<property name="enumerationLabels">
 			<value>Bathroom</value>
-			<value>LongCorridor</value>
-			<value>Hallway</value>
+			<value>Entrance</value>
 			<value>DinningTable</value>
+			<value>Kitchen</value>
+			<value>SmallCorridor</value>
+			<value>PitctureRoom</value>
+			<value>LongCorridor</value>
+			<value>Study</value>
+			<value>TrophyRoom</value>
+			<value>SmallBedroom</value>
+			<value>WestBedroom</value>
 			<value>NoSignal</value>
 		</property>
 		<property name="initialValue">

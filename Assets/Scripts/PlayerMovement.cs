@@ -22,10 +22,13 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform audioLeftPosition;
     [SerializeField] private Transform audioRightPosition;
 
+    [SerializeField] private SoundObstructionManager soundObstructionManager;
+
+    private SoundZone lastZoneChecked;
     private bool isMoving = false;
     private bool isRotating = false;
 
-    private Transform lastGeneratorPosition;
+    private Vector3 lastGeneratorPosition;
 
     public EventInstance lastSoundTriggerReference;
 
@@ -56,6 +59,7 @@ public class PlayerMovement : MonoBehaviour
 
         currentObstacle = string.Empty;
 
+        lastGeneratorPosition = transform.position;
     }
 
     private bool ClearToMove(string direction)
@@ -307,9 +311,10 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    public void SetCheckPoint(Transform transform)
+    public void SetCheckPoint(Vector3 position)
     {
-        lastGeneratorPosition = transform;
+        lastZoneChecked = soundObstructionManager.CurrentActiveZone;
+        lastGeneratorPosition = position;
     }
 
     public string GetCorrentDirection()
@@ -339,6 +344,23 @@ public class PlayerMovement : MonoBehaviour
 
         }
         
+    }
+
+    public void Respawn()
+    {
+        FreezePlayer();
+        gameObject.transform.position = lastGeneratorPosition;
+        gameObject.transform.rotation = Quaternion.Euler(Vector3.zero);
+        soundObstructionManager.SetZoneActive(lastZoneChecked);
+        canMove = true;
+        is_dead = false;
+    }
+
+    public void FreezePlayer()
+    {
+        print("it will respawn at: " + lastGeneratorPosition);
+        GetComponent<Rigidbody>().velocity = Vector3.zero;
+        GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
     }
 
 }

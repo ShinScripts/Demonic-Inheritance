@@ -173,6 +173,8 @@
 		<relationship name="effects">
 			<destination>{3cfc5510-0cab-4b59-95ab-0f2b3dcdc049}</destination>
 			<destination>{5950f1e8-f561-4a0b-81da-5d670d5b8a5e}</destination>
+			<destination>{0e28d13a-76b8-4a27-ab00-c5c6de9cf33d}</destination>
+			<destination>{7b183160-5211-4d85-a670-07bda7cf309d}</destination>
 			<destination>{067c505b-d566-415f-9796-3e0e8d1302a5}</destination>
 			<destination>{9629663c-d6f7-444e-a8fa-17a1266462b0}</destination>
 			<destination>{d828274a-6aa1-41f6-a0d6-b41d60070f33}</destination>
@@ -214,6 +216,19 @@
 		</property>
 		<property name="userStereoSeparation">
 			<value>33.9036522</value>
+		</property>
+	</object>
+	<object class="CompressorEffect" id="{0e28d13a-76b8-4a27-ab00-c5c6de9cf33d}">
+		<property name="threshold">
+			<value>-47.5</value>
+		</property>
+		<property name="ratio">
+			<value>3.70000005</value>
+		</property>
+	</object>
+	<object class="GainEffect" id="{7b183160-5211-4d85-a670-07bda7cf309d}">
+		<property name="gain">
+			<value>10</value>
 		</property>
 	</object>
 	<object class="LowpassEffect" id="{067c505b-d566-415f-9796-3e0e8d1302a5}">
