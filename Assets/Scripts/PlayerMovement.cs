@@ -117,7 +117,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-
+        print(Input.GetAxis("Xbox Rotate"));
         if (is_dead)
         {
             //dead
@@ -171,7 +171,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void HandleInput()
     {
-        if (Input.GetKeyDown(KeyCode.W) && !isMoving)
+        if ((Input.GetKeyDown(KeyCode.W) || Input.GetAxis("Vertical C") < -0.5f) && !isMoving)
         {
             if (ClearToMove("forward"))
             {
@@ -185,7 +185,7 @@ public class PlayerMovement : MonoBehaviour
                 playerAudioManager.PlayWallHitSound(currentObstacle, audioFrontPosition, "Front");
             }
         }
-        else if (Input.GetKeyDown(KeyCode.S) && !isMoving)
+        else if ((Input.GetKeyDown(KeyCode.S) || Input.GetAxis("Vertical C") > 0.5f) && !isMoving)
         {
             if (ClearToMove("backward"))
             {
@@ -199,7 +199,7 @@ public class PlayerMovement : MonoBehaviour
                 playerAudioManager.PlayWallHitSound(currentObstacle, audioBehindPosition, "Back");
             }
         }
-        else if (Input.GetKeyDown(KeyCode.A) && !isMoving)
+        else if ((Input.GetKeyDown(KeyCode.A) || Input.GetAxis("Horizontal C") < -0.5f) && !isMoving)
         {
             if (ClearToMove("left"))
             {
@@ -213,7 +213,7 @@ public class PlayerMovement : MonoBehaviour
                 playerAudioManager.PlayWallHitSound(currentObstacle, audioLeftPosition, "Left");
             }
         }
-        else if (Input.GetKeyDown(KeyCode.D) && !isMoving)
+        else if ((Input.GetKeyDown(KeyCode.D) || Input.GetAxis("Horizontal C") > 0.5f) && !isMoving)
         {
             if (ClearToMove("right"))
             {
@@ -228,12 +228,12 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftArrow) && !isRotating)
+        if ((Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetAxis("Xbox Rotate") < -0.5f) && !isRotating)
         {
             playerAudioManager.PlayFootstep("Rotate");
             StartRotation(-90f);
         }
-        else if (Input.GetKeyDown(KeyCode.RightArrow) && !isRotating)
+        else if ((Input.GetKeyDown(KeyCode.RightArrow) || Input.GetAxis("Xbox Rotate") > 0.5f) && !isRotating)
         {
             playerAudioManager.PlayFootstep("Rotate");
             StartRotation(90f);

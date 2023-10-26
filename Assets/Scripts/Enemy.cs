@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.AI;
 using FMOD.Studio;
 using FMODUnity;
@@ -135,8 +136,10 @@ public class Enemy : MonoBehaviour
     {
         playerDeadSound.start();
         player.GetComponent<PlayerMovement>().FreezePlayer();
-        yield return new WaitForSeconds(16f);
-        player.GetComponent<PlayerMovement>().Respawn();
+        yield return new WaitForSeconds(5f);
+
+        SceneManager.LoadScene("Daniel_Jens_AI");
+
         yield return null;
     }
 }
