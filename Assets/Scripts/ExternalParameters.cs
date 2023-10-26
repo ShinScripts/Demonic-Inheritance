@@ -7,7 +7,9 @@ public class ExternalParameters : MonoBehaviour
     [HideInInspector] public float enemy_speed;
     [HideInInspector] public bool doHeartRaise;
     [HideInInspector] public bool enableCheats;
+    [HideInInspector] public bool enableTriggers;
 
+    [SerializeField] GameObject triggers;
     private HeartbeatManager heartbeatManager;
 
     private void Awake()
@@ -40,6 +42,13 @@ public class ExternalParameters : MonoBehaviour
                         doHeartRaise = bool.Parse(variableValue);
                         Debug.Log("doHeartRaise = " + doHeartRaise);
                     }
+
+                    else if (variableName == "enableTriggers")
+                    {
+                        enableTriggers = bool.Parse(variableValue);
+                        Debug.Log("enable triggers = " + enableTriggers);
+                    }
+
                     else if (variableName == "enableCheats")
                     {
                         enableCheats = bool.Parse(variableValue);
@@ -67,6 +76,11 @@ public class ExternalParameters : MonoBehaviour
         if (enableCheats)
         {
 
+        }
+
+        if (!enableTriggers)
+        {
+            triggers.gameObject.SetActive(false);
         }
     }
 }
