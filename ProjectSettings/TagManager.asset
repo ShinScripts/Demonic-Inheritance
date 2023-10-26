@@ -15,6 +15,12 @@ TagManager:
   - NoSignal
   - Door
   - Enemy
+  - SmallCorridor
+  - PictureRoom
+  - Study
+  - SmallBedroom
+  - WestBedroom
+  - TrophyRoom
   layers:
   - Default
   - TransparentFX

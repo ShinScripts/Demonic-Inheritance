@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.3069224, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7959,6 +7959,14 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: -4.076387
       objectReference: {fileID: 0}
+    - target: {fileID: 8812349902929134510, guid: e81e3de2604407a47ab1f8d227c8ebb1, type: 3}
+      propertyPath: m_Name
+      value: SmallCorridorOutsideBathroom
+      objectReference: {fileID: 0}
+    - target: {fileID: 8812349902929134510, guid: e81e3de2604407a47ab1f8d227c8ebb1, type: 3}
+      propertyPath: m_TagString
+      value: SmallCorridor
+      objectReference: {fileID: 0}
     - target: {fileID: 8812349903361413856, guid: e81e3de2604407a47ab1f8d227c8ebb1, type: 3}
       propertyPath: m_Size.x
       value: 3.8019826
@@ -7975,6 +7983,14 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: -1.0444871
       objectReference: {fileID: 0}
+    - target: {fileID: 8812349903361413863, guid: e81e3de2604407a47ab1f8d227c8ebb1, type: 3}
+      propertyPath: m_Name
+      value: SmallBedroom
+      objectReference: {fileID: 0}
+    - target: {fileID: 8812349903361413863, guid: e81e3de2604407a47ab1f8d227c8ebb1, type: 3}
+      propertyPath: m_TagString
+      value: SmallBedroom
+      objectReference: {fileID: 0}
     - target: {fileID: 8812349904136255051, guid: e81e3de2604407a47ab1f8d227c8ebb1, type: 3}
       propertyPath: m_Size.z
       value: 2.2026632
@@ -7986,6 +8002,22 @@ PrefabInstance:
     - target: {fileID: 8812349904136255051, guid: e81e3de2604407a47ab1f8d227c8ebb1, type: 3}
       propertyPath: m_Center.z
       value: 0.25995633
+      objectReference: {fileID: 0}
+    - target: {fileID: 8812349904136255054, guid: e81e3de2604407a47ab1f8d227c8ebb1, type: 3}
+      propertyPath: m_Name
+      value: PictureRoom
+      objectReference: {fileID: 0}
+    - target: {fileID: 8812349904136255054, guid: e81e3de2604407a47ab1f8d227c8ebb1, type: 3}
+      propertyPath: m_TagString
+      value: PictureRoom
+      objectReference: {fileID: 0}
+    - target: {fileID: 8812349904149503169, guid: e81e3de2604407a47ab1f8d227c8ebb1, type: 3}
+      propertyPath: m_Name
+      value: TrophyRoom
+      objectReference: {fileID: 0}
+    - target: {fileID: 8812349904149503169, guid: e81e3de2604407a47ab1f8d227c8ebb1, type: 3}
+      propertyPath: m_TagString
+      value: TrophyRoom
       objectReference: {fileID: 0}
     - target: {fileID: 8812349904149503170, guid: e81e3de2604407a47ab1f8d227c8ebb1, type: 3}
       propertyPath: m_Size.x
@@ -8014,6 +8046,14 @@ PrefabInstance:
     - target: {fileID: 8812349904255952964, guid: e81e3de2604407a47ab1f8d227c8ebb1, type: 3}
       propertyPath: m_Center.z
       value: 0.28734368
+      objectReference: {fileID: 0}
+    - target: {fileID: 8812349904255952987, guid: e81e3de2604407a47ab1f8d227c8ebb1, type: 3}
+      propertyPath: m_Name
+      value: WestBedroom
+      objectReference: {fileID: 0}
+    - target: {fileID: 8812349904255952987, guid: e81e3de2604407a47ab1f8d227c8ebb1, type: 3}
+      propertyPath: m_TagString
+      value: WestBedroom
       objectReference: {fileID: 0}
     - target: {fileID: 8812349904468476561, guid: e81e3de2604407a47ab1f8d227c8ebb1, type: 3}
       propertyPath: m_Size.x
@@ -8082,6 +8122,14 @@ PrefabInstance:
     - target: {fileID: 8812349904754518323, guid: e81e3de2604407a47ab1f8d227c8ebb1, type: 3}
       propertyPath: m_Center.z
       value: -1.0167316
+      objectReference: {fileID: 0}
+    - target: {fileID: 8812349904754518326, guid: e81e3de2604407a47ab1f8d227c8ebb1, type: 3}
+      propertyPath: m_Name
+      value: Study
+      objectReference: {fileID: 0}
+    - target: {fileID: 8812349904754518326, guid: e81e3de2604407a47ab1f8d227c8ebb1, type: 3}
+      propertyPath: m_TagString
+      value: Study
       objectReference: {fileID: 0}
     - target: {fileID: 8812349904843236012, guid: e81e3de2604407a47ab1f8d227c8ebb1, type: 3}
       propertyPath: m_Size.x
