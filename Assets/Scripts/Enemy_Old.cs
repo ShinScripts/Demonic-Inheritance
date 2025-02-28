@@ -20,8 +20,9 @@ public class Enemy_Old : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector3.MoveTowards(gameObject.transform.position, target.transform.position, speed * Time.deltaTime);
-        if (gameObject.transform.position == target.transform.position)
+        transform.position = Vector3.MoveTowards(transform.position, target.transform.position, speed * Time.deltaTime);
+
+        if (Vector3.Distance(transform.position, target.transform.position) <= 0.1f)
         {
             ChangeTargets();
         }

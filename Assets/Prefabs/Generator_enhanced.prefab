@@ -28,13 +28,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8715230443046452054}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 30, y: 13, z: 12.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8715230443046452051
 MeshFilter:
@@ -94,9 +94,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8715230443046452054}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 1
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 10, y: 10, z: 10}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8715230443046452062
@@ -115,10 +123,10 @@ MonoBehaviour:
   generatorNumber: 0
   GeneratorCollectedEvent:
     Guid:
-      Data1: -109833649
-      Data2: 1150866856
-      Data3: -882387314
-      Data4: 1518396006
+      Data1: 23749390
+      Data2: 1146307791
+      Data3: -1535432023
+      Data4: -1586253075
     Path: event:/SFX_GeneratorCollected
 --- !u!114 &8715230443046452044
 MonoBehaviour:
@@ -141,6 +149,5 @@ MonoBehaviour:
     Path: event:/GeneratorStarted
   soundOcclusionWidening: 1.74
   playerOcclusionWidening: 0.67
-  occlusionLayer:
-    serializedVersion: 2
-    m_Bits: 64
+  shouldUseObstruction: 0
+  debugOcclusion: 0
